@@ -15,9 +15,9 @@ gulp.task('jekyll-build', function (done) {
     [
       'build',
       '--source',
-      config.neue.jekyll.src,
+      config.shuboxWeb.jekyll.src,
       '--destination',
-      config.neue.jekyll.dest
+      config.shuboxWeb.jekyll.dest
     ],
     { stdio: 'inherit' }
   ).on('close', done);

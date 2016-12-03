@@ -9,12 +9,12 @@ const changed = require('gulp-changed')
 
 // Concat and minfy JS
 gulp.task('js', () => {
-  gulp.src(path.join(config.neue.scripts.src, '**'))
-    .pipe(changed(config.neue.scripts.dest))
+  gulp.src(path.join(config.shuboxWeb.scripts.src, '**'))
+    .pipe(changed(config.shuboxWeb.scripts.dest))
     .pipe(sourcemaps.init())
       .pipe(babel())
       .pipe(uglify())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(config.neue.scripts.dest))
+    .pipe(gulp.dest(config.shuboxWeb.scripts.dest))
     .pipe(browserSync.stream({match: '**/*.js'}))
 })

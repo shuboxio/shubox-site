@@ -2,8 +2,10 @@ var config      = require('../../config');
 var browserSync = require('browser-sync');
 var gulp        = require('gulp');
 
-gulp.task('browserSync', () => {
+gulp.task('browserSync', ['js', 'sass', 'jekyll-build'], () => {
   browserSync({
-    proxy: config.env.local.url
+    server: {
+      baseDir: config.shuboxWeb.jekyll.dest
+    }
   })
 })

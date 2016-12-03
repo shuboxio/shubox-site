@@ -1,10 +1,5 @@
 {
-  "env": {
-    "local": {
-      "url": "http://localhost:4100"
-    }
-  },
-  "neue": {
+  "shuboxWeb": {
     "scripts": {
       "src": "./src/scripts",
       "dest": "./public/js"

@@ -4,9 +4,9 @@ var path = require('path');
 var browserSync = require('browser-sync');
 
 gulp.task('watch', () => {
-  gulp.watch(path.join(config.neue.styles.src, '**'), ['sass'])
-  gulp.watch(path.join(config.neue.scripts.src, '**'), ['js'])
-  gulp.watch(path.join(config.neue.jekyll.src, '**'), ['jekyll-rebuild'])
+  gulp.watch(path.join(config.shuboxWeb.styles.src, '**'), ['sass'])
+  gulp.watch(path.join(config.shuboxWeb.scripts.src, '**'), ['js'])
+  gulp.watch(path.join(config.shuboxWeb.jekyll.src, '**'), ['jekyll-rebuild'])
     .on('change', browserSync.reload)
 });
 
