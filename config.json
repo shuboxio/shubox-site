@@ -1,0 +1,21 @@
+{
+  "env": {
+    "local": {
+      "url": "http://localhost:4100"
+    }
+  },
+  "neue": {
+    "scripts": {
+      "src": "./src/scripts",
+      "dest": "./public/build/js"
+    },
+    "styles": {
+      "src": "./src/styles",
+      "dest": "./public/build/css"
+    },
+    "jekyll": {
+      "src": "./src/jekyll",
+      "dest": "./public/build"
+    }
+  }
+}
