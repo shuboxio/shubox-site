@@ -1,9 +1,8 @@
 var gulp        = require('gulp');
+var config      = require('../../config');
 var browserSync = require('browser-sync');
 var cp          = require('child_process');
-
-var jekyll = 'jekyll';
-var messages = { jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build' };
+var messages    = { jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build' };
 
 /**
  * Build the Jekyll Site
@@ -11,8 +10,17 @@ var messages = { jekyllBuild: '<span style="color: grey">Running:</span> $ jekyl
 gulp.task('jekyll-build', function (done) {
   browserSync.notify(messages.jekyllBuild);
 
-  return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
-    .on('close', done);
+  return cp.spawn(
+    'jekyll' ,
+    [
+      'build',
+      '--source',
+      config.neue.jekyll.src,
+      '--destination',
+      config.neue.jekyll.dest
+    ],
+    { stdio: 'inherit' }
+  ).on('close', done);
 });
 
 /**
