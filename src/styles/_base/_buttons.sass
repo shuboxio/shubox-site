@@ -1,0 +1,61 @@
+// ============================================================
+// Buttons
+// ============================================================
+
+.btn
+  background: $button-color
+  border-radius: $border-radius
+  border: 0
+  color: $button-text-color
+  cursor: pointer
+  display: inline-block
+  font-family: $sans-serif
+  font-size: rem(14)
+  letter-spacing: .1em
+  padding: rem(10) rem(20)
+  text-transform: uppercase
+
+  +mq-min(em(1080))
+    font-size: rem(15)
+
+  &:hover,
+  &:focus
+    background: $button-hover-color
+    color: $button-hover-text-color
+    outline: none
+
+  &.-small
+    font-size: rem(12)
+    padding: rem(6) rem(12)
+
+  &.-outline
+    background: transparent
+    border: 1px solid $link-color
+    color: $link-color
+
+    &:hover,
+    &:focus
+      border-color: $link-hover-color
+      color: $link-hover-color
+
+
+// ------------------------------------------------------------
+// Link
+// ------------------------------------------------------------
+
+.link
+  background: transparent
+  border-radius: $border-radius
+  border: 0
+  color: $link-color
+  cursor: pointer
+  display: inline-block
+  font-family: $sans-serif
+  font-size: rem(14)
+  letter-spacing: .1em
+  padding: 0
+  text-transform: uppercase
+
+  &:hover,
+  &:focus
+    color: $link-hover-color

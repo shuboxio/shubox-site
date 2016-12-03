@@ -1,7 +1,9 @@
+var gulp        = require('gulp');
+var browserSync = require('browser-sync');
+var cp          = require('child_process');
+
 var jekyll = 'jekyll';
-var messages = {
-  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
+var messages = { jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build' };
 
 /**
  * Build the Jekyll Site

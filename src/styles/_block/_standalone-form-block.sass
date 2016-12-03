@@ -1,0 +1,21 @@
+// ============================================================
+// Standalone Form Block (i.e. Sign up or sign in)
+// ============================================================
+
+.standalone-form-block
+  +mq-min(em(1000))
+    padding: rem(150) 0 rem(200)
+
+  .gi
+    +mq-min(em(1000))
+      +grid-item(3, 2, $grid-push: 1)
+
+  .headline
+    color: $green
+    margin-bottom: rem(50)
+
+  form
+    max-width: rem(600)
+
+    .btn
+      margin: rem(20) 0 rem(60)

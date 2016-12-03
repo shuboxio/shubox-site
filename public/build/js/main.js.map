@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":["$","on","slideToggle"],"mappings":"AAEAA,EAAE,gBAAgBC,GAAG,QAAS,WAC5BD,EAAE,aAAaE","file":"main.js","sourcesContent":["/* global $ */\n\n$('#menu-toggle').on('click', function () {\n  $('.main-nav').slideToggle()\n})\n"]}

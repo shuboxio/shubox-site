@@ -1,0 +1,80 @@
+// ============================================================
+// Form Styles
+// ============================================================
+
+$all-text-inputs: ("[type='color']", "[type='date']", "[type='datetime']", "[type='datetime-local']", "[type='email']", "[type='month']", "[type='number']", "[type='password']", "[type='search']", "[type='tel']", "[type='text']", "[type='time']", "[type='url']", "[type='week']", "input:not([type])", "textarea",)
+
+
+label
+  display: block
+  margin-bottom: rem(8)
+
+
+#{$all-text-inputs}
+  appearance: none
+  background-color: transparent
+  border-radius: 0
+  border: none
+  border-bottom: 1px solid $light-gray
+  box-shadow: 0
+  font-family: $monospace
+  font-size: rem(14)
+  margin-bottom: $page-margin
+  padding: rem(10) 0
+  overflow: visible
+  width: 100%
+
+  &:focus
+    outline: none
+
+  &:disabled
+    background-color: $light-gray
+    cursor: not-allowed
+
+  &::placeholder
+    color: $medium-gray
+
+
+textarea
+  resize: vertical
+
+
+[type="checkbox"],
+[type="radio"]
+  display: inline
+  margin-right: rem(4)
+
+
+[type="file"]
+  margin-bottom: $page-margin
+  width: 100%
+
+
+select
+  font-size: rem(16)
+  margin-bottom: $page-margin
+  width: 100%
+
+
+.input
+  display: flex
+  flex-flow: column
+
+  input
+    order: 0
+    margin-bottom: 0
+
+  label
+    @extend .title
+    order: 2
+
+
+.flash
+  background: $light-yellow
+
+.flash-notice
+  display: flex
+  justify-content: center
+  align-items: center
+  height: rem(100)
+  padding: rem(50) auto

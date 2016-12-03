@@ -1,0 +1,20 @@
+// ============================================================
+// Container
+// ============================================================
+// Example Usage:
+// <section class="c">
+//   ...
+// </section>
+// ============================================================
+
+
+.c
+  margin: 0 auto
+  max-width: rem(1400)
+  padding: 0 $page-margin
+
+  +mq-min(em(800))
+    padding: 0 $page-margin-medium
+
+  +mq-min(em(1100))
+    padding: 0 $page-margin-large

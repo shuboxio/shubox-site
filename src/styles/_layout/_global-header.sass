@@ -1,0 +1,109 @@
+// ============================================================
+// Global Header
+// ============================================================
+
+.global-header
+  $breakpoint: em(800)
+  background: $white
+  border-bottom: 1px solid $off-white
+
+  +mq-min($breakpoint)
+    padding: rem(50) 0 rem(20)
+
+
+  // ------------------------------------------------------------
+  // Structure
+  // ------------------------------------------------------------
+
+  .c
+    +mq-max($breakpoint)
+      padding: 0
+
+  .g
+    align-items: center
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+  .gi
+    margin-bottom: 0
+
+    +mq-max($breakpoint)
+      display: flex
+      justify-content: space-between
+      margin: 0 auto
+      max-width: rem(1400)
+      padding: rem(20) $page-margin
+
+    &:first-child
+      order: 2
+
+    &:last-child
+      order: 1
+
+    +mq-min($breakpoint)
+
+      &:first-child
+        +grid-item(3, 1)
+        order: 1
+
+      &:last-child
+        +grid-item(3, 2)
+        display: block !important
+        order: 2
+
+
+  // ------------------------------------------------------------
+  // Logo
+  // ------------------------------------------------------------
+
+  .logo
+    margin-right: rem(25)
+    display: inline
+
+    svg
+      width: rem(150)
+      height: rem(32)
+
+
+  // ------------------------------------------------------------
+  // Logo
+  // ------------------------------------------------------------
+
+  .main-nav
+    order: 0
+    display: none
+    background: $dark-gray
+
+    +mq-min($breakpoint)
+      background: none
+      display: block
+
+    a
+      display: block
+      font-family: $monospace
+      font-size: rem(15)
+
+      +mq-max($breakpoint)
+        color: $blue
+        padding: rem(15) 0
+
+        &:not(:first-child)
+          border-top: 1px solid $gray
+
+      +mq-min($breakpoint)
+        margin-right: rem(15)
+        display: inline-block
+
+      &.active
+        text-decoration: underline
+
+
+  // ------------------------------------------------------------
+  // Menu Toggle Button
+  // ------------------------------------------------------------
+
+  #menu-toggle
+
+    +mq-min($breakpoint)
+      display: none

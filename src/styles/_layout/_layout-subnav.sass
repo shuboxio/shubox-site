@@ -1,0 +1,20 @@
+// ============================================================
+// Layout with Subnav
+// ============================================================
+
+.layout-subnav
+  $breakpoint: em(800)
+  align-items: baseline
+
+  > .gi
+
+    +mq-min($breakpoint)
+
+      &:first-child
+        +grid-item(3, 1)
+        order: 1
+
+      &:last-child
+        +grid-item(3, 2)
+        display: block !important
+        order: 2
