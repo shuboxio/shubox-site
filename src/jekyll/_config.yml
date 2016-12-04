@@ -27,9 +27,9 @@ destination: ../../public/build
 markdown: kramdown
 gems:
   - jekyll-feed
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
+keep_files:
+  - js
+  - css
 defaults:
   -
     scope:
