@@ -1,1 +1,4 @@
 node_modules
+src/jekyll/.jekyll-metadata
+src/jekyll/.sass-cache
+public/*

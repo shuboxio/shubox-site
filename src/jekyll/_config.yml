@@ -15,21 +15,12 @@
 # in the templates via {{ site.myvariable }}.
 title: shubox.io
 email: joel@shubox.io
-description: > # this means to ignore newlines until "baseurl:"
+baseurl: ""    # the subpath of your site, e.g. /blog
+url: ""        # the base hostname & protocol for your site, e.g. http://example.com
+description: >
   The easiest and fastest way for your web-app to upload images directly to Amazon S3
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: shubox.io
-github_username:  shuboxio
 
-# Build settings
-destination: ../../public/build
-markdown: kramdown
-gems:
-  - jekyll-feed
-keep_files:
-  - js
-  - css
+# Site-wide defaults
 defaults:
   -
     scope:
@@ -37,3 +28,16 @@ defaults:
       type: "posts"
     values:
       permalink: /blog/:year/:month/:day/:title/
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+keep_files:
+  - ./js
+  - ./css
+
+# Collections
+collections:
+  - docs
+  - faqs
