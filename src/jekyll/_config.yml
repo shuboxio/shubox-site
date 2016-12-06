@@ -34,8 +34,8 @@ markdown: kramdown
 gems:
   - jekyll-feed
 keep_files:
-  - ./js
-  - ./css
+  - ./js/
+  - ./css/
 
 # Collections
 collections:
