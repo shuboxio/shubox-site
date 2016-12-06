@@ -1,31 +1,33 @@
-var gulp        = require('gulp');
-var config      = require('../../config');
-var browserSync = require('browser-sync');
-var cp          = require('child_process');
-var messages    = { jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build' };
+const gulp = require('gulp')
+const config = require('../../config')
+const browserSync = require('browser-sync')
+const cp = require('child_process')
+const path = require('path')
+const changed = require('gulp-changed')
 
-/**
- * Build the Jekyll Site
- */
-gulp.task('jekyll-build', function (done) {
-  browserSync.notify(messages.jekyllBuild);
-
+// ============================================================
+// Build Jekyll, Build!
+// ============================================================
+gulp.task('jekyll-build', (done) => {
   return cp.spawn(
-    'jekyll' ,
+    'jekyll',
     [
       'build',
       '--source',
       config.shuboxWeb.jekyll.src,
       '--destination',
-      config.shuboxWeb.jekyll.dest
+      'tmp'
     ],
     { stdio: 'inherit' }
-  ).on('close', done);
-});
+  ).on('close', done)
+})
 
-/**
- * Rebuild Jekyll & do page reload
- */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-  browserSync.reload();
-});
+// ============================================================
+// Sync Jekyll, Sync!
+// ============================================================
+gulp.task('jekyll-sync', () => {
+  return gulp.src(path.join(config.shuboxWeb.jekyll.tmp, '**'))
+    .pipe(changed(config.shuboxWeb.jekyll.dest))
+    .pipe(gulp.dest(config.shuboxWeb.jekyll.dest))
+    .pipe(browserSync.stream({ match: '**/*.html' }))
+})
