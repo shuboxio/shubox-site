@@ -1,0 +1,190 @@
+---
+title: JavaScript API
+order: 3
+---
+
+<div class="b" id="option-success">
+  <code class="key">
+    success:
+  </code>
+  <span class="default">
+    Default value:
+    <code>function(file){}</code>
+  </span>
+  <span class="description">
+    <p>
+      Assigning a function to the success key that accepts a
+      <code>file</code> parameter will be run after files are successfully
+      uploaded. More information about the <code>File</code> type passed into
+      this function <a href="#type-file">can be found below</a>.
+    </p>
+  </span>
+</div>
+
+<div class="b" id="option-error">
+  <code class="key">
+    error:
+  </code>
+  <span class="default">
+    Default value:
+    <code>function(file, message){}</code>
+  </span>
+  <span class="description">
+    <p>
+      Assign a function to the error key which accepts a <a
+        href="#type-file">file object</a> and an error string and it will
+      be run when errors are incurred with a file upload.
+    </p>
+  </span>
+</div>
+
+<div class="b" id="option-queue-complete">
+  <code class="key">
+    queuecomplete:
+  </code>
+  <span class="default">
+    Default value:
+    <code>function(){}</code>
+  </span>
+  <span class="description">
+    <p>
+      The queuecomplete callback will be called when all files are finished
+      uploading.
+    </p>
+  </span>
+</div>
+
+<div class="b" id="option-s3-url-template">
+  <code class="key">
+    s3urlTemplate:
+  </code>
+  <span class="default">
+    Default value:
+    <code>'{{s3Url}}'</code>
+  </span>
+  <span class="description">
+    <p>
+      When uploading to a form element, the element's value will be
+      changed to the URL of the uploaded file, which is, according to the
+      default value of this option, a handlebars-like representation of
+      the S3 URL - <code>'{{s3Url}}'</code>.
+    </p>
+
+    <p>
+      This can be changed to any string, and if it has the
+      <code>'{{s3Url}}'</code> string anywhere within it, it will be
+      interpolated with the final uploaded file's address. Example, to
+      instead insert markdown's image pseudo code you would change this to
+      <code>'![alt text]({{s3Url}})'</code>.
+    </p>
+  </span>
+</div>
+
+<div class="b" id="option-text-behavior">
+  <code class="key">
+    textBehavior:
+  </code>
+  <span class="default">
+    Default value:
+    <code>'replace'</code>
+  </span>
+  <span class="description">
+    <p>
+      When uploading through a form element (<code>&lt;input&gt;</code>,
+      <code>&lt;textarea&gt;</code>, etc) the behavior, by default, will be
+      to <code>'replace'</code> the contents of the form element value with
+      the URL to the newly uploaded file.
+    </p>
+
+    <p>
+      Changing the value to <code>'append'</code> will append the resulting
+      value from the newly uploaded file to the form element.
+    </p>
+  </span>
+</div>
+
+<div class="b" id="option-clickable">
+  <code class="key">
+    clickable:
+  </code>
+  <span class="default">
+    Default value:
+    <code>true</code>
+  </span>
+  <span class="description">
+    <p>
+      Any element initialized with Shubox will, by default, trigger the
+      file dialog when clicked.
+    </p>
+
+    <p>
+      Setting this to <code>false</code> will turn it off, but will still
+      allow dragging and dropping into the element.
+    </p>
+
+    <p>
+      Changing the value to a <strong>valid</strong> CSS selector pointing
+      to <strong>another</strong> element will allow that other element to
+      trigger the file dialog instead of the main target element Shubox is
+      initialized with. For a more comprehensive example see
+      <a href="/blog/2016/08/05/how-thredded-uses-shubox">this blog
+        post</a> for a common use case where this is utilized.
+    </p>
+  </span>
+</div>
+
+<div class="b" id="option-preview-template">
+  <code class="key">
+    previewTemplate:
+  </code>
+
+  <span class="default">
+
+    '<div class=\"dz-preview dz-file-preview\">' +
+    '  <div class=\"dz-details\">' +
+    '    <div class=\"dz-filename\"><span data-dz-name></span></div>' +
+    '    <div class=\"dz-size\" data-dz-size></div>' +
+    '    <img data-dz-thumbnail />' +
+    '  </div>' +
+    '  <div class=\"dz-progress\"><span class=\"dz-upload\" data-dz-uploadprogress></span></div>' +
+    '  <div class=\"dz-success-mark\"><span>✔</span></div>' +
+    '  <div class=\"dz-error-mark\"><span>✘</span></div>' +
+    '  <div class=\"dz-error-message\"><span data-dz-errormessage></span></div>' +
+    '</div>'
+
+  </span>
+  <span class="description">
+    <p>
+      Because much of the JS under the hood is handled by the excellent <a
+        href="http://www.dropzonejs.com/">dropzone.js</a> javascript library
+      Shubox makes use of its conventions where it makes sense. The
+      <code>previewTemplate</code> option takes a string containing an html
+      template which Dropzone will use to render a preview image for each
+      dropped image. For more information on how to theme the elements
+      generated by the default string <a
+        href="http://www.dropzonejs.com/#theming" target="_blank">you may
+        visit the DropzoneJS website</a> and get an idea for what you can do
+      by "theming" the resulting UI.
+    </p>
+  </span>
+</div>
+<div class="b" id="option-extra-params">
+  <code class="key">
+    extraParams:
+  </code>
+  <span class="default">
+    Default value:
+    <code>{}</code>
+  </span>
+  <span class="description">
+    <p>
+      Shubox provides a mechanism with which to post custom data via an
+      AJAX webhook, to any address of your own choosing, whenever files are
+      uploaded through your website. This allows you to share any
+      information available during your users' session. For example, you
+      may send data about the uploaded files alongside a user's ID or
+      email. It's not uncommon to want to know WHO is uploading a
+      particular file, no?
+    </p>
+  </span>
+</div>

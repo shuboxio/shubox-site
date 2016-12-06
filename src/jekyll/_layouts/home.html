@@ -1,22 +1,238 @@
 ---
 layout: default
 ---
-<div class="home">
-  <h1 class="page-heading">Posts</h1>
 
-  {{ content }}
+<div class="b home-header-block">
+  <div class="c">
+    <div class="g -half">
+      <div class="gi"></div>
+      <div class="gi">
+        <h1 class="headline -large">
+          The simplest and fastest way for your web-app to upload images <strong>directly</strong> to Amazon S3
+        </h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <h2 class="headline">
+          Configuring back-end libraries, front-end drag-n-drop libraries, monitoring
+          resources on your app servers, processing files and re-uploading to S3 ...
+          leave that work to <em>shubox.io</em> and get back to your other features!
         </h2>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+        <a href="#" class="btn -large" id="sign-up-now">Sign up. Start uploading now!</a>
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="b features-block">
+  <div class="c">
+    <div class="g -thirds">
+
+      <div class="gi">
+        <h2 class="headline -large">1000% Customiziable</h2>
+        <p>
+          Nothing is worse than tools that dictate design. Shubox is hear
+          to help you, not tell you what to do.
+        </p>
+      </div>
+
+      <div class="gi">
+        <h2 class="headline -large">Developer Power Tools</h2>
+        <p>
+          Webhooks can be configured to hit your app server with information about all uploaded, and post-processed files.
+        </p>
+      </div>
+
+      <div class="gi">
+        <h2 class="headline -large">3-minute Setup</h2>
+        <p>
+          Configuring back-end libraries, front-end drag-n-drop libraries, monitoring
+          resources on your app servers, processing files and re-uploading to S3 ...
+          leave that work to <em>shubox.io</em> and get back to your other features!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="b code-example-block">
+  <div class="c">
+    <div class="g -half">
+
+      <div class="gi">
+        <h2 class="headline -large">The avatar example</h2>
+        <p>
+          In the `div` above you'll see that there is a data attribute called `data-shubox-progress`. Shubox
+          will update that data attribute with the upload percentage. This allows you to style your element
+          how you'd like, based on the upload progress. It's how the "fill up" effect is accomplished in this
+          particular demo. *Note:* You do NOT have to add that attribute for it to work - it will be added
+          automatically upon file upload.
+
+          Also of now `previewsContainer:false`. Setting `previewsContainer` to false will keep the element
+          from inserting the preview template upon initial upload.
+        </p>
+      </div>
+
+      <div class="gi">
+```html
+<div class="javascript avatar-image"
+     id="avatar-image"
+     data-shubox-progress='0'
+     data-shubox-uploader-name="production-avatar-image"></div>
+
+<script>
+  new Shubox(
+    '#avatar-image', {
+      previewsContainer: false,
+      success: function(file){
+        img = new Image();
+        img.onload = function(){
+          $('.avatar-image').append('<img src="'+ file.s3url + '">');
+        };
+        img.src = file.s3url;
+      },
+      error: function(file, message){
+        alert("Oops! There was an error: \n" + message);
+      }
+    }
+  );
+</script>
+```
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="b testimonials-block">
+  <div class="c">
+    <div class="g -half">
+      <div class="gi">
+        <h2 class="headline">Testimonial - Tim Diggins</h2>
+        <p>
+          When we needed image uploads for a messaging area on a client site,
+          we decided to try out Shubox — just for a month initially. Our
+          rationale was: quicker to deliver to client, more time left to spend
+          on the unique issues of the app, and less code in our repo, so easier
+          to maintain. Our plan was we would migrate away from Shubox when we
+          had some feature that they couldn’t provide, or when the price payoff
+          didn’t work any more. We just haven’t needed to migrate — judging
+          from client satisfaction and developer team happiness, this has been
+          a good choice.
+        </p>
+        <p>
+          Tim Diggins<br>
+          Founder @ <a href="http://www.red56.co.uk/" target="_blank">Red56</a>
+        </p>
+      </div>
+      <div class="gi">
+        <h2 class="headline">Testimonial - Nick Gauthier</h2>
+        <p>
+          Shubox is a super easy way to upload files to S3. I love that I
+          didn't have to build in file management into my app and I could just
+          focus on what was important to my customers.
+        </p>
+        <p>
+          Nick Gauthier<br>
+          Founder @ <a href="http://www.meetspaceapp.com/" target="_blank">MeetSpace</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="b cta-block">
+  <div class="c">
+    <div class="g -full">
+      <div class="gi">
+        <h2 class="headline -medium">You could have been up and running already.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.
+        </p>
+        <a href="#" class="btn">Get Started</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    $('#view-code--avatar').on('click', function(e){
+      e.preventDefault();
+      $('#avatar-example')
+        .get(0)
+        .className = 'sample-modal sample-modal--visible animated zoomIn';
+    });
+
+    $('#view-code--input').on('click', function(e){
+      e.preventDefault();
+      $('#input-example')
+        .get(0)
+        .className = 'sample-modal sample-modal--visible animated zoomIn';
+    });
+
+    $('.sample-modal .remove').on('click', function(e){
+      e.preventDefault();
+      $('#avatar-example').get(0).className = 'sample-modal';
+      $('#input-example').get(0).className = 'sample-modal';
+    });
+
+    new Shubox(
+      '#avatar-image', {
+        previewsContainer: false,
+        success: function(file){
+          img = new Image();
+          img.onload = function(){
+            $('.avatar-image').append(
+              '<img src="'+
+                file.s3url +
+                '" class="animated flipInY" />'
+            );
+          };
+          img.src = file.s3url;
+
+          mixpanel.track("Avatar Uploaded", {
+            "file": file.name,
+            "size": file.size
+          });
+        },
+        error: function(file, message){
+          mixpanel.track("Avatar Upload Failure", {
+            "file": file.name,
+            "size": file.size,
+            "message": message,
+          });
+
+          alert("Oops! There was an error: \n" + message);
+        }
+      }
+    );
+
+    new Shubox(
+      '#file_url', {
+        textBehavior: 'append',
+        success: function(file){
+          $('.user-ux form input')
+            .after('<div class="input-upload-success animated tada" data-clipboard-target="#file_url">🎉 SUCCESS! Click here to copy URL.</div>');
+
+          new Clipboard('.input-upload-success');
+
+          mixpanel.track("File Uploaded", {
+            "file": file.name,
+            "size": file.size
+          });
+        },
+        error: function(file, message){
+          mixpanel.track("File Upload Failure", {
+            "file": file.name,
+            "size": file.size,
+            "message": message,
+          });
+
+          alert("Oops! There was an error: \n" + message);
+        }
+      }
+    );
+
+    setTimeout(function(){
+      $('#sign-up-now').addClass('animated tada');
+    }, 1200);
+  </script>
