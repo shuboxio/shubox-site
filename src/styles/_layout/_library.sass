@@ -4,6 +4,7 @@
 
 .library
   background: $white
+
   .g.nav
     display: block
 
@@ -11,7 +12,6 @@
       display: flex
       flex-flow: row wrap
       min-height: 100vh
-
 
     > .gi
       margin: 0
@@ -33,99 +33,62 @@
 
 
 // ============================================================
-// Neue Styles
+// Library Styles
 // ============================================================
 
-.neue-login
-  align-items: center
-  display: flex
-  justify-content: center
-  padding: rem(200)
-  text-align: center
+.library-header
+  border-bottom: 1px solid $light-gray
+  padding: rem(20) 0
 
-  img
-    margin-bottom: rem(30)
+  .c
+    display: flex
 
-  input[type="text"],
-  input[type="password"]
-    margin-bottom: rem(20)
-    width: 100%
-
-  input[type="submit"]
-    color: $link-color
-    font-size: rem(20)
-
-.neue-title
-  font-size: rem(45)
-  line-height: 1
-
-.neue-intro
-  margin-bottom: rem(100)
-  padding-top: rem(100)
-
-.neue-section
-  margin: 0 0 rem(80)
-
-  .plain
+  .gi
     margin-bottom: 0
 
-.neue-header
-  border-bottom: rem(3) solid $dark-gray
-  margin: rem(50) 0 rem(10)
-  padding: rem(6) 0
+  .gi:last-child
+    text-align: right
 
-  &.g
-    align-items: baseline
+.library-section
+  padding-top: 6%
 
-  .gi
+.library-home
+  padding-top: 6%
+  max-width: rem(600)
 
-    +mq-min(em(700))
+.library-style
+  margin-bottom: 4%
+  padding-bottom: 4%
+  border-bottom: 1px solid $light-gray
 
-      &:first-child
-        +grid-item(3,1)
-        margin-bottom: 0
+  code
+    display: inline-block
+    margin-bottom: rem(20)
 
-      &:last-child
-        +grid-item(3,2)
-        margin-bottom: 0
+// ------------------------------------------------------------
+// Grids
+// ------------------------------------------------------------
 
-.neue-grids
+.library-grids
 
-  .gi
-    background: $light-red
-    display: flex
-    flex-flow: row wrap
-    justify-content: center
-    padding: rem(8)
-
-  .neue-style
-    border-bottom: none
-    padding-bottom: rem(15)
-
-.neue-style
-  align-items: flex-start
-  border-bottom: rem(1) solid $light-gray
-  margin-top: rem(30)
-  padding-bottom: rem(30)
+  code
+    margin-bottom: rem(8)
+    display: inline-block
 
   .gi
-
-    +mq-min(em(700))
-
-      &:first-child
-        +grid-item(3,1)
-        margin-bottom: 0
-
-      &:last-child
-        +grid-item(3,2)
-        margin-bottom: 0
-
+    background: $blue
+    color: $white
+    text-align: center
+    padding: rem(6)
+    font-size: rem(11)
+    text-transform: uppercase
+    letter-spacing: .1em
 
 // ------------------------------------------------------------
 // Colors
 // ------------------------------------------------------------
 
-.neue-colors
+.library-colors
 
   code
     display: block

@@ -22,8 +22,7 @@ description: >
 
 # Site-wide defaults
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
@@ -33,11 +32,10 @@ defaults:
 markdown: kramdown
 gems:
   - jekyll-feed
-keep_files:
-  - ./js/
-  - ./css/
 
 # Collections
 collections:
   - docs
   - faqs
+
+  
