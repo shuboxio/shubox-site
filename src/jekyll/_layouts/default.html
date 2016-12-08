@@ -14,99 +14,12 @@
   </head>
   <body>
 
-  <div class="global-header">
-     <div class="c">
-       <nav class="g">
-
-         <div class="gi">
-           <h1 class="logo">
-             <a href="/">
-               {% include logo.svg %}
-             </a>
-           </h1>
-
-           <span>
-             <button type="button" id="menu-toggle" class="btn -small -outline" name="menu">Menu</button>
-           </span>
-         </div><!-- .gi -->
-
-         <div class="gi main-nav">
-           <a href="/pricing">Pricing</a>
-           <a href="/docs">Docs</a>
-           <a href="/faqs">FAQs</a>
-           <a href="/demos">Demos</a>
-           <a href="/sign_up">Sign Up</a>
-         </div>
-       </nav>
-     </div>
-    </div>
+    {% include header.liquid %}
 
     <main>
       {{ content }}
     </main>
 
-    <footer class="global-footer">
-      <div class="c">
-        <div class="g layout-subnav">
-
-          <div class="gi">
-            <h3 class="title">Contact</h3>
-            <ul class="footer-navigation-list">
-              <li class="footer-navigation-item">
-                <a href="https://twitter.com/shuboxio">@Shubox</a>
-              </li>
-              <li class="footer-navigation-item">
-                <a href="mailto:joel@shubox.io">joel@shubox.io</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="gi">
-            <div id="mc_embed_signup" class="newsletter-sign-up">
-              <header class="newsletter-header" id="newsletter">
-                <h1 class="title">Newsletter</h1>
-
-                <p>
-                  You'll get time saving tips for file upload, notifications about when
-                  we launch, early and open access to beta, and direct help from the
-                  shubox team.
-                </p>
-              </header>
-
-              <!-- Begin MailChimp Signup Form -->
-              <div id="mc_embed_signup">
-                <form
-                   action="//shubox.us12.list-manage.com/subscribe/post?u=a3a4a889a5f3ff0320a62c23b&amp;id=12b17c8654"
-                   method="post"
-                   id="mc-embedded-subscribe-form"
-                   name="mc-embedded-subscribe-form"
-                   class="validate" novalidate>
-
-                  <div id="mc_embed_signup_scroll">
-                    <div class="mc-field-group">
-                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="> Your Email">
-                    </div>
-
-                    <div id="mce-responses" class="clear">
-                      <div class="response" id="mce-error-response" style="display:none"></div>
-                      <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                      <input type="text" name="b_a3a4a889a5f3ff0320a62c23b_12b17c8654" tabindex="-1" value="">
-                    </div>
-
-                    <div class="clear">
-                      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn -outline -small">
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <!--End mc_embed_signup-->
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    {% include footer.liquid %}
   </body>
 </html>

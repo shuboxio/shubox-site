@@ -13,8 +13,7 @@ description: >
 
 # Site-wide defaults
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:

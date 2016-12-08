@@ -2,87 +2,60 @@
 layout: default
 ---
 
-<div class="b home-header-block">
-  <div class="c">
-    <div class="g -half">
-      <div class="gi"></div>
-      <div class="gi">
-        <h1 class="headline -large">
-          The simplest and fastest way for your web-app to upload images <strong>directly</strong> to Amazon S3
-        </h1>
+<div class="c b">
+  <h1 class="headline -large">The simplest and fastest way for your web-app to upload images directly to Amazon S3</h1>
+  <p>
+    Configuring back-end libraries, front-end drag-n-drop libraries, monitoring
+    resources on your app servers, processing files and re-uploading to S3 ...
+    leave that work to <em>shubox.io</em> and get back to your other features!
+  </p>
+  <a href="#" class="btn -large" id="sign-up-now">Sign up. Start uploading now!</a>
+</div>
 
-        <h2 class="headline">
-          Configuring back-end libraries, front-end drag-n-drop libraries, monitoring
-          resources on your app servers, processing files and re-uploading to S3 ...
-          leave that work to <em>shubox.io</em> and get back to your other features!
-        </h2>
+<div class="c b">
+  <h2 class="b headline -large">[[ The Plans ]]</h2>
 
-        <a href="#" class="btn -large" id="sign-up-now">Sign up. Start uploading now!</a>
-      </div>
+  <div class="g -half">
+
+    <div class="gi">
+      <h3 class="headline -medium">The Uploader</h3>
+      <ul>
+        <li>Easy upload to S3</li>
+        <li>Webhooks/JavaScript Callbacks</li>
+        <li>$XXX</li>
+      </ul>
+      <a href="#">Sign Up</a>
     </div>
+
+    <div class="gi">
+      <h3 class="headline -medium">The Transformer</h3>
+      <ul>
+        <li>Easy upload to S3</li>
+        <li>Uploads can be transformed, chopped, screwed, manipulated</li>
+        <li>Webhook/JavaScript callbacks containing information for every image upload sent to your endpoint of choice.</li>
+        <li>$XXX</li>
+      </ul>
+      <a href="#">Sign Up</a>
+    </div>
+
   </div>
 </div>
 
-<div class="b features-block">
-  <div class="c">
-    <div class="g -thirds">
-
-      <div class="gi">
-        <h2 class="headline -large">1000% Customiziable</h2>
-        <p>
-          Nothing is worse than tools that dictate design. Shubox is hear
-          to help you, not tell you what to do.
-        </p>
-      </div>
-
-      <div class="gi">
-        <h2 class="headline -large">Developer Power Tools</h2>
-        <p>
-          Webhooks can be configured to hit your app server with information about all uploaded, and post-processed files.
-        </p>
-      </div>
-
-      <div class="gi">
-        <h2 class="headline -large">3-minute Setup</h2>
-        <p>
-          Configuring back-end libraries, front-end drag-n-drop libraries, monitoring
-          resources on your app servers, processing files and re-uploading to S3 ...
-          leave that work to <em>shubox.io</em> and get back to your other features!
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="b code-example-block">
-  <div class="c">
-    <div class="g -half">
-
-      <div class="gi">
-        <h2 class="headline -large">The avatar example</h2>
-        <p>
-          In the `div` above you'll see that there is a data attribute called `data-shubox-progress`. Shubox
-          will update that data attribute with the upload percentage. This allows you to style your element
-          how you'd like, based on the upload progress. It's how the "fill up" effect is accomplished in this
-          particular demo. *Note:* You do NOT have to add that attribute for it to work - it will be added
-          automatically upon file upload.
-
-          Also of now `previewsContainer:false`. Setting `previewsContainer` to false will keep the element
-          from inserting the preview template upon initial upload.
-        </p>
-      </div>
-
-      <div class="gi">
-        <div class="avatar-image"
-           id="avatar-image"
-           data-shubox-transform="avatar-demo"></div>
-      </div>
-    </div>
-  </div>
+<div class="c b">
+  <h2 class="b headline -large">[[ The Example ]]</h2>
+  <p>
+    ============================== <br>
+    A very sweet example goes here <br>
+    ============================== <br>
+  </p>
+  <a href="#">See more examples</a>
 </div>
 
 <div class="b testimonials-block">
   <div class="c">
+
+    <h2 class="b headline -large">[[ The Testimonials ]]</h2>
+
     <div class="g -half">
       <div class="gi">
         <h2 class="headline">Testimonial - Tim Diggins</h2>
@@ -133,23 +106,23 @@ layout: default
 </div>
 
 <script>
-new Shubox(
-  '#avatar-image', {
-    previewsContainer: false,
-    success: function(file){
-      img = new Image();
-      img.onload = function(){
-        $('.avatar-image').append(
-            '<img src="'+
-            file.s3url +
-            '" class="animated flipInY" />'
-            );
-      };
-      img.src = file.s3url;
-    },
-    error: function(file, message){
-      alert("Oops! There was an error: \n" + message);
-    }
-  }
-);
+// new Shubox(
+//   '#avatar-image', {
+//     previewsContainer: false,
+//     success: function(file){
+//       img = new Image();
+//       img.onload = function(){
+//         $('.avatar-image').append(
+//             '<img src="'+
+//             file.s3url +
+//             '" class="animated flipInY" />'
+//             );
+//       };
+//       img.src = file.s3url;
+//     },
+//     error: function(file, message){
+//       alert("Oops! There was an error: \n" + message);
+//     }
+//   }
+// );
 </script>
