@@ -2,31 +2,18 @@
 layout: page
 ---
 
-<header class="page-header-block">
+<hr class="b">
+
+<header class="b page-header-block">
   <div class="c">
     <h1 class="headline -large">Frequently Asked Questions</h1>
   </div>
 </header>
 
-<div class="c">
-  <div class="g layout-subnav">
-    <div class="gi subnav">
-      <h2 class="headline">Amazon S3</h2>
-      <ul class="plain">
-        <li><a href="#">What is an IAM?</a></li>
-        <li><a href="#">Why does Shubox need my S3 credentials?</a></li>
-        <li><a href="#">What permissions does Shubox need?</a></li>
-        <li><a href="#">How do I allow permissions on S3?</a></li>
-        <li><a href="#">What about granular permissions?</a></li>
-        <li><a href="#">Give me even more control.</a></li>
-      </ul>
+<hr class="b">
 
-      <h2 class="headline">Development</h2>
-      <ul class="plain">
-        <li><a href="#">What information does Shubox need about my website?</a></li>
-        <li><a href="#">What if I use localhost:3000 as my development server?</a></li>
-      </ul>
-    </div>
+<div class="c">
+  <div class="g">
     <div class="gi">
       <div class="content-area">
         {% assign faqs = site.faqs | sort: "order" %}
@@ -38,3 +25,5 @@ layout: page
     </div>
   </div>
 </div>
+
+<hr class="b">

@@ -2,63 +2,76 @@
 layout: default
 ---
 
+<hr class="b">
+
 <div class="c b">
-  <h1 class="headline -large">The simplest and fastest way for your web-app to upload images directly to Amazon S3</h1>
-  <p>
-    Configuring back-end libraries, front-end drag-n-drop libraries, monitoring
-    resources on your app servers, processing files and re-uploading to S3 ...
-    leave that work to <em>shubox.io</em> and get back to your other features!
-  </p>
-  <a href="#" class="btn -large" id="sign-up-now">Sign up. Start uploading now!</a>
+  <h1 class="headline -large">Simple. Fast. Customizable.</h1>
+  <p>Upload images from your web app directly to Amazon S3.</p>
+  <a href="#" class="btn -large" id="sign-up-now">Sign up</a>
 </div>
 
-<div class="c b">
-  <h2 class="b headline -large">[[ The Plans ]]</h2>
+<hr class="b">
 
+<div class="c b">
+  <h2 class="headline -large">Give it a whirl!</h2>
+  <div class="circle" style="border-radius: 100%;
+  background: #ccc;
+  border: 4px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;">
+    Drop an<br> image file here
+  </div>
+  <a class="btn -small" href="#">See the code</a>
+  <a class="btn -small -outline" href="#">See more examples</a>
+</div>
+
+<hr class="b">
+
+<div id="pricing" class="c b">
   <div class="g -half">
 
     <div class="gi">
-      <h3 class="headline -medium">The Uploader</h3>
-      <ul>
+      <h3 class="headline -medium">
+        The Uploader <br>
+        <span class="title">$XXX/month</span>
+      </h3>
+
+      <ul class="plain">
         <li>Easy upload to S3</li>
         <li>Webhooks/JavaScript Callbacks</li>
-        <li>$XXX</li>
       </ul>
-      <a href="#">Sign Up</a>
+      <a class="btn" href="#">Sign Up</a>
     </div>
 
     <div class="gi">
-      <h3 class="headline -medium">The Transformer</h3>
-      <ul>
+      <h3 class="headline -medium">
+        The Transformer <br>
+        <span class="title">$XXX/month</span>
+      </h3>
+
+      <ul class="plain">
         <li>Easy upload to S3</li>
         <li>Uploads can be transformed, chopped, screwed, manipulated</li>
         <li>Webhook/JavaScript callbacks containing information for every image upload sent to your endpoint of choice.</li>
-        <li>$XXX</li>
       </ul>
-      <a href="#">Sign Up</a>
+      <a class="btn" href="#">Sign Up</a>
     </div>
 
   </div>
 </div>
 
-<div class="c b">
-  <h2 class="b headline -large">[[ The Example ]]</h2>
-  <p>
-    ============================== <br>
-    A very sweet example goes here <br>
-    ============================== <br>
-  </p>
-  <a href="#">See more examples</a>
-</div>
+<hr class="b">
 
 <div class="b testimonials-block">
   <div class="c">
 
-    <h2 class="b headline -large">[[ The Testimonials ]]</h2>
-
-    <div class="g -half">
+    <div class="g">
+      <!--
       <div class="gi">
-        <h2 class="headline">Testimonial - Tim Diggins</h2>
         <p>
           When we needed image uploads for a messaging area on a client site,
           we decided to try out Shubox — just for a month initially. Our
@@ -75,8 +88,8 @@ layout: default
           Founder @ <a href="http://www.red56.co.uk/" target="_blank">Red56</a>
         </p>
       </div>
+       -->
       <div class="gi">
-        <h2 class="headline">Testimonial - Nick Gauthier</h2>
         <p>
           Shubox is a super easy way to upload files to S3. I love that I
           didn't have to build in file management into my app and I could just
@@ -89,40 +102,14 @@ layout: default
       </div>
     </div>
   </div>
+  <span class="headline -large">•◦••</span>
 </div>
 
-<div class="b cta-block">
-  <div class="c">
-    <div class="g -full">
-      <div class="gi">
-        <h2 class="headline -medium">You could have been up and running already.</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.
-        </p>
-        <a href="#" class="btn">Get Started</a>
-      </div>
-    </div>
-  </div>
+<hr class="b">
+
+<div class="c b">
+  <h2 class="headline -large">Give Shubox a try.</h2>
+  <a href="#" class="btn">Sign up now</a>
 </div>
 
-<script>
-// new Shubox(
-//   '#avatar-image', {
-//     previewsContainer: false,
-//     success: function(file){
-//       img = new Image();
-//       img.onload = function(){
-//         $('.avatar-image').append(
-//             '<img src="'+
-//             file.s3url +
-//             '" class="animated flipInY" />'
-//             );
-//       };
-//       img.src = file.s3url;
-//     },
-//     error: function(file, message){
-//       alert("Oops! There was an error: \n" + message);
-//     }
-//   }
-// );
-</script>
+<hr class="b">
