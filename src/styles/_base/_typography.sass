@@ -31,7 +31,6 @@ pre
 code
   font-family: $monospace
   font-size: rem(14)
-  background: $light-yellow
   padding: rem(4)
 
 
@@ -72,11 +71,9 @@ h1, h2, h3, h4, h5, h6
       font-size: rem(33)
 
   h2
-    color: $green
     font-size: em(20)
     line-height: 1.125
     margin: 0 0 em(16)
-    border-bottom: 1px solid $off-white
     padding-bottom: rem(11)
 
     +mq-min(em(1080))
@@ -87,7 +84,6 @@ h1, h2, h3, h4, h5, h6
       padding-top: 1em
 
   h3
-    color: $green
     font-size: em(18)
     line-height: 1.29
     margin: 0 0 em(16)
@@ -117,31 +113,11 @@ h1, h2, h3, h4, h5, h6
     text-transform: uppercase
 
   p
-    font-family: $monospace
-    font-size: rem(14)
+
 
 
   a
     text-decoration: underline
-
-  // Docs Page
-  .key
-    font-size: rem(15)
-
-  .default
-    border-bottom: 1px solid $off-white
-    border-top: 1px solid $off-white
-    color: $gray
-    display: block
-    font-size: rem(13)
-    margin-bottom: rem(16)
-    margin-top: rem(5)
-    padding: rem(15) 0 rem(13)
-    width: 100%
-
-    code
-      background: none
-
 
 
 // ------------------------------------------------------------
@@ -150,9 +126,9 @@ h1, h2, h3, h4, h5, h6
 
 ol,
 ul
-  @extend p
-  margin-bottom: 1em
-  // padding-left: 1.3em
+  // @extend p
+  // margin-bottom: 1em
+  // padding-left: 1.4em
 
 ul
   list-style-type: disc
@@ -198,10 +174,8 @@ a
 .subnav
 
   .headline
-    color: $green
-    margin-bottom: rem(30)
-    border-bottom: 1px solid $off-white
-    padding-bottom: rem(10)
+    margin-bottom: em(16)
+    // padding-bottom: rem(10)
 
     &:not(:first-of-type)
       padding-top: rem(30)
@@ -214,7 +188,7 @@ a
   ul
     max-width: rem(300)
     display: block
-    font-family: $monospace
+    // font-family: $monospace
     font-size: rem(14)
     margin-bottom: rem(36)
 
@@ -224,19 +198,12 @@ a
       margin-left: rem(15)
       padding-right: rem(15)
 
-      &:before
-        content: '> '
-
-
-
-
 
 // ------------------------------------------------------------
 // Titles
 // ------------------------------------------------------------
 
 .title
-  color: $green
   font-size: rem(13)
   letter-spacing: .1em
   text-transform: uppercase
@@ -261,10 +228,12 @@ a
   &.-medium,
   &.-medium p
     font-size: rem(21)
+    margin-bottom: em(12)
 
   &.-large,
   &.-large p
     font-size: rem(30)
+    margin-bottom: em(2)
 
   &.-xlarge,
   &.-xlarge p
