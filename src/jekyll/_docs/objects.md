@@ -1,6 +1,6 @@
 ---
 title: File Object
-order: 4
+order: 3
 ---
 
 <a id="type-file"></a>
