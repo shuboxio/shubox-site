@@ -1,6 +1,6 @@
 ---
 title: JavaScript API
-order: 3
+order: 2
 ---
 
 <div class="b" id="option-success">
