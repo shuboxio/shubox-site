@@ -10,8 +10,10 @@ const changed = require('gulp-changed')
 // ============================================================
 gulp.task('jekyll-build', (done) => {
   return cp.spawn(
-    'jekyll',
+    'bundle',
     [
+      'exec',
+      'jekyll',
       'build',
       '--source',
       config.shuboxWeb.jekyll.src,
