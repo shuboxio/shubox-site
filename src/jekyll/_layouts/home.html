@@ -73,32 +73,10 @@ layout: default
       </div>
 
       <div class="gi">
-```html
-<div class="javascript avatar-image"
-     id="avatar-image"
-     data-shubox-progress='0'
-     data-shubox-uploader-name="production-avatar-image"></div>
-
-<script>
-  new Shubox(
-    '#avatar-image', {
-      previewsContainer: false,
-      success: function(file){
-        img = new Image();
-        img.onload = function(){
-          $('.avatar-image').append('<img src="'+ file.s3url + '">');
-        };
-        img.src = file.s3url;
-      },
-      error: function(file, message){
-        alert("Oops! There was an error: \n" + message);
-      }
-    }
-  );
-</script>
-```
+        <div class="avatar-image"
+           id="avatar-image"
+           data-shubox-transform="avatar-demo"></div>
       </div>
-
     </div>
   </div>
 </div>
@@ -154,85 +132,24 @@ layout: default
   </div>
 </div>
 
-  <script>
-    $('#view-code--avatar').on('click', function(e){
-      e.preventDefault();
-      $('#avatar-example')
-        .get(0)
-        .className = 'sample-modal sample-modal--visible animated zoomIn';
-    });
-
-    $('#view-code--input').on('click', function(e){
-      e.preventDefault();
-      $('#input-example')
-        .get(0)
-        .className = 'sample-modal sample-modal--visible animated zoomIn';
-    });
-
-    $('.sample-modal .remove').on('click', function(e){
-      e.preventDefault();
-      $('#avatar-example').get(0).className = 'sample-modal';
-      $('#input-example').get(0).className = 'sample-modal';
-    });
-
-    new Shubox(
-      '#avatar-image', {
-        previewsContainer: false,
-        success: function(file){
-          img = new Image();
-          img.onload = function(){
-            $('.avatar-image').append(
-              '<img src="'+
-                file.s3url +
-                '" class="animated flipInY" />'
+<script>
+new Shubox(
+  '#avatar-image', {
+    previewsContainer: false,
+    success: function(file){
+      img = new Image();
+      img.onload = function(){
+        $('.avatar-image').append(
+            '<img src="'+
+            file.s3url +
+            '" class="animated flipInY" />'
             );
-          };
-          img.src = file.s3url;
-
-          mixpanel.track("Avatar Uploaded", {
-            "file": file.name,
-            "size": file.size
-          });
-        },
-        error: function(file, message){
-          mixpanel.track("Avatar Upload Failure", {
-            "file": file.name,
-            "size": file.size,
-            "message": message,
-          });
-
-          alert("Oops! There was an error: \n" + message);
-        }
-      }
-    );
-
-    new Shubox(
-      '#file_url', {
-        textBehavior: 'append',
-        success: function(file){
-          $('.user-ux form input')
-            .after('<div class="input-upload-success animated tada" data-clipboard-target="#file_url">🎉 SUCCESS! Click here to copy URL.</div>');
-
-          new Clipboard('.input-upload-success');
-
-          mixpanel.track("File Uploaded", {
-            "file": file.name,
-            "size": file.size
-          });
-        },
-        error: function(file, message){
-          mixpanel.track("File Upload Failure", {
-            "file": file.name,
-            "size": file.size,
-            "message": message,
-          });
-
-          alert("Oops! There was an error: \n" + message);
-        }
-      }
-    );
-
-    setTimeout(function(){
-      $('#sign-up-now').addClass('animated tada');
-    }, 1200);
-  </script>
+      };
+      img.src = file.s3url;
+    },
+    error: function(file, message){
+      alert("Oops! There was an error: \n" + message);
+    }
+  }
+);
+</script>
