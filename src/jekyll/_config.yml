@@ -35,7 +35,6 @@ gems:
 
 # Collections
 collections:
+  - examples
   - docs
   - faqs
-
-  

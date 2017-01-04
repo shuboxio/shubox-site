@@ -5,7 +5,7 @@ order: 1
 
 <p>Getting up and running with Shubox was designed to be quick and easy so you can get up back to working on your project. There are two parts to setting up Shubox — connecting your Amazon S3 account to Shubox, then integrating Shubox into your website. Let’s go!</p>
 
-<h3>Amazon S3 Setup</h3>
+<h3 id="setup-amazon">Amazon S3 Setup</h3>
 
 <p>In order for Shubox to work it’s magic, it needs access to your Amazon S3 account with a few non-destructive permissions.</p>
 
@@ -39,10 +39,10 @@ order: 1
 </ul>
 <img src='/assets/4-success.png'>
 
-<h3>Connect your domain to Shubox</h3>
+<h3 id="setup-shubox">Connect your domain to Shubox</h3>
 <p>Now that your Amazon IAM user is set up, you can head over to your Shubox console and <a href="https://shubox.io/dashboard/domains/new">add a new domain</a>. A unique bit of JavaScript will be created for your domain. You’re going to need that next.</p>
 
-<h3>Website Integration</h3>
+<h3 id="setup-website">Website Integration</h3>
 <p>It’s time to fire up your code editor! We’re going to connect your website to Shubox. Front-end Integration Remember that JavaScript? Place it near the end of <code class='code-inline'>body</code> of your HTML template:</p>
 ```html
     ...
