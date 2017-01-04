@@ -28,6 +28,7 @@ keep_files:
   - ./js/
   - ./css/
   - ./images/
+  - ./favicon.ico
 
 # Collections
 collections:
