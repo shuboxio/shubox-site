@@ -31,5 +31,6 @@ keep_files:
 
 # Collections
 collections:
+  - examples
   - docs
   - faqs
