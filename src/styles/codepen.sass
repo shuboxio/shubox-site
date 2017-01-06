@@ -13,7 +13,17 @@
   text-align: center
 
 .shubox--form
+  width: 95%
+  max-width: 500px
   background: white
   padding: 5rem
-  width: 500px
   margin: 0 auto
+
+// For small screen(s)
+
+@media (max-width: 600px)
+  .shubox--container
+    margin-top: .5rem
+
+  .shubox--form
+    padding: 1rem

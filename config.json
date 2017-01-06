@@ -8,6 +8,10 @@
       "src": "./src/styles",
       "dest": "./public/css"
     },
+    "images": {
+      "src": "./src/images",
+      "dest": "./public/images"
+    },
     "jekyll": {
       "src": "./src/jekyll",
       "tmp": "./tmp",
