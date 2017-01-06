@@ -1,0 +1,26 @@
+.avatar-image
+  background: url("../images/avatar.png") center center no-repeat, url("../images/purple.png") left 100% no-repeat
+  background-size: 3.5rem, 100% 0
+  border: 6px solid darken(yellow, 30%)
+  width: 7rem
+  height: 7rem
+  border-radius: 50%
+  margin: 0 auto
+  overflow: hidden
+  cursor: pointer
+  margin-top: 2rem
+
+  &:hover
+    border-color: darken(yellow, 20%)
+
+  img
+    border-radius: 50%
+    display: block
+    height: 100%
+    width: 100%
+
+@for $i from 1 through 100
+  $percentage: 100 / 100 * $i
+
+  .avatar-image[data-shubox-progress='#{$percentage}']
+    background-size: 3.5rem, 100% ($percentage * 1%)
