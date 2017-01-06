@@ -33,4 +33,3 @@ keep_files:
 collections:
   - examples
   - docs
-  - faqs
