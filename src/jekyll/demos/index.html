@@ -20,34 +20,132 @@ layout: page
     </div>
     <div class="gi">
       <div class="content-area">
+        <div class="content-demo-container" id="demo-easy-avatar">
+          <h2>Upload single avatar</h2>
+          <p>
+            Using the default rendered <code>previewContainer</code> markup
+            we can show the uploaded file contents as soon
+            as it is entered, display the built-in progress bar, and a successful
+            `√` or `X` when there's an error.
+          </p>
+
+          <p data-height="400"
+             data-theme-id="dark"
+             data-slug-hash="bgNKmR"
+             data-default-tab="js,result"
+             data-user="shubox"
+             data-embed-version="2"
+             data-pen-title="Simple avatar Upload with shubox.io"
+             class="codepen">
+
+            See the Pen <a href="http://codepen.io/shubox/pen/bgNKmR/">Simple avatar Upload with shubox.io</a>
+            by Team Shubox (<a href="http://codepen.io/shubox">@shubox</a>) on <a href="http://codepen.io">CodePen</a>.
+          </p>
+
+        </div>
         <div class="content-demo-container" id="demo-single-file">
 
-          <div class="content-demo">
-            <h2>Avatar Upload</h2>
+          <h2>Slightly fancier avatar upload with shubox.io</h2>
 
-            <p data-height="304"
-              data-theme-id="dark"
-              data-slug-hash="dNPyQV"
-              data-default-tab="html,result"
-              data-user="shubox"
-              data-embed-version="2"
-              data-pen-title="Avatar Upload with shubox.io"
-              class="codepen">
+          <p>
+            To achieve a slightly more fancy experience we can turn off the
+            `previewsContainer` setting and insert the resulting image
+            ourselves with appropriate class names that will result in a
+            flip-in effect using the animate.css library. In addition the
+            progress of the upload can be customized based on the data
+            attribute applied to the base element. This allows for control more
+            finely tuned than an element that merrely changes the width
+            property.
+          </p>
 
-              See the Pen <a href="http://codepen.io/shubox/pen/dNPyQV/">Avatar Upload with shubox.io</a>
-              by Team Shubox (<a href="http://codepen.io/shubox">@shubox</a>) on <a href="http://codepen.io">CodePen</a>.
-            </p>
-            <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-          </div>
+          <p>
+            The upload progress css, it should be noted, can be styled with a
+            sass for loop that will change the display based on the percentage
+            of completion.
+          </p>
+
+          <p data-height="400"
+             data-theme-id="dark"
+             data-slug-hash="dNPyQV"
+             data-default-tab="js,result"
+             data-user="shubox"
+             data-embed-version="2"
+             data-pen-title="Slightly fancier avatar upload with shubox.io"
+             class="codepen">
+
+            See the Pen <a href="http://codepen.io/shubox/pen/dNPyQV/">Slightly fancier avatar upload with shubox.io</a>
+            by Team Shubox (<a href="http://codepen.io/shubox">@shubox</a>) on <a href="http://codepen.io">CodePen</a>.
+          </p>
         </div>
 
         <div class="content-demo-area" id="demo-forms">
           <h2>Form Elements</h2>
 
+          <p>
+            Clicking into <code>&lt;input/&gt;</code>
+            will trigger the upload dialog, will upload
+            the file and replace the contents of the
+            element.
+          </p>
+
+          <p>
+            The <code>&lt;textarea/&gt;</code> will
+            behave as usual unless you drag and drop
+            images into the body of it. If you click the
+            adjacent <code>&lt;div/&gt;</code> it will
+            trigger the file dialog on behalf of the
+            textarea. Successfully uploaded files will be
+            appended to the end of the textarea as a markdown
+            image tag.
+          </p>
+
+          <p>
+            Note that if you are using Google Chrome you are able to paste
+            image data in your clipboard into the two form elements directly.
+            Shubox will create a new file for you with that data and return
+            the resulting URL.
+          </p>
+
+          <p data-height="400"
+             data-theme-id="dark"
+             data-slug-hash="qRdddM"
+             data-default-tab="js,result"
+             data-user="shubox"
+             data-embed-version="2"
+             data-pen-title="Uploading in, and through, forms with shubox.io"
+             class="codepen">
+
+            See the Pen <a href="http://codepen.io/shubox/pen/qRdddM/">Uploading in, and through, forms with shubox.io</a>
+            by Team Shubox (<a href="http://codepen.io/shubox">@shubox</a>) on <a href="http://codepen.io">CodePen</a>.
+          </p>
         </div>
 
         <div class="content-demo-area" id="demo-multiple-files">
           <h2>Multiple files uploading</h2>
+
+          <p>
+            By assigning the target `previewsContainer` to an adjacent div
+            we can style and display the thumbnails along with their upload
+            progress, and resulting success or failure state.
+          </p>
+
+          <p>
+            Most of the work here is done in the stylesheet, with only the
+            `previewContainer` being changed in the shubox initializer.
+          </p>
+
+          <p data-height="400"
+             data-theme-id="dark"
+             data-slug-hash="qRdddM"
+             data-default-tab="js,result"
+             data-user="shubox"
+             data-embed-version="2"
+             data-pen-title="Uploading multiple files"
+             class="codepen">
+
+            See the Pen <a href="http://codepen.io/shubox/pen/qRdddM/">Uploading multiple files</a>
+            by Team Shubox (<a href="http://codepen.io/shubox">@shubox</a>) on <a href="http://codepen.io">CodePen</a>.
+          </p>
         </div>
 
         <div class="content-demo-area" id="demo-upload-webhook">
@@ -57,3 +155,5 @@ layout: page
     </div>
   </div>
 </div>
+
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
