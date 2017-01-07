@@ -54,6 +54,7 @@ order: 2
   </span>
 </div>
 
+{% raw  %}
 <div class="b" id="option-s3-url-template">
   <code class="key">
     s3urlTemplate:
@@ -79,6 +80,7 @@ order: 2
     </p>
   </span>
 </div>
+{% endraw %}
 
 <div class="b" id="option-text-behavior">
   <code class="key">
@@ -127,8 +129,8 @@ order: 2
       to <strong>another</strong> element will allow that other element to
       trigger the file dialog instead of the main target element Shubox is
       initialized with. For a more comprehensive example see
-      <a href="/blog/2016/08/05/how-thredded-uses-shubox">this blog
-        post</a> for a common use case where this is utilized.
+      <a href="/blog/2016/08/05/how-thredded-uses-shubox">this blog post</a>
+      for a common use case where this is utilized.
     </p>
   </span>
 </div>
@@ -181,11 +183,16 @@ order: 2
   <span class="description">
     <p>
       Shubox provides a mechanism with which to post custom data via an AJAX
-      webhook, to any address of your own choosing, whenever files are
+      webhook to any address of your own choosing whenever files are
       uploaded. This will allow you to share any information available during
-      your users' session. For example, you may send data about the uploaded
-      files alongside a user's ID or email. It's not uncommon to want to know
-      WHO is uploading a particular file.
+      your users' session. The information within the `extraParams` hash will
+      be sent to your webhook endpoint along with the data from the uploaded
+      file.
+    </p>
+    <p>
+      As an example, you may want to send data about the uploaded
+      file(s) <em><strong>with</strong></em> a user's ID or email. It's not uncommon
+      to want to know <em><strong>who</strong></em> is uploading a particular file.
     </p>
   </span>
 </div>
