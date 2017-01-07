@@ -5,6 +5,9 @@ order: 3
 
 <a id="type-file"></a>
 
+Upon successful upload of an image the Shubox library will pass a file object
+to all JavaScript callbacks. The format of this file object follows:
+
 ```javascript
 {
   accepted: true,
