@@ -5,98 +5,71 @@
 .global-header
   $breakpoint: em(800)
 
-  +mq-min($breakpoint)
-    padding: rem(50) 0 rem(20)
-
-
   // ------------------------------------------------------------
   // Structure
   // ------------------------------------------------------------
 
-  .c
-    +mq-max($breakpoint)
-      padding: 0
-
   .g
-    align-items: center
-    display: flex
-    flex-flow: row wrap
-    justify-content: space-between
-
-  .gi
-    margin-bottom: 0
-
-    +mq-max($breakpoint)
-      display: flex
-      justify-content: space-between
-      margin: 0 auto
-      max-width: rem(1400)
-      padding: rem(20) $page-margin
-
-    &:first-child
-      order: 2
-
-    &:last-child
-      order: 1
+    padding: rem(20) 0
 
     +mq-min($breakpoint)
+      display: flex
+      flex-flow: row
+      justify-content: space-between
+      padding: rem(60) 0
 
-      &:first-child
-        +grid-item(3, 1)
-        order: 1
+  .gi
+    align-items: baseline
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    margin-bottom: 0
+    text-align: center
 
-      &:last-child
-        +grid-item(3, 2)
-        display: block !important
-        order: 2
-        text-align: right
-
+    +mq-min($breakpoint)
+      justify-content: flex-start
 
   // ------------------------------------------------------------
   // Logo
   // ------------------------------------------------------------
 
   .logo
-    margin-right: rem(25)
-    display: inline
+
+    +mq-max($breakpoint)
+      margin-bottom: rem(10)
 
     svg
-      width: rem(150)
-      height: rem(32)
-
+      fill: $red
+      height: rem(25)
+      width: rem(106)
 
   // ------------------------------------------------------------
-  // Logo
+  // Main Nav
   // ------------------------------------------------------------
 
   .main-nav
-    order: 0
-    display: none
-    background: $dark-gray
 
     +mq-min($breakpoint)
-      background: none
       display: block
+      text-align: right
 
     a
-      display: block
-      // font-family: $monospace
-      font-size: rem(15)
-
-      +mq-max($breakpoint)
-        color: $blue
-        padding: rem(15) 0
-
-        &:not(:first-child)
-          border-top: 1px solid $gray
+      color: $gray
+      display: inline-block
+      font-size: rem(14)
+      font-weight: 600
+      margin: 0 rem(15) 0 0
+      text-transform: uppercase
+      padding-top: rem(6)
 
       +mq-min($breakpoint)
-        margin-right: rem(15)
-        display: inline-block
+        margin: 0 0 0 rem(15)
 
       &.active
         text-decoration: underline
 
+      &.highlight
+        color: $red
 
   // ------------------------------------------------------------
   // Menu Toggle Button
