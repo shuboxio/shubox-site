@@ -16,6 +16,9 @@
       "src": "./src/jekyll",
       "tmp": "./tmp",
       "dest": "./public"
+    },
+    "svg": {
+      "src": "./src/svg"
     }
   }
 }
