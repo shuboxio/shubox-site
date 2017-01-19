@@ -3,6 +3,51 @@
 // ============================================================
 
 .global-footer
-
-  .gi:last-child
-    max-width: rem(600)
+  $breakpoint-sm: em(600)
+  $breakpoint-md: em(800)
+  $breakpoint-lg: em(1000)
+  
+  margin-bottom: 10%
+  
+  // ------------------------------------------------------------
+  // Structure
+  // ------------------------------------------------------------
+  
+  +mq-between($breakpoint-sm, $breakpoint-md)
+    .gi:nth-of-type(1)
+      +grid-item(6, 1)
+      
+    .gi:nth-of-type(2)
+      +grid-item(6, 2)
+      
+    .gi:nth-of-type(3)
+      +grid-item(6, 3)      
+      
+  +mq-min($breakpoint-md)
+    .gi:nth-of-type(1)
+      +grid-item(6, 1)
+      
+    .gi:nth-of-type(2)
+      +grid-item(6, 3)
+      
+    .gi:nth-of-type(3)
+      +grid-item(6, 2)            
+      
+  // ------------------------------------------------------------
+  // Elements
+  // ------------------------------------------------------------
+  
+  .logo-mark
+    width: rem(65)
+    height: rem(40)
+    margin-top: rem(4)
+    
+  h3:not(:first-child)
+    padding-top: rem(20)
+    
+  a
+    color: $gray
+    
+    &:hover,
+    &:focus
+      color: $red
