@@ -8,6 +8,8 @@ body
 
 p
   color: $gray
+  font-size: rem(18)
+  line-height: 1.7
   margin: 0 0 1em
 
 strong
@@ -47,73 +49,49 @@ blockquote
 // Headings
 // ------------------------------------------------------------
 
-h1, h2, h3, h4, h5, h6
-  font-family: $sans-serif
-
 .content-area
   max-width: rem(800)
 
   h1, h2, h3, h4, h5, h6
-
+    color: $dark-purple
+    margin-bottom: em(5)
+    
     &:not(:first-child)
       padding-top: 2em
 
-  h1
+h1
+  font-size: rem(24)
+  line-height: 1.09
+  font-weight: 600
+
+  +mq-min(em(600))
+    font-size: rem(27)
+
+  +mq-min(em(1080))
+    font-size: rem(36)
+
+h2
+  font-size: em(20)
+  line-height: 1.125
+  font-weight: 600
+  
+  +mq-min(em(1080))
+    font-size: rem(30)
+
+h3
+  font-size: em(18)
+  line-height: 1.29
+
+  +mq-min(em(800))
     font-size: rem(24)
-    line-height: 1.09
-    margin: 0 0 em(12)
 
-    +mq-min(em(600))
-      font-size: rem(27)
+h4
+  font-size: rem(21)
+  
+h5
+  font-weight: 600
 
-    +mq-min(em(1080))
-      font-size: rem(33)
-
-  h2
-    font-size: em(20)
-    line-height: 1.125
-    margin: 0 0 em(16)
-    padding-bottom: rem(11)
-
-    +mq-min(em(1080))
-      font-size: rem(27)
-
-  h2 + h3
-    &:not(:first-child)
-      padding-top: 1em
-
-  h3
-    font-size: em(18)
-    line-height: 1.29
-    margin: 0 0 em(16)
-
-    +mq-min(em(800))
-      font-size: rem(20)
-
-  h4
-    margin: 0 0 em(6)
-
-  h5
-    font-family: $sans-serif
-    font-size: rem(13)
-    font-weight: normal
-    letter-spacing: .1em
-    line-height: 1.29
-    margin: 0 0 em(6)
-    text-transform: uppercase
-
-  h6
-    color: $gray
-    font-family: $sans-serif
-    font-size: rem(13)
-    font-weight: normal
-    letter-spacing: .1em
-    margin: 0 0 em(6)
-    text-transform: uppercase
-
-  p
-
-
+p
 
   a
     text-decoration: underline
@@ -196,15 +174,17 @@ a
 // ------------------------------------------------------------
 
 .title
-  font-size: rem(13)
-  letter-spacing: .1em
-  text-transform: uppercase
-
+  color: $gray
+  font-size: rem(16)
+  
   &.-medium
-    font-size: rem(26)
+    color: $purple
+    font-size: rem(18)
 
   &.-large
-    font-size: rem(36)
+    color: $purple
+    font-size: rem(18)
+    font-weight: 600
 
 
 // ------------------------------------------------------------
@@ -214,26 +194,21 @@ a
 .headline,
 .headline p
   color: $dark-purple
-  font-size: rem(18)
+  font-size: rem(24)
   font-weight: 600
   line-height: 1.3
-  
 
   &.-medium,
   &.-medium p
-    font-size: rem(24)
+    font-size: rem(36)
     font-weight: 600
     margin-bottom: em(6)
 
   &.-large,
   &.-large p
-    font-size: rem(36)
+    font-size: rem(48)
     font-weight: 600
     margin-bottom: em(4)
-
-  &.-xlarge,
-  &.-xlarge p
-    font-size: rem(48)
 
 // ------------------------------------------------------------
 // Intros
@@ -244,11 +219,18 @@ a
   font-family: $sans-serif
   color: $purple
   font-size: rem(18)
+  
+  &.-gray
+    color: $gray
+  
+  &.-dark-gray
+    color: $dark-gray
 
   &.-medium,
   &.-medium p
-    font-size: rem(20)
+    font-size: rem(24)
 
   &.-large,
   &.-large p
-    font-size: rem(24)
+    font-size: rem(30)
+    font-weight: 600

@@ -4,7 +4,7 @@
 
 .layout-subnav
   $breakpoint: em(800)
-  align-items: baseline
+  // align-items: baseline
 
   > .gi
 
@@ -22,3 +22,17 @@
 
         .b
           text-align: left
+        
+        
+  .subnav
+    position: relative  
+    
+  #sticky
+    
+    &.-stuck
+      +mq-min(em(800))
+        padding: rem(20) rem(30) rem(20) 0
+        position: fixed
+        top: 0
+        height: 100vh
+        overflow: auto
