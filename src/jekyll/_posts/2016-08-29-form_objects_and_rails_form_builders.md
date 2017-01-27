@@ -1,3 +1,7 @@
+---
+layout: post
+title:  "Form Objects and Rails Form Builders"
+---
 
 "Convention over configuration". This mantra is a cornerstone of Rails and a large reason it's so
 enjoyable to use. Adhering to Rails' sensible defaults is often the right decision when working with

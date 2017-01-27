@@ -4,7 +4,6 @@
 
 .layout-subnav
   $breakpoint: em(800)
-  // align-items: baseline
 
   > .gi
 
@@ -16,23 +15,25 @@
 
       &:last-child
         +grid-item(3, 2)
-        text-align: left
         display: block !important
         order: 2
+        text-align: left
 
         .b
           text-align: left
-        
-        
-  .subnav
-    position: relative  
     
   #sticky
-    
-    &.-stuck
-      +mq-min(em(800))
-        padding: rem(20) rem(30) rem(20) 0
+  
+    +mq-min(em(800))
+      overflow: auto
+      padding: rem(20) rem(30) 0 0
+      
+      &.-stuck
+        max-height: 100%
         position: fixed
         top: 0
-        height: 100vh
-        overflow: auto
+          
+      &.-stuck-bottom
+        bottom: 0
+        padding: rem(20) rem(30) 0 0
+        position: absolute

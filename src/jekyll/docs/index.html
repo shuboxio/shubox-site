@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 
 {% include page-header.liquid title='Documentation' %}
@@ -44,7 +44,7 @@ layout: page
     </div>
 
     <div class="gi">
-      <div class="content-area">
+      <div class="content">
         {% assign docs = site.docs | sort: "order" %}
         {% for doc in docs %}
         <h2>{{ doc.title }}</h2>
@@ -55,5 +55,3 @@ layout: page
 
   </div>
 </div>
-
-<hr class="b">

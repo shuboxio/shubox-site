@@ -1,12 +1,22 @@
 ---
-layout: blog
+layout: default
 ---
 
-{% for post in site.posts limit:4 %}
- <article>
-   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-   <h3 class="date">{{ post.date | date_to_string }}</h3>
+{% include page-header.liquid title="Blog" %}
 
-   {{ post.content }}
- </article>
-{% endfor %}
+<div class="c">
+  <div class="g">
+    
+    <div class="gi">
+      {% for post in site.posts limit:4 %}
+       <article>
+         <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+         <h3 class="date">{{ post.date | date_to_string }}</h3>
+
+         {{ post.content }}
+       </article>
+      {% endfor %}      
+    </div>
+    
+  </div>
+</div>

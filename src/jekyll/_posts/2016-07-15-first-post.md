@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "First Post"
+---
+
 ![](http://theartaround.us/system/photos/images/52c9839ecc82497a9600b7f1/original.jpg?1388938142)
 
 Hi 👋, I'm [Joel]. I'm the founder of shubox.io. How are you?

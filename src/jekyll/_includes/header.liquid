@@ -9,12 +9,11 @@
           </a>
         </h1>
       </div>
-
       <div class="gi main-nav">
         <a href="/#pricing">Pricing</a>
-        <a href="/docs">Docs</a>
-        <a href="/demos">Demos</a>
-        <a href="/blog">Blog</a>
+        <a href="/docs"{% if page.url contains '/docs/' %} class="active"{% endif %}>Docs</a>
+        <a href="/demos"{% if page.url contains '/demos/' %} class="active"{% endif %}>Demos</a>
+        <a href="/blog"{% if page.url contains '/blog/' %} class="active"{% endif %}>Blog</a>
         <a class="highlight" href="https://dashboard.shubox.io/sign_in">Sign In</a>
       </div>
 

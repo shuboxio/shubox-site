@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "Simple Markdown Powered Rails Blog"
+---
+
 I think you'll agree that starting a brand new greenfield Rails app is a delightful experience.
 That blank slate is a sign of promise, a sign of hope, a deeeeep breath of fresh air, an
 opportunity to write your career's *best* code! You know, it makes me feel good just writing that.

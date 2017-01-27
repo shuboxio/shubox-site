@@ -49,7 +49,7 @@ blockquote
 // Headings
 // ------------------------------------------------------------
 
-.content-area
+.content
   max-width: rem(800)
 
   h1, h2, h3, h4, h5, h6
@@ -59,42 +59,46 @@ blockquote
     &:not(:first-child)
       padding-top: 2em
 
-h1
-  font-size: rem(24)
-  line-height: 1.09
-  font-weight: 600
-
-  +mq-min(em(600))
-    font-size: rem(27)
-
-  +mq-min(em(1080))
-    font-size: rem(36)
-
-h2
-  font-size: em(20)
-  line-height: 1.125
-  font-weight: 600
-  
-  +mq-min(em(1080))
-    font-size: rem(30)
-
-h3
-  font-size: em(18)
-  line-height: 1.29
-
-  +mq-min(em(800))
+  h1
     font-size: rem(24)
+    line-height: 1.09
+    font-weight: 600
 
-h4
-  font-size: rem(21)
-  
-h5
-  font-weight: 600
+    +mq-min(em(600))
+      font-size: rem(27)
 
-p
+    +mq-min(em(1080))
+      font-size: rem(36)
 
-  a
-    text-decoration: underline
+  h2
+    font-size: em(20)
+    line-height: 1.125
+    font-weight: 600
+    
+    +mq-min(em(1080))
+      font-size: rem(30)
+
+  h3
+    font-size: em(18)
+    line-height: 1.29
+
+    +mq-min(em(800))
+      font-size: rem(24)
+
+  h4
+    font-size: rem(21)
+    
+  h5
+    font-weight: 600
+
+  p,
+  ol,
+  ul
+    font-size: rem(16)
+    font-weight: normal
+
+    a
+      text-decoration: underline
 
 
 // ------------------------------------------------------------
@@ -105,7 +109,8 @@ ol,
 ul
   @extend p
   margin-bottom: 1em
-
+  list-style-position: inside
+  
 ul
   list-style-type: disc
 

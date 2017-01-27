@@ -1,24 +1,24 @@
 ---
-layout: page
+layout: default
 ---
 
-<header class="page-header-block">
-  <div class="c">
-    <h1 class="headline -large">Demos</h1>
-  </div>
-</header>
+{% include page-header.liquid title="Demos" %}
 
 <div class="c">
   <div class="g layout-subnav">
+    
     <div class="gi subnav">
-      <ul class="plain">
-        <li><a href="#demo-easy-avatar">Upload an avatar</a></li>
-        <li><a href="#demo-fancy-avatar">Another avatar upload approach</a></li>
-        <li><a href="#demo-forms">Form Elements</a></li>
-        <li><a href="#demo-multiple-files">Multiple Files</a></li>
-        <li><a href="#demo-upload-webhook">Upload Event Webhook</a></li>
-      </ul>
+      <nav id="sticky">        
+        <ul class="plain">
+          <li><a href="#demo-easy-avatar">Upload an avatar</a></li>
+          <li><a href="#demo-fancy-avatar">Another avatar upload approach</a></li>
+          <li><a href="#demo-forms">Form Elements</a></li>
+          <li><a href="#demo-multiple-files">Multiple Files</a></li>
+          <li><a href="#demo-upload-webhook">Upload Event Webhook</a></li>
+        </ul>
+      </nav>
     </div>
+    
     <div class="gi">
       <div class="content-area">
         <div class="content-demo-container" id="demo-easy-avatar">
@@ -160,9 +160,8 @@ layout: page
           </p>
         </div>
 
-        <div class="content-demo-area" id="demo-upload-webhook">
-
-        </div>
+        <div class="content-demo-area" id="demo-upload-webhook"></div>
+        
       </div>
     </div>
   </div>

@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "How Thredded Uses Shubox"
+---
+
 I've mentioned previously how shubox.io was born of one of the bigger frustrations I had while
 building the [thredded gem], and [thredded.com]. In short, it was a feature too big to be
 handled elegantly within something that had a whole other responsibility - discussion and
