@@ -4,6 +4,7 @@
 
 .layout-subnav
   $breakpoint: em(800)
+  // align-items: baseline
 
   > .gi
 
@@ -23,17 +24,30 @@
           text-align: left
     
   #sticky
-  
+    
     +mq-min(em(800))
-      overflow: auto
-      padding: rem(20) rem(30) 0 0
+      display: block
+      overflow: scroll
+      margin: rem(20) rem(30) 0 0
+      max-height: 100vh
       
-      &.-stuck
-        max-height: 100%
-        position: fixed
-        top: 0
-          
-      &.-stuck-bottom
-        bottom: 0
-        padding: rem(20) rem(30) 0 0
-        position: absolute
+  .subnav
+    
+    .nav-group
+      border-top: 3px solid $dark-purple
+      
+      &:last-of-type
+        border-bottom: 3px solid $dark-purple
+      
+    .headline
+      font-size: rem(17)
+      margin-bottom: 0
+      padding: rem(10) 0
+      
+  .nav-links
+    display: none
+    padding-top: rem(16)
+    padding-left: rem(12)
+    
+    +mq-min(em(800))
+      display: block

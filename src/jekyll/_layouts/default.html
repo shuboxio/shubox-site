@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="icon" href="/favicon.ico" />
     <script src="https://js.shubox.io/v1/{{ site.shuboxScriptId }}_src.js"></script>
-    <script type="text/javascript" src="/js/_vendor/highlight.pack.js"></script>
-    <script type="text/javascript" src="/js/_vendor/jquery-3.0.0.min.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
     <script src="https://use.typekit.net/uma1wda.js"></script>
     <script>try{ Typekit.load({ async: true  }); }catch(e){}</script>
   </head>
   <body>
+    
     {% include svg.html %}
-
     {% include header.liquid %}
-
     <main>
       {{ content }}
     </main>
-
     {% include footer.liquid %}
+    
+    <script type="text/javascript" src="/js/_vendor/highlight.pack.js"></script>
+    <script type="text/javascript" src="/js/_vendor/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script>hljs.initHighlightingOnLoad()</script>
   </body>
 </html>

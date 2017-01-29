@@ -1,10 +1,10 @@
 ---
-title: File Object
+title: Objects
 order: 3
 ---
 
 <a id="type-file"></a>
-
+<h3>File Object</h3>
 Upon successful upload of an image the Shubox library will pass a file object
 to all JavaScript callbacks. The format of this file object follows:
 

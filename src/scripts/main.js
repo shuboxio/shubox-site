@@ -1,38 +1,64 @@
 /* global $ */
 
-$('#menu-toggle').on('click', function () {
-  $('.main-nav').slideToggle()
-})
-
 // ============================================================
 // Sticky Subnav
 // ============================================================
 
 function sticky (el) {
-  var elem = document.querySelector(el)
-  var scrollStop = document.querySelector('main')
-  var sticky = document.getElementById('sticky')
-  var scrollActive = elem.offsetTop <= window.scrollY
-  var scrollBottom = window.scrollY + sticky.offsetHeight >= scrollStop.scrollHeight
+  var scrollAmount = $(document).scrollTop() - $('.layout-subnav').offset().top
+  var stickyZone = $('.layout-subnav').offset().top <= $(window).scrollTop()
+  var stickyScreenSize = window.matchMedia('(min-width: 800px)').matches
 
-  if (scrollBottom) {
-    sticky.classList.remove('-stuck')
-    sticky.classList.add('-stuck-bottom')
-  } else if (scrollActive && !scrollBottom) {
-    sticky.classList.add('-stuck')
-    sticky.classList.remove('-stuck-bottom')
+  if (stickyZone && stickyScreenSize) {
+    $('#sticky').animate({
+      'marginTop': scrollAmount + 'px'
+    }, 200)
   } else {
-    sticky.classList.remove('-stuck', '-stuck-bottom')
+    $('#sticky').css({
+      'marginTop': 0
+    })
   }
 }
+
+var debouncedSticky = debounce(function () {
+  sticky('.layout-subnav')
+}, 250)
 
 function initalizeStickyNav () {
   var hasSticky = document.querySelectorAll('#sticky')
   if (hasSticky.length) {
     window.addEventListener('scroll', function (e) {
-      sticky('.layout-subnav')
+      debouncedSticky()
     })
   }
 }
 
 document.addEventListener('DOMContentLoaded', initalizeStickyNav)
+
+// ============================================================
+// Folding Nav
+// ============================================================
+
+$('.nav-header').on('click', function () {
+  $(this).next('.nav-links').slideToggle()
+})
+
+// ============================================================
+// Debounce function 
+// ============================================================
+
+function debounce (func, wait, immediate) {
+  var timeout
+  return function () {
+    var context = this
+    var args = arguments
+    var later = function () {
+      timeout = null
+      if (!immediate) func.apply(context, args)
+    }
+    var callNow = immediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (callNow) func.apply(context, args)
+  }
+}

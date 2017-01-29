@@ -3,9 +3,12 @@
 // ============================================================
 
 .page-header-block
-  background: $light-purple
+  background: $dark-purple
   padding: 8% 0
-  text-align: left
+
+  +mq-min(em(800))
+    text-align: left
   
   .headline
+    color: $white
     margin-bottom: 0

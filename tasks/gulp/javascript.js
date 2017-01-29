@@ -9,7 +9,10 @@ const changed = require('gulp-changed')
 
 // Concat and minfy JS
 gulp.task('js', () => {
-  return gulp.src(path.join(config.shuboxWeb.scripts.src, '**'))
+  return gulp.src([
+    path.join(config.shuboxWeb.scripts.src, 'main.js'),
+    path.join(config.shuboxWeb.scripts.src, '_vendor/highlight.pack.js')
+  ])
     .pipe(changed(config.shuboxWeb.scripts.dest))
     .pipe(sourcemaps.init())
       .pipe(babel())

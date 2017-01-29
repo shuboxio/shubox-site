@@ -13,7 +13,7 @@ into your website. Let’s go!
 In order for Shubox to work it’s magic, it needs access to your Amazon S3
 account with a few non-destructive permissions.
 
-Step 1: Create an "Identity and Access Management" (IAM) User
+#### Step 1: Create an "Identity and Access Management" (IAM) User
 
 Amazon's user management service "Identity and Access Management" (IAM), is how
 master AWS accounts manage users, groups, and the permissions to work with the
@@ -21,19 +21,23 @@ different services. We would recommend that each site (and with further
 granularity - each domain) that works with Shubox to be an IAM user. Let’s make
 one:
 
-* Head over to the “Users” section of your
-  [AWS console](https://console.aws.amazon.com/iam/home#/users) and hit the
-  “Add user” button:
+##### Head over to the “Users” section of your [AWS console](https://console.aws.amazon.com/iam/home#/users) and hit the “Add user” button:
 
-![user dashboard](/assets/1-user-dashboard.png)
+<figure class="shadow">
+  <img src="/assets/1-user-dashboard.png" alt="user dashboard"/>
+</figure>
 
-* We suggest creating a “shubox” user with programatic access:
+##### We suggest creating a “shubox” user with programatic access:
 
-![add user](/assets/2-add-user.png)
+<figure class="shadow">
+  <img src="/assets/2-add-user.png" alt="add user"/>
+</figure>
 
-* Attach the `AmazonS3FullAccess` policy, then review and create the user:
+##### Attach the `AmazonS3FullAccess` policy, then review and create the user:
 
-![set permissions](/assets/3-permissions.png)
+<figure class="shadow">
+  <img src="/assets/3-permissions.png" alt="set permissions"/>
+</figure>
 
 Not comfortable with granting Shubox full permissions? That’s okay, we only
 need following permissions to do our work:
@@ -42,9 +46,17 @@ need following permissions to do our work:
 [`s3:PutBucketCORS`](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTcors.html),
 [`s3:PutObject`](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTcors.html)
 
-* Then grab your access key id and secret access key:
+##### Review and create the user:
 
-![success!](/assets/4-success.png)
+<figure class="shadow">
+  <img src="/assets/4-review.png" alt="review and create user"/>
+</figure>
+
+##### Grab your access key id and secret access key:
+
+<figure class="shadow">
+  <img src="/assets/5-success.png" alt="great success"/>
+</figure>
 
 <h3 id="setup-shubox">Connect your domain to Shubox</h3>
 
@@ -57,7 +69,7 @@ that next.
 
 It’s time to fire up your code editor! We’re going to connect your website to
 Shubox. Place the javascript snippet that shubox provided just before
-`&lt;body&gt;` in your HTML template:
+`<body>` in your HTML template:
 
 ```html
     ...
@@ -98,10 +110,4 @@ of an http(s) protocol, hostname, domain name, and port.
 Domains must be unique in our system, which makes local development domains,
 like `http://localhost:3000`, problematic -- once a localhost domain and port
 are taken in our system, they are no longer available.We suggest proxying your
-local development domain with
-
-* [Pow.cx](http://pow.cx),
-* [Puma Dev](https://github.com/puma/puma-dev),
-* [Laravel Valet](https://laravel.com/docs/5.3/valet)
-
-or something similar.
+local development domain with [Pow.cx](http://pow.cx), [Puma Dev](https://github.com/puma/puma-dev), [Laravel Valet](https://laravel.com/docs/5.3/valet) or something similar.
