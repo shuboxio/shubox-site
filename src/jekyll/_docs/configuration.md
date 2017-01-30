@@ -5,7 +5,7 @@ order: 2
 
 <h3>Methods</h3>
 
-<div class="b" id="option-success">
+<div id="option-success">
   <h4>success:</h4>
   <p>
     Assign a function to the success key that accepts a
@@ -16,7 +16,7 @@ order: 2
   <pre><code class="js">success: function(file) {}</code></pre>
 </div>
 
-<div class="b" id="option-error">
+<div id="option-error">
   <h4>error:</h4>
   <p>
     Assign a function to the error key which accepts a
@@ -26,7 +26,7 @@ order: 2
   <pre><code>error: function(file, message) {}</code></pre>  
 </div>
 
-<div class="b" id="option-queue-complete">
+<div id="option-queue-complete">
   <h4>queuecomplete:</h4>
   <p>
     The queuecomplete callback will be called when all files are finished
@@ -38,7 +38,7 @@ order: 2
 <h3>Parameters</h3>
 
 {% raw %}
-<div class="b" id="option-s3-url-template">
+<div id="option-s3-url-template">
   <h4>s3urlTemplate:</h4>
   <p>
     When uploading to a form element, the element's value will be
@@ -57,7 +57,7 @@ order: 2
 </div>
 {% endraw %}
 
-<div class="b" id="option-text-behavior">
+<div id="option-text-behavior">
   <h4>textBehavior:</h4>
   <p>
     When uploading through a form element (<code>&lt;input&gt;</code>,
@@ -72,7 +72,7 @@ order: 2
   <pre><code>textBehavior: 'replace' // default value</code></pre>
 </div>
 
-<div class="b" id="option-clickable">
+<div id="option-clickable">
   <h4>clickable:</h4>
   <p>
     Any element initialized with Shubox will, by default, trigger the
@@ -93,7 +93,7 @@ order: 2
   <pre><code>clickable: true // default value</code></pre>
 </div>
 
-<div class="b" id="option-preview-template">
+<div id="option-preview-template">
   <h4>previewTemplate:</h4>
   <p>
     Because much of the JS under the hood is handled by the excellent
@@ -123,7 +123,7 @@ previewTemplate: myTemplate
 </code></pre>
 </div>
 
-<div class="b" id="option-extra-params">
+<div id="option-extra-params">
   <h4>extraParams:</h4>
   <p>
     Shubox provides a mechanism with which to post custom data via an AJAX
