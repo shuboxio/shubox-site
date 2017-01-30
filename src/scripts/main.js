@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', initalizeStickyNav)
 // ============================================================
 
 $('.nav-header').on('click', function () {
-  $(this).next('.nav-links').slideToggle()
+  $(this).toggleClass('rotate-arrow').next('.nav-links').slideToggle()
 })
 
 // ============================================================
-// Debounce function 
+// Debounce function
 // ============================================================
 
 function debounce (func, wait, immediate) {

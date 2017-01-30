@@ -5,6 +5,9 @@
 .global-header
   $breakpoint: em(800)
 
+  &.-tint
+    background: $off-white
+
   // ------------------------------------------------------------
   // Structure
   // ------------------------------------------------------------
@@ -16,7 +19,7 @@
       display: flex
       flex-flow: row
       justify-content: space-between
-      padding: rem(60) 0
+      padding: rem(60) 0 rem(48)
 
   .gi
     align-items: baseline
@@ -63,7 +66,7 @@
         margin: 0 0 0 rem(15)
 
       &.active
-        text-decoration: underline
+        color: $dark-purple
 
       &.highlight
         font-weight: 600

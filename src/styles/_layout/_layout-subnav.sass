@@ -4,7 +4,6 @@
 
 .layout-subnav
   $breakpoint: em(800)
-  // align-items: baseline
 
   > .gi
 
@@ -34,20 +33,35 @@
   .subnav
     
     .nav-group
-      border-top: 3px solid $dark-purple
-      
-      &:last-of-type
-        border-bottom: 3px solid $dark-purple
+      border-top: 3px solid $off-white
       
     .headline
       font-size: rem(17)
       margin-bottom: 0
       padding: rem(10) 0
       
+  .nav-header
+    align-items: center
+    cursor: pointer
+    display: flex
+    justify-content: space-between
+    
+    &.rotate-arrow
+      
+      .arrow
+        transform: rotate(180deg)
+      
+    .arrow
+      height: rem(22)
+      width: rem(22)
+      transform: rotate(180deg)
+      
+      +mq-min(em(800))
+        transform: rotate(0deg)
+        
   .nav-links
     display: none
     padding-top: rem(16)
-    padding-left: rem(12)
     
     +mq-min(em(800))
       display: block

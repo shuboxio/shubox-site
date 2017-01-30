@@ -10,7 +10,6 @@ body
 
 p
   color: $gray
-  font-size: rem(18)
   line-height: 1.7
   margin: 0 0 1em
 
@@ -63,7 +62,7 @@ blockquote
     margin-bottom: em(5)
     
     &:not(:first-child)
-      padding-top: 2em
+      padding-top: 1em
 
   h1
     font-size: rem(24)
@@ -81,7 +80,7 @@ blockquote
     line-height: 1.125
     font-weight: 600
     
-    +mq-min(em(1080))
+    +mq-min(em(600))
       font-size: rem(30)
 
   h3
@@ -93,6 +92,7 @@ blockquote
 
   h4
     font-size: rem(21)
+    font-weight: normal
     
   h5
     font-weight: 600
@@ -168,7 +168,6 @@ a
 
   .headline
     margin-bottom: em(16)
-    // padding-bottom: rem(10)
 
     &:not(:first-of-type)
       padding-top: rem(30)
@@ -181,7 +180,6 @@ a
   ul
     max-width: rem(300)
     display: block
-    // font-family: $monospace
     font-size: rem(14)
     margin-bottom: rem(36)
 
@@ -217,13 +215,13 @@ a
 .headline,
 .headline p
   color: $dark-purple
-  font-size: rem(24)
+  font-size: rem(21)
   font-weight: 600
-  line-height: 1.3
+  line-height: 1.2
 
   &.-medium,
   &.-medium p
-    font-size: rem(36)
+    font-size: rem(33)
     font-weight: 600
     margin-bottom: em(6)
 
