@@ -23,7 +23,7 @@ pre
   border-radius: $border-radius
   color: $white
   margin-bottom: rem(16)
-  overflow: scroll
+  overflow: hidden
   text-align: left
 
   code
@@ -49,8 +49,8 @@ blockquote
 // Headings
 // ------------------------------------------------------------
 
-.content 
-  
+.content
+
   p, h1, h2, h3, h4, h5, h6, li
     display: block
     max-width: rem(600)
@@ -60,7 +60,7 @@ blockquote
     color: $dark-purple
     font-weight: 600
     margin-bottom: em(5)
-    
+
     &:not(:first-child)
       padding-top: 1em
 
@@ -79,7 +79,7 @@ blockquote
     font-size: em(20)
     line-height: 1.125
     font-weight: 600
-    
+
     +mq-min(em(600))
       font-size: rem(30)
 
@@ -93,7 +93,7 @@ blockquote
   h4
     font-size: rem(21)
     font-weight: normal
-    
+
   h5
     font-weight: 600
 
@@ -105,17 +105,17 @@ blockquote
 
     a
       text-decoration: underline
-    
+
   img,
-  .hljs,  
+  .hljs,
   .cp_embed_wrapper
     margin-bottom: 3em
-    
+
   .note
     border: 3px solid $dark-purple
     padding: 2em
     max-width: rem(600)
-    
+
     p
       color: $dark-purple
 
@@ -129,7 +129,7 @@ ul
   @extend p
   margin-bottom: 1em
   list-style-position: inside
-  
+
 ul
   list-style-type: disc
 
@@ -196,7 +196,7 @@ a
 .title
   color: $gray
   font-size: rem(16)
-  
+
   &.-medium
     color: $purple
     font-size: rem(18)
@@ -239,10 +239,10 @@ a
   font-family: $sans-serif
   color: $purple
   font-size: rem(18)
-  
+
   &.-gray
     color: $gray
-  
+
   &.-dark-gray
     color: $dark-gray
 
