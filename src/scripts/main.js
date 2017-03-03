@@ -62,3 +62,7 @@ function debounce (func, wait, immediate) {
     if (callNow) func.apply(context, args)
   }
 }
+
+var a = 3
+var a = 10
+var a = 123123

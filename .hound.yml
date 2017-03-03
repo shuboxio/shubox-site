@@ -1,0 +1,8 @@
+ruby:
+  enabled: false
+eslint:
+  enabled: true
+jshint:
+  enabled: false
+scss:
+  enabled: false
