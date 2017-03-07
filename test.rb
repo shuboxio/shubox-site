@@ -14,7 +14,8 @@ class Test
      }
    end
 
-def bare_percent
-   time = %q(8 o'clock)
-end
+  def bare_percent
+    time = %q(8 o'clock)
+    date = %x(date)
+  end
 end
