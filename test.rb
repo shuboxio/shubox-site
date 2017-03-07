@@ -13,4 +13,8 @@ class Test
        sdkjf: 'sbd'
      }
    end
+
+def bare_percent
+   time = %q(8 o'clock)
+end
 end
