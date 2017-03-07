@@ -4,6 +4,6 @@ class Test
   end
 
   def b
-
+    bye = 'b'
   end
 end

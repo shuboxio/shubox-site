@@ -20,4 +20,3 @@ AllCops:
   - 'db/**/*'
   RunRailsCops: true
   DisplayCopNames: false
-  StyleGuideCopsOnly: false
