@@ -3,7 +3,7 @@ class Test
     hello = 'hi'
   end
 
-  def b
-    bye = 'b'
+   def bad_indent
+    "slkdjfls"
   end
 end

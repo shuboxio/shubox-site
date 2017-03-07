@@ -19,4 +19,3 @@ AllCops:
   - 'vendor/**/*'
   - 'db/**/*'
   RunRailsCops: true
-  DisplayCopNames: false
