@@ -6,4 +6,11 @@ class Test
    def bad_indent
     "slkdjfls"
   end
+
+  def bad_hash
+    {
+      sdf: 'df',
+       sdkjf: 'sbd'
+     }
+   end
 end

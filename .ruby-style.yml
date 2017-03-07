@@ -18,4 +18,3 @@ AllCops:
   Exclude:
   - 'vendor/**/*'
   - 'db/**/*'
-  RunRailsCops: true
