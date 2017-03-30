@@ -2340,6 +2340,13 @@ gulp-sourcemaps@^1.9.1:
     through2 "2.X"
     vinyl "1.X"
 
+gulp-svgmin@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/gulp-svgmin/-/gulp-svgmin-1.2.3.tgz#88947b132e15b2de43d1dbccb30455319c5e50b5"
+  dependencies:
+    gulp-util "^3.0.4"
+    svgo "^0.7.0"
+
 gulp-svgstore@^6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/gulp-svgstore/-/gulp-svgstore-6.1.0.tgz#04b203ac0e13f8ed6dbfc940d25965c4e2456676"
@@ -2366,7 +2373,7 @@ gulp-uglify@^2.0.0:
     uglify-save-license "^0.4.1"
     vinyl-sourcemaps-apply "^0.2.0"
 
-gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.2, gulp-util@^3.0.7, gulp-util@^3.0.8:
+gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.2, gulp-util@^3.0.4, gulp-util@^3.0.7, gulp-util@^3.0.8:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
