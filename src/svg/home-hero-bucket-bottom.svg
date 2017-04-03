@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="228px" height="122px" viewBox="0 0 228 122" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Bucket Bottom Outline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bucket-Bottom-Outline" transform="translate(1.000000, 0.000000)">
+            <path d="M208.08,121.46 L224.01,2.46 C224.01,2.46 222,24.5 112.12,24.5 C2.24,24.5 0.23,2.46 0.23,2.46 L16.17,121.46 L208.08,121.46 Z" id="Shape" fill="#F9F2FF" fill-rule="nonzero"></path>
+            <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="153.18 121.46 153.18 82.7 114.18 68.5 75.64 82.5 75.64 121.44"></polygon>
+            <path d="M78.62,121.46 L78.62,88.65 L111.4,100.58 L111.4,121.46 L117.4,121.46 L117.4,100.41 L150.18,88.48 L150.18,121.48 L156.18,121.48 L156.18,80.6 L114.18,65.31 L72.64,80.43 L72.64,121.43 L78.62,121.46 Z M114.16,71.69 L146.45,83.44 L114.16,95.2 L81.87,83.45 L114.16,71.69 Z" id="Shape" fill="#7C5CD1" fill-rule="nonzero"></path>
+            <path d="M2,24 C2,24 2,2 111,2 C220,2 224,24 224,24" id="Path-2" stroke="#7C5CD1" stroke-width="5" transform="translate(113.000000, 13.000000) scale(1, -1) translate(-113.000000, -13.000000) "></path>
+            <path d="M1.5,2.5 L16,120.5" id="Path-3" stroke="#7C5CD1" stroke-width="5"></path>
+            <path d="M207,0.5 L223.5,120.5" id="Path-3" stroke="#7C5CD1" stroke-width="5" transform="translate(215.500000, 60.500000) scale(-1, 1) translate(-215.500000, -60.500000) "></path>
+        </g>
+    </g>
+</svg>
