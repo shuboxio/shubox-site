@@ -5,7 +5,6 @@
 .home-hero
   height: 355px
   width: 625px
-  border: solid 1px green
   margin: auto
   position: relative
 
@@ -14,7 +13,6 @@
     height: 100%
 
 .icons-paths
-  outline: solid 1px purple
   width: 100%
   height: 230px
   position: absolute
@@ -23,44 +21,106 @@
   svg
     position: absolute
 
+  .photo
+    z-index: 100
+
   .home-hero-photo-left
-    outline: solid 1px blue
     position: absolute
     left: 0
     top: 0
     height: 100%
     width: 50%
 
-    .home-hero-photo
-      width: 5rem
-      height: 5rem
-      right: 114px
-      top: 105px
-      transform: rotate(-22deg)
+    .photo
+      width: 4.5rem
+      height: 4.5rem
+      right: 100px
+      top: 110px
+      transform: rotate(-29deg)
+      transition: .1s ease-in-out
 
-    .home-hero-path
+      &:hover
+        transform: rotate(-20deg) scale(1.1)
+        cursor: pointer
+
+    .path
       width: 5.5rem
       height: 5.5rem
       top: 122px
       z-index: 1
-      right: 20px
+      right: 8px
 
-  .home-hero-photo-right
-    outline: solid 1px pink
+  .home-hero-profile-center
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 50%
+
+    .profile
+      width: 4rem
+      height: 4rem
+      right: 90px
+      top: 21px
+      transition: .1s ease-in-out
+
+      &:hover
+        transform: rotate(-15deg) scale(1.1)
+        cursor: pointer
+
+    .path
+      width: 5rem
+      height: 5rem
+      top: 65px
+      right: 10px
+      z-index: 1
+
+  .home-hero-photo-center
     position: absolute
     right: 0
     top: 0
     height: 100%
     width: 50%
 
-    .home-hero-photo
+    .photo
+      width: 4.5rem
+      height: 4.5rem
+      left: 73px
+      top: 84px
+      transform: rotate(-23deg)
+      transition: .1s ease-in-out
+
+      &:hover
+        transform: rotate(-15deg) scale(1.1)
+        cursor: pointer
+
+    .path
+      width: 9rem
+      height: 9rem
+      top: 72px
+      z-index: 1
+      left: -29px
+
+  .home-hero-photo-right
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    width: 50%
+
+    .photo
       width: 4.5rem
       height: 4.5rem
       left: 190px
       top: 85px
       transform: rotate(58deg)
+      transition: .1s ease-in-out
 
-    .home-hero-path
+      &:hover
+        transform: rotate(63deg) scale(1.1)
+        cursor: pointer
+
+    .path
       width: 11rem
       height: 11rem
       top: 36px
