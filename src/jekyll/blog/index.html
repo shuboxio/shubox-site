@@ -4,16 +4,23 @@ layout: default
 
 {% include page-header.liquid title="Blog" %}
 
-<div class="c blog">
-  <div class="g">
+<div class="{% include tachyons-container.liquid %}">
+  <div class="flex flex-row flex-wrap nl2 nr2">
     
-    <div class="gi articles content">
-      {% for post in site.posts %}
-       <article>
-         <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-       </article>
-      {% endfor %}      
-    </div>
+    {% for post in site.posts %}
+      <article class="w-100 w-50-m w-third-l mb5 ph2">
+        <a href="{{ post.url }}">
+          <div class="bg-near-white mb4 w-100
+            aspect-ratio aspect-ratio--16x9">
+            <img class="aspect-ratio--object" src="{{ post.image }}" alt="">
+          </div>
+          <h1 class="f5 mb2">{{ post.title }}</h1>
+          <p class="gray lh-copy mt0">
+            {{ post.summary }}
+          </p>
+        </a>
+      </article>
+    {% endfor %}      
     
   </div>
 </div>

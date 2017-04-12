@@ -4,51 +4,51 @@ layout: default
 
 {% include page-header.liquid title='Documentation' %}
 
-<div class="c docs">
-  <div class="g layout-subnav">
+<div class="{% include tachyons-container.liquid %}">
+  <div class="flex-l flex-row">
     
-    <div class="gi subnav">
+    <div class="subnav w5-l mr5-l flex-none">
       <nav id="sticky">
         
-        <div class="nav-group">
-          <div class="nav-header">
-            <h2 class="title -large">Getting Started</h2>
+        <div class="bt bw2 b--light-gray">
+          <div class="folding-header flex justify-between items-center pointer">
+            <h2 class="f4 b purple">Getting Started</h2>
             <svg class="arrow"><use xlink:href="#nav-arrow"></use></svg>
           </div>
-          <div class="nav-links">
-            <ul class="plain">
-              <li><a href="#setup-amazon">Amazon S3 Setup</a></li>
-              <li><a href="#setup-shubox">Shubox Setup</a></li>
-              <li><a href="#setup-website">Website Integration</a></li>
+          <div class="folding-links dn db-l">
+            <ul class="list pl0 ma0">
+              <li class="mb3"><a href="#setup-amazon">Amazon S3 Setup</a></li>
+              <li class="mb3"><a href="#setup-shubox">Shubox Setup</a></li>
+              <li class="mb4"><a href="#setup-website">Website Integration</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="nav-group">
-          <div class="nav-header">
-            <h2 class="title -large">JavaScript API</h2>
+        <div class="bt bw2 b--light-gray mb4">
+          <div class="folding-header flex justify-between items-center pointer">
+            <h2 class="f4 b purple">JavaScript API</h2>
             <svg class="arrow"><use xlink:href="#nav-arrow"></u`se></svg>
           </div>
-          <div class="nav-links">  
-            <h3 class="title">Methods</h3>
-            <ul class="plain">
-              <li><a href="#option-success">success</a></li>
-              <li><a href="#option-error">error</a></li>
-              <li><a href="#option-queue-complete">queuecomplete</a></li>
+          <div class="folding-links dn db-l">  
+            <h3 class="f5 silver normal">Methods</h3>
+            <ul class="list pl0 mt0 mb4">
+              <li class="mb3"><a href="#option-success">success</a></li>
+              <li class="mb3"><a href="#option-error">error</a></li>
+              <li class="mb3"><a href="#option-queue-complete">queuecomplete</a></li>
             </ul>
 
-            <h3 class="title">Parameters</h3>
-            <ul class="plain">
-              <li><a href="#option-s3-url-template">s3urlTemplate</a></li>
-              <li><a href="#option-text-behavior">textBehavior</a></li>
-              <li><a href="#option-clickable">clickable</a></li>
-              <li><a href="#option-preview-template">previewTemplate</a></li>
-              <li><a href="#option-extra-params">extraParams</a></li>
+            <h3 class="f5 silver normal">Parameters</h3>
+            <ul class="list pl0 mt0 mb4">
+              <li class="mb3"><a href="#option-s3-url-template">s3urlTemplate</a></li>
+              <li class="mb3"><a href="#option-text-behavior">textBehavior</a></li>
+              <li class="mb3"><a href="#option-clickable">clickable</a></li>
+              <li class="mb3"><a href="#option-preview-template">previewTemplate</a></li>
+              <li class="mb3"><a href="#option-extra-params">extraParams</a></li>
             </ul>
 
-            <h3 class="title">Objects</h3>
-            <ul class="plain">
-              <li><a href="#type-file">File Object</a></li>
+            <h3 class="f5 silver normal">Objects</h3>
+            <ul class="list pl0 ma0">
+              <li class="mb3"><a href="#type-file">File Object</a></li>
             </ul>          
           </div>
         </div>
@@ -56,8 +56,8 @@ layout: default
       </nav>
     </div>
 
-    <div class="gi">
-      <div class="content">
+    <div class="flex-auto">
+      <div class="nested-copy-line-height nested-headline-line-height nested-img nested-copy-colors">
         {% assign docs = site.docs | sort: "order" %}
         {% for doc in docs %}
         <h2>{{ doc.title }}</h2>

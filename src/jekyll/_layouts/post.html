@@ -2,10 +2,15 @@
 layout: default
 ---
 
-<div class="c">
-  <div class="g">
-    <div class="gi content">
-      <h1 class="headline -large">{{ page.title }}</h1>
+<div class="{% include tachyons-container.liquid %}">
+  <div class="measure-wide">
+    <h1 class="f2 f1-ns b dark-purple lh-title">
+      {{ page.title }}
+    </h1>
+    <div class="nested-copy-line-height 
+      nested-headline-line-height 
+      nested-img 
+      nested-copy-colors">
       {{ content }}
     </div>
   </div>

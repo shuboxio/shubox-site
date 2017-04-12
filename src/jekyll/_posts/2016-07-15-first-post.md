@@ -1,6 +1,9 @@
 ---
 layout: post
 title:  "First Post"
+image: "http://placecorgi.com/400/200"
+summary: "I want it to be the easiest, quickest, and most painless way to allow your users -- whether they are
+your end-users, or your internal team -- to upload images to S3. Let me unpack a few points there."
 ---
 
 ![](http://theartaround.us/system/photos/images/52c9839ecc82497a9600b7f1/original.jpg?1388938142)
@@ -8,7 +11,7 @@ title:  "First Post"
 Hi 👋, I'm [Joel]. I'm the founder of shubox.io. How are you?
 
 It's been several months since I shared anything about shubox.io being something I was working on. I
-have spent the majority of my spare time this winter and spring working on so many facets of the
+have spent the majority of my spare time this winter and spring working on so as many facets of the
 application and keeping my head down - I didn't think I had a whole lot to share. 
 
 But now? I believe shubox is ready to flip the sign around to "open" and enthusiastically welcome

@@ -1,35 +1,28 @@
-<div id="pricing" class="c b pricing-block">
-  <div class="g -half">
+<div id="pricing" class="pricing-block {% include tachyons-container.liquid %} flex flex-wrap pv6">
 
-    <div class="gi uploader">
-      <svg><use xlink:href="#plan-upload"></use></svg>
-      
-      <h3 class="headline -medium">The Uploader</h3>
-      
-      <span class="price">
-        $50/month
-        <span class="per-year">$500/year</span>
-      </span>
-      
-      <p>Upload files from a web browser directly to your own Amazon S3 bucket, define webhooks for upload events, and use our robust JavaScript library to customize your upload experience.</p>
-      <a href="https://dashboard.shubox.io/sign_up" class="btn">Sign Up</a>
-      
-    </div>
-
-    <div class="gi transformer">
-      <svg><use xlink:href="#plan-transform"></use></svg>
-      
-      <h3 class="headline -medium">The Transformer</h3>
-      
-      <span class="price">
-        $199/month
-        <span class="per-year">$1999/year</span>
-      </span>
-      
-      <p>All features from The Uploader plan, plus you can configure Shubox to resize images, correct orientation, strip EXIF data, extract frames from animated gifs, and get email support.</p>
-      <a href="https://dashboard.shubox.io/sign_up" class="btn">Sign Up</a>
-      
-    </div>
-
+  <div class="w-50-l tc mb5 uploader">
+    <svg><use xlink:href="#plan-upload"></use></svg>
+    
+    <h3 class="f3 f2-ns b dark-purple">The Uploader</h3>
+    
+    <span class="f3 red db mb2">$50/month</span>
+    <span class="gray">$500/year</span>
+    
+    <p class="dark-gray lh-copy ph3 mb4">Upload files from a web browser directly to your own Amazon S3 bucket, define webhooks for upload events, and use our robust JavaScript library to customize your upload experience.</p>
+    <a href="https://dashboard.shubox.io/sign_up" class="btn">Sign Up</a>
   </div>
+
+  <div class="w-50-l tc transformer">
+    <svg><use xlink:href="#plan-transform"></use></svg>
+    
+    <h3 class="f3 f2-ns b dark-purple">The Transformer</h3>
+    
+    <span class="f3 red db mb2">$199/month</span>
+    <span class="gray">$1999/year</span>
+    
+    
+    <p class="dark-gray lh-copy ph3 mb4">All features from The Uploader plan, plus you can configure Shubox to resize images, correct orientation, strip EXIF data, extract frames from animated gifs, and get email support.</p>
+    <a href="https://dashboard.shubox.io/sign_up" class="btn">Sign Up</a>
+  </div>
+  
 </div>
