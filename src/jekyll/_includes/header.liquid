@@ -1,21 +1,27 @@
-<div class="global-header {% if page.url == '/' %} -tint{% endif %}">
-  <div class="c">
-    <nav class="g">
+<div class="global-header pv4{% if page.url == '/' %} bg-near-white{% endif %}">
+  <div class="{% include tachyons-container.liquid %}">
+    <nav class="flex flex-column flex-row-ns items-center items-baseline-ns justify-between-ns">
 
-      <div class="gi">
-        <h1 class="logo">
-          <a href="/">
-            <svg><use xlink:href="#logo"/></svg>
-          </a>
-        </h1>
-      </div>
+      <h1 class="logo mt0 mb3 mb0-ns">
+        <a href="/">
+          <svg><use xlink:href="#logo"/></svg>
+        </a>
+      </h1>
       
-      <div class="gi main-nav">
-        <a href="/#pricing">Pricing</a>
-        <a href="/docs"{% if page.url contains '/docs/' %} class="active"{% endif %}>Docs</a>
-        <a href="/demos"{% if page.url contains '/demos/' %} class="active"{% endif %}>Demos</a>
-        <a href="/blog"{% if page.url contains '/blog/' %} class="active"{% endif %}>Blog</a>
-        <a class="highlight" href="https://dashboard.shubox.io/sign_in">Sign In</a>
+      <div class="main-nav">
+        <a href="/#pricing" class="gray mr3">
+          Pricing
+        </a>
+        <a href="/docs" class="gray mr3{% if page.url contains '/docs/' %} dark-purple{% endif %}">
+          Docs
+        </a>
+        <a href="/demos" class="gray mr3{% if page.url contains '/demos/' %} dark-purple{% endif %}">
+          Demos
+        </a>
+        <a href="/blog" class="gray mr3{% if page.url contains '/blog/' %} dark-purple{% endif %}">Blog</a>
+        <a class="red" href="https://dashboard.shubox.io/sign_in">
+          Sign In
+        </a>
       </div>
 
     </nav>

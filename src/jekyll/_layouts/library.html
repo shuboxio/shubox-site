@@ -8,25 +8,20 @@
     <meta name="viewport" content="width=device-width">
     <script src="https://use.typekit.net/uma1wda.js"></script>
     <script>try{ Typekit.load({ async: true  }); }catch(e){}</script>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/main.css">
     <script type="text/javascript" src="/js/main.js" defer></script>
   </head>
 
-  <body class="library">
+  <body>
 
-    <header class="library-header">
-      <div class="c">
-        <div class="gi">
-          <a href="/library"><h1>Shubox Style Guide</h1></a>
-        </div>
-        <div class="gi">
-          {{ page.title }}
-        </div>
+    <header class="bg-near-white pv3">
+      <div class="{% include tachyons-container.liquid %} flex items-baseline">
+        <a href="/library" class="mr1"><h1 class="f5 b">Shubox Style Guide /</h1></a>
+        <span class="f5 gray">{{ page.title }}</span>
       </div>
     </header>
-
-    <div class="c">
-      {{ content }}
-    </div>
+    
+    {{ content }}
+  
   </body>
 </html>

@@ -4,26 +4,27 @@ layout: default
 
 {% include page-header.liquid title="Demos" %}
 
-<div class="c">
-  <div class="g layout-subnav">
+<div class="{% include tachyons-container.liquid %}">
+  <div class="flex-l flex-row">
     
-    <div class="gi subnav">
-      <nav id="sticky" class="is-active">        
-        <ul class="plain">
-          <li><a href="#demo-easy-avatar">Upload an avatar</a></li>
-          <li><a href="#demo-fancy-avatar">Another avatar upload approach</a></li>
-          <li><a href="#demo-forms">Form Elements</a></li>
-          <li><a href="#demo-multiple-files">Multiple Files</a></li>
-          <li><a href="#demo-upload-webhook">Upload Event Webhook</a></li>
+    <div class="subnav w5 mr4 mb5 flex-none">
+      <nav id="sticky" class="is-active">      
+        <ul class="list pl0 ma0 bt bw2 b--light-gray pt4">
+          <li class="mb3"><a href="#demo-easy-avatar">Upload an avatar</a></li>
+          <li class="mb3"><a href="#demo-fancy-avatar">Another avatar upload approach</a></li>
+          <li class="mb3"><a href="#demo-forms">Form Elements</a></li>
+          <li class="mb3"><a href="#demo-multiple-files">Multiple Files</a></li>
+          <li class="mb3"><a href="#demo-upload-webhook">Upload Event Webhook</a></li>
         </ul>
       </nav>
     </div>
     
-    <div class="gi">
-      <div class="content">
+    <div class="w-auto">
+      <div class="nested-copy-line-height nested-headline-line-height nested-img nested-copy-colors">
+        
         <div class="content-demo-container" id="demo-easy-avatar">
           
-          <div class="note">
+          <div class="pv2 ph4 bg-light-purple">
             <p>
               Note that the Codepen demos pull in only 3 dependencies outside of the demo code:
             </p>

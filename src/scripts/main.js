@@ -5,8 +5,8 @@
 // ============================================================
 
 function sticky (el) {
-  var scrollAmount = $(document).scrollTop() - $('.layout-subnav').offset().top
-  var stickyZone = $('.layout-subnav').offset().top <= $(window).scrollTop()
+  var scrollAmount = $(document).scrollTop() - $('.subnav').offset().top
+  var stickyZone = $('.subnav').offset().top <= $(window).scrollTop()
   var stickyScreenSize = window.matchMedia('(min-width: 800px)').matches
 
   if (stickyZone && stickyScreenSize) {
@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', initalizeStickyNav)
 // Folding Nav
 // ============================================================
 
-$('.nav-header').on('click', function () {
-  $(this).toggleClass('rotate-arrow').next('.nav-links').slideToggle()
+$('.folding-header').on('click', function () {
+  $(this).toggleClass('rotate-arrow').next('.folding-links').slideToggle()
 })
 
 // ============================================================

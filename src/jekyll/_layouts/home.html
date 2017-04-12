@@ -2,77 +2,65 @@
 layout: default
 ---
 
-<div class="b home-hero-block">
-  <div class="c">
-    <h1 class="headline -large">Simple. Fast. Customizable.</h1>
-    <p class="intro -medium">Upload images from your web app directly to Amazon S3.</p>
-    <a href="https://dashboard.shubox.io/sign_up" class="btn -large" id="sign-up-now">Sign Up</a>
-    <img src="/assets/home-hero.svg" alt="">
+<div class="bg-near-white">
+  <div class="{% include tachyons-container.liquid %} tc lh-title">
+    <h1 class="f2 f1-ns b dark-purple pt3 pt5-ns mb1 mt0">Simple. Fast. Customizable.</h1>
+    <p class="f4 f3-ns purple mb4">Upload images from your web app directly to Amazon S3.</p>
+    <a href="https://dashboard.shubox.io/sign_up" class="btn -large mb4" id="sign-up-now">Sign Up</a>
+    <img class="center db" src="/assets/home-hero.svg" alt="">
   </div>
 </div>
 
 
-<div class="c b intro-block">
-  <h2 class="headline -medium">Built for developers<br>  who have bigger fish to fry.</h2>
-  <p class="intro">Integrate these powerful features into your workflow in just minutes.</p>
+<div class="{% include tachyons-container.liquid %} pv4 tc">
+  <h2 class="f3 f2-ns b dark-purple mb3 lh-title">Built for developers<br>  who have bigger fish to fry.</h2>
+  <p class="f4 purple center measure-narrow lh-copy">Integrate these powerful features into your workflow in just minutes.</p>
 </div>
 
-<div class="c b features-block">
-  <div class="g -half">
+<div class="features-block {% include tachyons-container.liquid %}">
+  <div class="flex flex-wrap">
     
-    <div class="gi">
-      <div class="feature">
-        <img src="/assets/feature-upload.svg" alt="">
-        <h2 class="headline">Direct Uploads</h2>
-        <p>Quickly handle user supplied images in your web app with a completely customizable interface. We do the hard work for you.</p>
-      </div>
+    <div class="w-50 pa3">
+      <img src="/assets/feature-upload.svg" alt="">
+      <h2 class="f4 b dark-purple mb2">Direct Uploads</h2>
+      <p class="gray lh-copy">Quickly handle user supplied images in your web app with a completely customizable interface. We do the hard work for you.</p>
     </div>
 
-    <div class="gi">
-      <div class="feature">
+    <div class="w-50 pa3">
         <img src="/assets/feature-webhook.svg" alt="">
-        <h2 class="headline">Webhook Endpoints</h2>
-        <p>Shubox can send you detailed information about your uploads like, dimensions, orientation, file size and much more.</p>
-      </div>
+        <h2 class="f4 b dark-purple mb2">Webhook Endpoints</h2>
+        <p class="gray lh-copy">Shubox can send you detailed information about your uploads like, dimensions, orientation, file size and much more.</p>
     </div>
 
-    <div class="gi">
-      <div class="feature">
+    <div class="w-50 pa3">
         <img src="/assets/feature-transform.svg" alt="">
-        <h2 class="headline">Image Transformations</h2>
-        <p>Optimized images are key to great performance. Tell Shubox how to transform your images and they'll be processed on upload.</p>
-      </div>
+        <h2 class="f4 b dark-purple mb2">Image Transformations</h2>
+        <p class="gray lh-copy">Optimized images are key to great performance. Tell Shubox how to transform your images and they'll be processed on upload.</p>
     </div>
 
-    <div class="gi">
-      <div class="feature">
+    <div class="w-50 pa3">
         <img src="/assets/feature-orientation.svg" alt="">
-        <h2 class="headline">Orientation Correction</h2>
-        <p>Nothing is more annoying than a flopped photo. Shubox corrects image orientation so you have one less thing to worry about.</p>
-      </div>
+        <h2 class="f4 b dark-purple mb2">Orientation Correction</h2>
+        <p class="gray lh-copy">Nothing is more annoying than a flopped photo. Shubox corrects image orientation so you have one less thing to worry about.</p>
     </div>
 
-    <div class="gi">
-      <div class="feature">
+    <div class="w-50 pa3">
         <img src="/assets/feature-exif.svg" alt="">
-        <h2 class="headline">Strip EXIF Data</h2>
-        <p>Every photo comes loaded EXIF data that adds size to the file. Shubox strips that away so you only serve the bytes you need to.</p>
-      </div>
+        <h2 class="f4 b dark-purple mb2">Strip EXIF Data</h2>
+        <p class="gray lh-copy">Every photo comes loaded EXIF data that adds size to the file. Shubox strips that away so you only serve the bytes you need to.</p>
     </div>
 
-    <div class="gi">
-      <div class="feature">
+    <div class="w-50 pa3">
         <img src="/assets/feature-gif.svg" alt="">
-        <h2 class="headline">Extract Frames from Animated Gifs</h2>
-        <p>Shubox doesn't flatten animated Gifs. Instead it gives you a static keyframe and retains the original in all it's glory.</p>
-      </div>
+        <h2 class="f4 b dark-purple mb2">Extract Frames from Animated Gifs</h2>
+        <p class="gray lh-copy">Shubox doesn't flatten animated Gifs. Instead it gives you a static keyframe and retains the original in all it's glory.</p>
     </div>
     
   </div>
 </div>
 
-<div class="b testimonials-block">
-  <div class="c">
+<div class="bg-dark-purple tc pv4 pv6-ns">
+  <div class="{% include tachyons-container.liquid %}">
       <!--
         <p>
           When we needed image uploads for a messaging area on a client site,
@@ -90,15 +78,15 @@ layout: default
           Founder @ <a href="http://www.red56.co.uk/" target="_blank">Red56</a>
         </p>
        -->
-        <svg class="quotemark">
+        <svg class="quotemark w3 h3">
           <use xlink:href="#quote"></use>
         </svg>
-        <p class="quote">
+        <p class="f3 white lh-copy measure center">
           Shubox is a super easy way to upload files to S3. I love that I didn't have to build in file management into my app and I could just focus on what was important to my customers.
         </p>
-        <p class="citation">
+        <p class="white">
           <strong>Nick Gauthier</strong>
-          Founder, <a href="http://www.meetspaceapp.com/" target="_blank">MeetSpace</a>
+          Founder, <a class="white" href="http://www.meetspaceapp.com/" target="_blank">MeetSpace</a>
         </p>
     </div>
   </div>

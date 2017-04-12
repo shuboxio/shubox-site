@@ -5,10 +5,10 @@ Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
 */
 
 .hljs {
+  @extend .pa4;
   display: block;
   overflow-x: auto;
-  padding: 1em;
-  background: $off-white;
+  background: $near-white;
 }
 
 .hljs,

@@ -1,30 +1,30 @@
-<footer class="global-footer">
-  <div class="c">
-    <div class="g">
+<footer class="bg-near-white pt4 pb6 mt6">
+  <div class="{% include tachyons-container.liquid %}">
+    <div class="flex-ns justify-between">
       
-      <div class="gi">
-        <a href="/">
+      <div class="inline-flex-ns mr4">
+        <a href="/" class="mr4 mb4 db">
           <svg class="logo-mark">
             <use xlink:href="#logo-mark"></use>
           </svg>
         </a>
+        <div class="">
+          <h3 class="f5 gray mb2 mt0">Contact</h3>
+          <a href="mailto:team@shubox.io">team@shubox.io</a>
+          
+          <h3 class="f5 gray mb2">Twitter</h3>
+          <a href="https://twitter.com/shuboxio">@Shubox</a>
+        </div>
       </div>
       
-      <div class="gi">
-        <h3 class="intro">Contact</h3>
-        <a href="mailto:team@shubox.io">team@shubox.io</a>
-        
-        <h3 class="intro">Twitter</h3>
-        <a href="https://twitter.com/shuboxio">@Shubox</a>
-      </div>
 
-      <div class="gi">
+      <div class="">
         <div id="mc_embed_signup" class="newsletter-sign-up">
           <header class="newsletter-header" id="newsletter">
-            <h3 class="intro">Newsletter</h3>
+            <h3 class="f5 gray mb2 mt0-ns">Newsletter</h3>
 
-            <p>
-            Get time saving tips and product updates.
+            <p class="dark-gray mt0 mb4">
+              Get time saving tips and product updates.
             </p>
           </header>
 
@@ -39,7 +39,9 @@
 
               <div id="mc_embed_signup_scroll">
                 <div class="mc-field-group">
-                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your Email">
+                  <input type="email" value="" name="EMAIL" 
+                  id="mce-EMAIL" placeholder="Your Email"
+                  class="required email w-100 mb2 pa2 ba bw2 b--purple">
                 </div>
 
                 <div id="mce-responses" class="clear">
