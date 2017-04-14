@@ -6,9 +6,9 @@ layout: default
 
 <div class="{% include tachyons-container.liquid %}">
   <div class="flex-l flex-row">
-    
+
     <div class="subnav w5 mr4 mb5 flex-none">
-      <nav id="sticky" class="is-active">      
+      <nav id="sticky" class="is-active">
         <ul class="list pl0 ma0 bt bw2 b--light-gray pt4">
           <li class="mb3"><a href="#demo-easy-avatar">Upload an avatar</a></li>
           <li class="mb3"><a href="#demo-fancy-avatar">Another avatar upload approach</a></li>
@@ -18,12 +18,12 @@ layout: default
         </ul>
       </nav>
     </div>
-    
+
     <div class="w-auto">
       <div class="nested-copy-line-height nested-headline-line-height nested-img nested-copy-colors">
-        
+
         <div class="content-demo-container" id="demo-easy-avatar">
-          
+
           <div class="pv2 ph4 bg-light-purple">
             <p>
               Note that the Codepen demos pull in only 3 dependencies outside of the demo code:
@@ -164,10 +164,14 @@ layout: default
         </div>
 
         <div class="content-demo-area" id="demo-upload-webhook"></div>
-        
+
       </div>
     </div>
   </div>
 </div>
 
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<script>
+fbq('track', 'ViewContent', { page: 'Demos' });
+</script>

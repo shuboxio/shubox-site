@@ -8,20 +8,28 @@ const changed = require('gulp-changed')
 // ============================================================
 // Build Jekyll, Build!
 // ============================================================
+
+var build_command = [
+  'exec',
+  'jekyll',
+  'build',
+  '--source',
+  config.shuboxWeb.jekyll.src,
+  '--destination',
+  'tmp'
+]
+
+if (process.env.PRODUCTION_BUILD == 'true') {
+  build_command.push(
+    '--config',
+    'src/jekyll/_config.yml,src/jekyll/_production_config.yml'
+  )
+}
+
 gulp.task('jekyll-build', (done) => {
-  return cp.spawn(
-    'bundle',
-    [
-      'exec',
-      'jekyll',
-      'build',
-      '--source',
-      config.shuboxWeb.jekyll.src,
-      '--destination',
-      'tmp'
-    ],
-    { stdio: 'inherit' }
-  ).on('close', done)
+  return cp
+    .spawn('bundle', build_command, { stdio: 'inherit' })
+    .on('close', done)
 })
 
 // ============================================================
