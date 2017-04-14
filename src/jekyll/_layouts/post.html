@@ -7,11 +7,15 @@ layout: default
     <h1 class="f2 f1-ns b dark-purple lh-title">
       {{ page.title }}
     </h1>
-    <div class="nested-copy-line-height 
-      nested-headline-line-height 
-      nested-img 
+    <div class="nested-copy-line-height
+      nested-headline-line-height
+      nested-img
       nested-copy-colors">
       {{ content }}
     </div>
   </div>
 </div>
+
+<script>
+fbq('track', 'ViewContent', { page: 'Blog post', title: '{{ page.title }}' });
+</script>

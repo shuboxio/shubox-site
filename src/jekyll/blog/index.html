@@ -6,7 +6,7 @@ layout: default
 
 <div class="{% include tachyons-container.liquid %}">
   <div class="flex flex-row flex-wrap nl2 nr2">
-    
+
     {% for post in site.posts %}
       <article class="w-100 w-50-m w-third-l mb5 ph2">
         <a href="{{ post.url }}">
@@ -20,7 +20,11 @@ layout: default
           </p>
         </a>
       </article>
-    {% endfor %}      
-    
+    {% endfor %}
+
   </div>
 </div>
+
+<script>
+fbq('track', 'ViewContent', { page: 'Blog index' });
+</script>

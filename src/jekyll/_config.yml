@@ -1,15 +1,17 @@
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: shubox.io
 email: joel@shubox.io
 shuboxScriptId: "03457406"
 baseurl: ""    # the subpath of your site, e.g. /blog
 url: ""        # the base hostname & protocol for your site, e.g. http://example.com
 description: >
-  The easiest and fastest way for your web-app to upload images directly to Amazon S3
+  The easiest and fastest way for your web-app to
+  upload images directly to Amazon S3
+
+# Analytics settings
+fb_pixel: "1490231254348649"
+ga: "UA-80905075-3"
+mixpanel: "01357d729eae31357daebaf72ebb3cd6"
 
 # Site-wide defaults
 defaults:
