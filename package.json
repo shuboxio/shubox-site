@@ -25,6 +25,7 @@
     "shipit-deploy": "^2.4.0"
   },
   "dependencies": {
-    "gulp-s3-upload": "^1.6.4"
+    "gulp-s3-upload": "^1.6.4",
+    "node-sass": "^4.5.2"
   }
 }

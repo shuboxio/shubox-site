@@ -28,7 +28,7 @@ a {
   outline: 0;
 
   &:hover,
-  &:focus {  
+  &:focus {
     color: darken($red, 10%);
   }
 }
@@ -42,24 +42,24 @@ a {
       max-height: 100vh;
     }
   }
-  
-  .arrow {  
+
+  .arrow {
     height: 22px;
     width: 22px;
     transform: rotate(180deg);
-            
+
     @media (min-width: 50em) {
       transform: rotate(0deg) !important;
     }
   }
-  
+
   .rotate-arrow > .arrow {
     transform: rotate(0deg);
-    
+
     @media (min-width: 50em) {
       transform: rotate(180deg) !important;
     }
-  }  
+  }
 }
 
 pre {
@@ -76,7 +76,7 @@ pre {
   width: 106px;
 }
 
-.logo-mark {  
+.logo-mark {
   width: 65px;
   height: 40px;
   margin-top: 4px;
@@ -92,7 +92,7 @@ pre {
 
 .transformer svg {
   height: 64px;
-  margin-bottom: 17px;  
+  margin-bottom: 17px;
 }
 
 // Docs
@@ -101,14 +101,3 @@ pre {
   border-radius: 2px;
   box-shadow: 0 1px 3px $light-gray;
 }
-
-
-  // .nav-header
-  //   align-items: center
-  //   cursor: pointer
-  //   display: flex
-  //   justify-content: space-between
-  // 
-
-
-  
