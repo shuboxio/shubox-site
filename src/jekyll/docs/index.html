@@ -6,11 +6,11 @@ layout: default
 
 <div class="{% include tachyons-container.liquid %}">
   <div class="flex-l flex-row">
-    
+
     <div class="subnav w5-l mr5-l flex-none">
       <nav id="sticky">
-        
-        <div class="bt bw2 b--light-gray">
+
+        <div class="bt bw1 b--light-gray">
           <div class="folding-header flex justify-between items-center pointer">
             <h2 class="f4 b purple">Getting Started</h2>
             <svg class="arrow"><use xlink:href="#nav-arrow"></use></svg>
@@ -24,12 +24,12 @@ layout: default
           </div>
         </div>
 
-        <div class="bt bw2 b--light-gray mb4">
+        <div class="bt bw1 b--light-gray mb4">
           <div class="folding-header flex justify-between items-center pointer">
             <h2 class="f4 b purple">JavaScript API</h2>
             <svg class="arrow"><use xlink:href="#nav-arrow"></u`se></svg>
           </div>
-          <div class="folding-links dn db-l">  
+          <div class="folding-links dn db-l">
             <h3 class="f5 silver normal">Methods</h3>
             <ul class="list pl0 mt0 mb4">
               <li class="mb3"><a href="#option-success">success</a></li>
@@ -49,10 +49,10 @@ layout: default
             <h3 class="f5 silver normal">Objects</h3>
             <ul class="list pl0 ma0">
               <li class="mb3"><a href="#type-file">File Object</a></li>
-            </ul>          
+            </ul>
           </div>
         </div>
-          
+
       </nav>
     </div>
 
@@ -60,7 +60,7 @@ layout: default
       <div class="nested-copy-line-height nested-headline-line-height nested-img nested-copy-colors">
         {% assign docs = site.docs | sort: "order" %}
         {% for doc in docs %}
-        <h2>{{ doc.title }}</h2>
+        <h1>{{ doc.title }}</h1>
           {{ doc.content }}
         {% endfor %}
       </div>

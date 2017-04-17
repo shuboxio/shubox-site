@@ -8,12 +8,12 @@ get up back to working on your project. There are two parts to setting up
 Shubox — connecting your Amazon S3 account to Shubox, then integrating Shubox
 into your website. Let’s go!
 
-<h3 id="setup-amazon">Amazon S3 Setup</h3>
+<h2 id="setup-amazon">Amazon S3 Setup</h2>
 
 In order for Shubox to work it’s magic, it needs access to your Amazon S3
 account with a few non-destructive permissions.
 
-#### Step 1: Create an "Identity and Access Management" (IAM) User
+### Step 1: Create an "Identity and Access Management" (IAM) User
 
 Amazon's user management service "Identity and Access Management" (IAM), is how
 master AWS accounts manage users, groups, and the permissions to work with the
@@ -21,19 +21,19 @@ different services. We would recommend that each site (and with further
 granularity - each domain) that works with Shubox to be an IAM user. Let’s make
 one:
 
-##### Head over to the “Users” section of your [AWS console](https://console.aws.amazon.com/iam/home#/users) and hit the “Add user” button:
+#### Head over to the “Users” section of your [AWS console](https://console.aws.amazon.com/iam/home#/users) and hit the “Add user” button:
 
 <figure class="shadow">
   <img src="/assets/1-user-dashboard.png" alt="user dashboard"/>
 </figure>
 
-##### We suggest creating a “shubox” user with programatic access:
+#### We suggest creating a “shubox” user with programatic access:
 
 <figure class="shadow">
   <img src="/assets/2-add-user.png" alt="add user"/>
 </figure>
 
-##### Attach the `AmazonS3FullAccess` policy, then review and create the user:
+#### Attach the `AmazonS3FullAccess` policy, then review and create the user:
 
 <figure class="shadow">
   <img src="/assets/3-permissions.png" alt="set permissions"/>
@@ -46,26 +46,26 @@ need following permissions to do our work:
 [`s3:PutBucketCORS`](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTcors.html),
 [`s3:PutObject`](http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTcors.html)
 
-##### Review and create the user:
+#### Review and create the user:
 
 <figure class="shadow">
   <img src="/assets/4-review.png" alt="review and create user"/>
 </figure>
 
-##### Grab your access key id and secret access key:
+#### Grab your access key id and secret access key:
 
 <figure class="shadow">
   <img src="/assets/5-success.png" alt="great success"/>
 </figure>
 
-<h3 id="setup-shubox">Connect your domain to Shubox</h3>
+<h2 id="setup-shubox">Connect your domain to Shubox</h2>
 
 Step 2: Now that your Amazon IAM user is set up, you can head over to your Shubox
 dashboard and [add a new domain](https://dashboard.shubox.io/domains/new). A
 unique bit of JavaScript will be created for your domain. You’re going to need
 that next.
 
-<h3 id="setup-website">Website Integration</h3>
+<h2 id="setup-website">Website Integration</h2>
 
 It’s time to fire up your code editor! We’re going to connect your website to
 Shubox. Place the javascript snippet that shubox provided just before
@@ -78,7 +78,7 @@ Shubox. Place the javascript snippet that shubox provided just before
 </html>
 ```
 
-### Initialization
+## Initialization
 
 Now all we have to do is bind Shubox to a form element:
 
@@ -92,7 +92,7 @@ Now all we have to do is bind Shubox to a form element:
 </script>
 ```
 
-### Customization
+## Customization
 
 From here you can use our [JavaScript API](#JavaScriptAPI) to create the file
 uploader of your dreams. If you’d rather get started fast, check out our
@@ -100,7 +100,7 @@ uploader of your dreams. If you’d rather get started fast, check out our
 [codepen](http://codepen.io/shubox). Feel free to incorporate those into your
 project, customize them, or use them to learn the ropes.
 
-### Local Development
+## Local Development
 
 Shubox only needs the domain for your website. The only requirements are that
 the domain is running on a web server (i.e. `https://mydomain.com`,

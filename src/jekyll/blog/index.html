@@ -10,10 +10,8 @@ layout: default
     {% for post in site.posts %}
       <article class="w-100 w-50-m w-third-l mb5 ph2">
         <a href="{{ post.url }}">
-          <div class="bg-near-white mb4 w-100
-            aspect-ratio aspect-ratio--16x9">
-            <img class="aspect-ratio--object" src="{{ post.image }}" alt="">
-          </div>
+
+            <img src="{{ post.image }}" alt="">
           <h1 class="f5 mb2">{{ post.title }}</h1>
           <p class="gray lh-copy mt0">
             {{ post.summary }}

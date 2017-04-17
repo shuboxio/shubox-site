@@ -3,10 +3,10 @@ title: JavaScript API
 order: 2
 ---
 
-<h3>Methods</h3>
+<h2>Methods</h2>
 
 <div id="option-success">
-  <h4>success:</h4>
+  <h3>success:</h3>
   <p>
     Assign a function to the success key that accepts a
     <code>file</code> parameter which will be run after files are successfully
@@ -17,7 +17,7 @@ order: 2
 </div>
 
 <div id="option-error">
-  <h4>error:</h4>
+  <h3>error:</h3>
   <p>
     Assign a function to the error key which accepts a
     <a href="#type-file">file object</a> and an error string and it will
@@ -27,7 +27,7 @@ order: 2
 </div>
 
 <div id="option-queue-complete">
-  <h4>queuecomplete:</h4>
+  <h3>queuecomplete:</h3>
   <p>
     The queuecomplete callback will be called when all files are finished
     uploading.
@@ -35,11 +35,11 @@ order: 2
   <pre><code>queuecomplete: function() {}</code></pre>
 </div>
 
-<h3>Parameters</h3>
+<h2>Parameters</h2>
 
 {% raw %}
 <div id="option-s3-url-template">
-  <h4>s3urlTemplate:</h4>
+  <h3>s3urlTemplate:</h3>
   <p>
     When uploading to a form element, the element's value will be
     changed to the URL of the uploaded file, which is, according to the
@@ -58,7 +58,7 @@ order: 2
 {% endraw %}
 
 <div id="option-text-behavior">
-  <h4>textBehavior:</h4>
+  <h3>textBehavior:</h3>
   <p>
     When uploading through a form element (<code>&lt;input&gt;</code>,
     <code>&lt;textarea&gt;</code>, etc) the behavior, by default, will be
@@ -73,7 +73,7 @@ order: 2
 </div>
 
 <div id="option-clickable">
-  <h4>clickable:</h4>
+  <h3>clickable:</h3>
   <p>
     Any element initialized with Shubox will, by default, trigger the
     file dialog when clicked.
@@ -94,7 +94,7 @@ order: 2
 </div>
 
 <div id="option-preview-template">
-  <h4>previewTemplate:</h4>
+  <h3>previewTemplate:</h3>
   <p>
     Because much of the JS under the hood is handled by the excellent
     <a href="http://www.dropzonejs.com/">dropzone.js</a> javascript library
@@ -124,7 +124,7 @@ previewTemplate: myTemplate
 </div>
 
 <div id="option-extra-params">
-  <h4>extraParams:</h4>
+  <h3>extraParams:</h3>
   <p>
     Shubox provides a mechanism with which to post custom data via an AJAX
     webhook to any address of your own choosing whenever files are

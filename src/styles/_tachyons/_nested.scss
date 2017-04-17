@@ -16,10 +16,20 @@
 .nested-copy-colors {
   h1, h2, h3, h4, h5, h6 {
     color: $dark-purple;
+    margin-top: 40px;
   }
-  
+
   p, li {
-    color: $dark-gray;
+    color: $gray;
+    font-size: 16px;
+
+    @media (min-width: 30em) {
+      font-size: 18px;
+    }
+  }
+
+  .highlight {
+    margin: 25px 0;
   }
 }
 
@@ -59,6 +69,7 @@
   width: 100%;
   max-width: 100%;
   display: block;
+  margin: 40px 0;
 }
 
 .nested-links a {
@@ -71,4 +82,3 @@
   color: darken($red, 10%);
   transition: color .15s ease-in;
 }
-
