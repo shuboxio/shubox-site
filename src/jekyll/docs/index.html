@@ -60,7 +60,6 @@ layout: default
       <div class="nested-copy-line-height nested-headline-line-height nested-img nested-copy-colors">
         {% assign docs = site.docs | sort: "order" %}
         {% for doc in docs %}
-        <h1>{{ doc.title }}</h1>
           {{ doc.content }}
         {% endfor %}
       </div>

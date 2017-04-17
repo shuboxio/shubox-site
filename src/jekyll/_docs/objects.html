@@ -3,12 +3,14 @@ title: Objects
 order: 3
 ---
 
-<a id="type-file"></a>
-<h2>File Object</h2>
-Upon successful upload of an image the Shubox library will pass a file object
-to all JavaScript callbacks. The format of this file object follows:
+<h2 id="type-file">File Object</h2>
 
-```javascript
+<p>
+  Upon successful upload of an image the Shubox library will pass a file object
+  to all JavaScript callbacks. The format of this file object follows:
+</p>
+
+<pre><code class="js">
 {
   accepted: true,
   custom_status: "ready",
@@ -38,4 +40,4 @@ to all JavaScript callbacks. The format of this file object follows:
     progress: 100
   }
 }
-```
+</code></pre>
