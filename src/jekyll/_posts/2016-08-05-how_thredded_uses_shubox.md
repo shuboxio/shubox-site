@@ -4,7 +4,7 @@ title:  "How Thredded Uses Shubox"
 ---
 
 I've mentioned previously how shubox.io was born of one of the bigger frustrations I had while
-building the [thredded gem], and [thredded.com]. In short, it was a feature too big to be
+building the [thredded gem], and [thredded.org]. In short, it was a feature too big to be
 handled elegantly within something that had a whole other responsibility - discussion and
 conversation. Sure, images are a vital piece of communication these days and deserve to be a first
 class citizen. That being said - they deserve their own first class solution. Hence, why I built
@@ -184,4 +184,4 @@ linking to photos and gifs within the thredded post textarea!
 [empty]: https://github.com/thredded/thredded/blob/master/app/views/thredded/posts_common/form/_before_content.html.erb
 [partials]: https://github.com/thredded/thredded/blob/master/app/views/thredded/posts_common/form/_after_content.html.erb
 [thredded gem]: https://github.com/thredded/thredded
-[thredded.com]: https://thredded.com
+[thredded.org]: https://thredded.org

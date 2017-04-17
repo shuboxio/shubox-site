@@ -9,6 +9,8 @@ Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
   display: block;
   overflow-x: auto;
   background: $near-white;
+  font-size: .875em;
+  line-height: 1.5;
 }
 
 .hljs,
@@ -84,5 +86,5 @@ Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
 }
 
 .hljs-number {
-  color: #8A7B52;  
+  color: #8A7B52;
 }
