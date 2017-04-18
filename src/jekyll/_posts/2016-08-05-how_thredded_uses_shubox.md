@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "How Thredded Uses Shubox"
+image: "/assets/blog/picture.svg"
+summary: "I want it to be the easiest, quickest, and most painless way to allow your users — whether they are your end-users, or your internal team — to upload images to S3. Let me unpack a few points there."
 ---
 
 I've mentioned previously how shubox.io was born of one of the bigger frustrations I had while

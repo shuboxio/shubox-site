@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Simple Markdown Powered Rails Blog"
+image: "/assets/blog/markdown.svg"
 ---
 
 I think you'll agree that starting a brand new greenfield Rails app is a delightful experience.
