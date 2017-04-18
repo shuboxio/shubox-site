@@ -3,23 +3,22 @@ title: Getting Started
 order: 1
 ---
 
-<h1>{{ page.title }}</h1>
+<h1 class="mt0">{{ page.title }}</h1>
 
 <p>
-  Getting up and running with Shubox was designed to be quick and easy so you can
-  get up back to working on your project. There are two parts to setting up
+  Getting up and running with Shubox was designed to be quick and easy so you can get up back to working on your project. There are two parts to setting up
   Shubox — connecting your Amazon S3 account to Shubox, then integrating Shubox
   into your website. Let’s go!
 </p>
 
-<h2 id="setup-amazon">Amazon S3 Setup</h2>
+<h2 class="mt4 mb0" id="setup-amazon">Amazon S3 Setup</h2>
 
 <p>
   In order for Shubox to work it’s magic, it needs access to your Amazon S3
   account with a few non-destructive permissions.
 </p>
 
-<h3>Step 1: Create an "Identity and Access Management" (IAM) User</h3>
+<h3 class="mt4 mb0">Step 1: Create an "Identity and Access Management" (IAM) User</h3>
 
 <p>
   Amazon's user management service "Identity and Access Management" (IAM), is how
@@ -29,9 +28,9 @@ order: 1
   one:
 </p>
 
-<h4>
-  Head over to the “Users” section of your 
-  <a href="https://console.aws.amazon.com/iam/home#/users">AWS console</a> 
+<h4 class="mt4 mb0">
+  Head over to the “Users” section of your
+  <a href="https://console.aws.amazon.com/iam/home#/users">AWS console</a>
   and hit the “Add user” button:
 </h4>
 
@@ -93,7 +92,7 @@ order: 1
 
 <p>
   It’s time to fire up your code editor! We’re going to connect your website to
-  Shubox. Place the javascript snippet that shubox provided just before 
+  Shubox. Place the javascript snippet that shubox provided just before
   <code>&lt;body&gt;</code> in your HTML template:
 </p>
 
@@ -101,7 +100,7 @@ order: 1
     ...
     &lt;script src="/x/abc12300.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
-&lt;/html&gt;    
+&lt;/html&gt;
 </code></pre>
 
 <h2>Initialization</h2>
@@ -117,7 +116,7 @@ order: 1
 
   // with custom options - note: `optionKey` is just an example
   new Shubox("#dragndrop", { optionKey: 'option value' });
-&lt;/script&gt;  
+&lt;/script&gt;
 </code></pre>
 
 <h2>Customization</h2>
@@ -125,8 +124,8 @@ order: 1
 <p>
   From here you can use our [JavaScript API](#JavaScriptAPI) to create the file
   uploader of your dreams. If you’d rather get started fast, check out our
-  [example/demo uploaders](/demos) here or on 
-  <a href="http://codepen.io/shubox">codepen</a>. Feel free to incorporate those 
+  [example/demo uploaders](/demos) here or on
+  <a href="http://codepen.io/shubox">codepen</a>. Feel free to incorporate those
   into your project, customize them, or use them to learn the ropes.
 </p>
 
@@ -135,7 +134,7 @@ order: 1
 <p>
   Shubox only needs the domain for your website. The only requirements are that
   the domain is running on a web server (i.e. <code>https://mydomain.com</code>,
-  <code>http://mydomain.dev</code>, or <code>http://localhost:[port]</code>). 
+  <code>http://mydomain.dev</code>, or <code>http://localhost:[port]</code>).
   They may be a combination of an http(s) protocol, hostname, domain name, and port.
 </p>
 

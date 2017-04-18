@@ -2,16 +2,10 @@
 layout: post
 title:  "How Thredded Uses Shubox"
 image: "/assets/blog/picture.svg"
-summary: "I want it to be the easiest, quickest, and most painless way to allow your users — whether they are your end-users, or your internal team — to upload images to S3. Let me unpack a few points there."
+summary: "Images are a vital piece of communication these days that deserve to be a first class citizen with their own first class solution."
 ---
 
-I've mentioned previously how shubox.io was born of one of the bigger frustrations I had while
-building the [thredded gem], and [thredded.org]. In short, it was a feature too big to be
-handled elegantly within something that had a whole other responsibility - discussion and
-conversation. Sure, images are a vital piece of communication these days and deserve to be a first
-class citizen. That being said - they deserve their own first class solution. Hence, why I built
-shubox. It's an upload solution *for developers* to make that experience easy, seemless, and
-transparent *for users*.
+I've mentioned previously how Shubox was born of one of the bigger frustrations I had while building the [thredded gem], and [thredded.org]. In short, it was a feature too big to be handled elegantly within something that had a whole other responsibility - discussion and conversation. Sure, images are a vital piece of communication these days and deserve to be a first class citizen. That being said, they deserve their own first class solution. Hence, why I built Shubox. It's an upload solution *for developers* to make that experience easy, seemless, and transparent *for users*.
 
 Of the user experiences I use regularly, what are some of the best? Github's is one. When leaving
 comments on GitHub's issues or PR's I know I can drag and drop an image, or click a well-styled

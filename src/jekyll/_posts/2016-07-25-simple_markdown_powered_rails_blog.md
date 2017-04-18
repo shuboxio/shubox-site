@@ -1,28 +1,18 @@
 ---
 layout: post
-title:  "Simple Markdown Powered Rails Blog"
+title:  "Simple Markdown-Powered Rails Blog"
 image: "/assets/blog/markdown.svg"
+summary: "Get a blog up and running in Rails in no time using Markdown. I'll show you how in five simple steps."
 ---
 
-I think you'll agree that starting a brand new greenfield Rails app is a delightful experience.
-That blank slate is a sign of promise, a sign of hope, a deeeeep breath of fresh air, an
-opportunity to write your career's *best* code! You know, it makes me feel good just writing that.
+I think you'll agree that starting a brand new greenfield Rails app is a delightful experience. That blank slate is a sign of promise, a sign of hope, a deeeeep breath of fresh air, an opportunity to write your career's *best* code! You know, it makes me feel good just writing that.
 
-At the same time, it's an opportunity to experiment with all this cool shiney *new* technology! To
-that I ask -- "do you need it?" Do you need to use that new add-on? That new engine? Is the purpose of
-this new app to ... play with new technology? Or to ship? If the answer is "to ship" I
-have a proposition for you - why not eschew that new technology unless you absolutely have to?
+At the same time, it's an opportunity to experiment with all this cool shiny *new* technology! To that I ask: "Do you need it?" Do you need to use that new add-on? That new engine? Is the purpose of this new app to play with new technology or to ship? If the answer is to ship, I have a proposition for you - why not eschew that new technology unless you absolutely have to?
 
-For example - what about the part of your website or app where you'll be blogging about all the
-great stuff your service offers? You'll need some way to author and publish these posts, right?
-You could try out [comfortable mexican sofa], [refinery], or try to integrate [jekyll] or [middleman], or
-get something like [wordpress] or [ghost] set up on a subdomain.
+For example, what about the part of your website or app where you'll be blogging about all the great stuff your service offers? You'll need some way to author and publish these posts, right? You could try out [comfortable mexican sofa], [refinery], or try to integrate [jekyll] or [middleman], or get something like [wordpress] or [ghost] set up on a subdomain.
 
 The itch and the compulsion to try out that shiny piece of tech is super strong.
-However, you should remind yourself that the business must come first. To that end - in order to get
-something up off the ground fast, you have to just think creatively. I've done that work for you and
-have a solution that might get you from 0 to 60 in a lot less time than it would take to configure
-(your desired blog engine here). Let's get to work. Here's what we'll do:
+However, you should remind yourself that the business must come first. To that end, in order to get something up off the ground fast, you have to just think creatively. I've done that work for you and have a solution that might get you from 0 to 60 in a lot less time than it would take to configure (your desired blog engine here). Let's get to work. Here's what we'll do:
 
 * * *
 
@@ -98,8 +88,7 @@ have a solution that might get you from 0 to 60 in a lot less time than it would
     Welcome to the first post on the blog!
     ```
 
-That's it! ***Done!*** Future blog posts can now be published by deploying your website with new markdown
-files in the desired path(s).
+That's it! ***Done!*** Future blog posts can now be published by deploying your website with new markdown files in the desired path(s).
 
 ```
 ./app/views/blog/2016/07/25/_my_first_post.html.md
