@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Form Objects and Rails Form Builders"
-image: "/assets/blog/picture-scale.svg"
+image: "/assets/blog/transform.svg"
 summary: "Adhering to Rails' sensible defaults is often the right decision when working with the framework, but at times you may be served best by trying something a little different."
 ---
 
