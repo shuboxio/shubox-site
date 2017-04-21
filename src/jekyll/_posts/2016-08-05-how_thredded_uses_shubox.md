@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How Thredded Uses Shubox"
-image: "/assets/blog/picture.svg"
+image: "/assets/blog/shubox.svg"
 summary: "Images are a vital piece of communication these days that deserve to be a first class citizen with their own first class solution."
 ---
 
