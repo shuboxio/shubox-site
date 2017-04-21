@@ -3,14 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
+    <title>Shubox | {{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="icon" href="/favicon.ico" />
     <script src="https://js.shubox.io/v1/{{ site.shuboxScriptId }}_src.js"></script>
-    <!-- <script src="https://use.typekit.net/uma1wda.js"></script> -->
     <script src="https://use.typekit.net/dji7eur.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    
+    <!-- SEO -->
+    <meta name="referrer" content="always" />
+    <meta name="robots" content="all" />
+    <meta name="keywords" content="image upload, amazon s3, s3, service" />
+    <meta name="description" content="Upload images from your web app directly to Amazon S3. Simple. Fast. Customizable." />
+    <link rel="canonical" href="https://shubox.io/" />
+    
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/favicon.png" />
+    <link rel='mask-icon' href='/favicon.svg' color='#7c60ce'>
+    
+    <!-- Twitter Summary Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@shuboxio" />
+    <meta name="twitter:title" content="Shubox" />
+    <meta name="twitter:description" content="Upload images from your web app directly to Amazon S3. Simple. Fast. Customizable." />
+    <meta name="twitter:image" content="https://shubox.io/favicon.png" />
+    
+    <!-- Facebook -->
+    <meta property="og:url" content="https://shubox.io" />
+    <meta property="og:type" content="product" />
+    <meta property="og:title" content="Shubox" />
+    <meta property="og:description" content="Upload images from your web app directly to Amazon S3. Simple. Fast. Customizable." />
+    <meta property="og:image" content="https://shubox.io/favicon.png" />
+    
     {% include analytics.liquid %}
   </head>
   <body>
