@@ -1,6 +1,6 @@
-var config = require('../../config')
-var gulp = require('gulp')
-var s3 = require('gulp-s3-upload')({
+const config = require('../../config')
+const gulp = require('gulp')
+const s3 = require('gulp-s3-upload')({
   accessKeyId: process.env.AWS_ACCESS_KEY,
   secretAccessKey: process.env.AWS_SECRET_KEY
 })

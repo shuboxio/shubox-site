@@ -9,7 +9,7 @@ const changed = require('gulp-changed')
 // Build Jekyll, Build!
 // ============================================================
 
-var build_command = [
+var buildCommand = [
   'exec',
   'jekyll',
   'build',
@@ -19,8 +19,8 @@ var build_command = [
   'tmp'
 ]
 
-if (process.env.PRODUCTION_BUILD == 'true') {
-  build_command.push(
+if (process.env.PRODUCTION_BUILD === 'true') {
+  buildCommand.push(
     '--config',
     'src/jekyll/_config.yml,src/jekyll/_production_config.yml'
   )
@@ -28,7 +28,7 @@ if (process.env.PRODUCTION_BUILD == 'true') {
 
 gulp.task('jekyll-build', (done) => {
   return cp
-    .spawn('bundle', build_command, { stdio: 'inherit' })
+    .spawn('bundle', buildCommand, { stdio: 'inherit' })
     .on('close', done)
 })
 
