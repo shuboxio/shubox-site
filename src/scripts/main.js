@@ -3,6 +3,8 @@
 // ============================================================
 // Sticky Subnav
 // ============================================================
+//
+var foo = bar
 
 function sticky (el) {
   var scrollAmount = $(document).scrollTop() - $('.subnav').offset().top
