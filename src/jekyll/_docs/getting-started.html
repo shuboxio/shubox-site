@@ -91,7 +91,7 @@ order: 1
 <h2 class="mt4" id="setup-website">Website Integration</h2>
 
 <p>
-  It’s time to fire up your code editor! We’re going to connect your website to
+  It’s time to fire up your editor! We’re going to connect your website to
   Shubox. Place the javascript snippet that shubox provided just before
   <code>&lt;body&gt;</code> in your HTML template:
 </p>
@@ -122,25 +122,128 @@ order: 1
 <h2 class="mt4">Customization</h2>
 
 <p>
-  From here you can use our [JavaScript API](#JavaScriptAPI) to create the file
-  uploader of your dreams. If you’d rather get started fast, check out our
-  [example/demo uploaders](/demos) here or on
-  <a href="http://codepen.io/shubox">codepen</a>. Feel free to incorporate those
+  From here you can use our <a href="#javascript-api">JavaScript API</a> to
+  create the file uploader of your dreams. If you’d rather get started fast,
+  check out our <a href="/demos">example/demo uploaders</a> here or on <a
+  href="http://codepen.io/shubox">codepen</a>. Feel free to incorporate those
   into your project, customize them, or use them to learn the ropes.
 </p>
 
-<h2 class="mt4">Local Development</h2>
+<h2 class="mt4">Local Development with <em>Development Sandboxes</em></h2>
 
 <p>
-  Shubox only needs the domain for your website. The only requirements are that
-  the domain is running on a web server (i.e. <code>https://mydomain.com</code>,
-  <code>http://mydomain.dev</code>, or <code>http://localhost:[port]</code>).
-  They may be a combination of an http(s) protocol, hostname, domain name, and port.
+  To make local development as <em>"quick to victory"</em> as possible we've
+  created what we call <em>development sandboxes</em>. To view the installation
+  instructions for your own account,
+  <a href="https://dashboard.shubox.io/domains/sandbox">visit your dashboard
+  and follow the steps outlined there</a>.
 </p>
 
 <p>
-  Domains must be unique in our system, which makes local development domains,
-  like <code>http://localhost:3000</code>, problematic -- once a localhost domain and port
-  are taken in our system, they are no longer available.We suggest proxying your
-  local development domain with <a href="http://pow.cx">Pow.cx</a>, <a href="https://github.com/puma/puma-dev">Puma Dev</a>, <a href="https://laravel.com/docs/5.3/valet">Laravel Valet</a> or something similar.
+  Development Sandboxes are S3 buckets we've created, for you, under our own
+  Shubox umbrella that are configured for immediate use with the usual
+  development addresses:
 </p>
+
+<ul>
+  <li><code>localhost:*</code></li>
+  <li><code>127.0.0.1:*</code></li>
+  <li><code>0.0.0.0:*</code></li>
+</ul>
+
+<p>
+</p>
+
+<p>
+  <strong>NOTE:</strong> sandboxes are for quickly testing the JavaScript
+  library and getting a feel for how Shubox file uploads work and feel. Image
+  transforms are not enabled for the sandbox. To test image transforms you would
+  have to set up a specific domain for your environment(s).
+</p>
+
+<h2 class="mt4" id="setup-image-transforms">Image Transforms</h2>
+
+<p>
+  Image transforms are operations defined in the dashboard that occur on all
+  images uploaded through your configured Shubox element.  An image transform
+  consists of 1 or more <em>processes</em> where you define
+  <strong>what</strong> happens to an image after it is uploaded. That could be
+  a single new image size created, several different image sizes, or more.
+</p>
+
+<h3 class="mt4 mb0">What Image Transforms processes are available?</h3>
+
+<p>
+  Currently:
+</p>
+
+<ul>
+  <li>
+    Resize images using <a href="https://www.imagemagick.org/script/command-line-processing.php#geometry">the geometry conventions with ImageMagick</a>.
+  </li>
+  <li>
+    Auto-orient rotation in photos (usually) taken with cell phone cameras.
+  </li>
+  <li>
+    Strip EXIF data from uploaded photos.
+  </li>
+  <li>
+    Extract single frame from the middle of an animated gif.
+  </li>
+</ul>
+
+<h2 class="mt4 mb0">How does an image transform queue get set up?</h2>
+
+<h3 class="mt4 mb0">Step 1: A functional Shubox upload</h3>
+
+<p>
+  Step one is to make sure <a href="#setup-website">you have a functional Shubox
+  element</a> accepting uploads to your bucket.
+</p>
+
+<h3 class="mt4 mb0">Step 2: Set up the image transform in your dashboard</h3>
+
+<p>
+  In your dashboard, <a href="https://dashboard.shubox.io/image_transforms/new"
+  target="_new">create a new image transform</a>. Give it a name, select the
+  domains that should be able to run the transform, and select the processes and
+  image sizes that should be generated after images are uploaded. Save your image
+  transform and you are almost there. Last, but not least ...
+</p>
+
+<h3 class="mt4 mb0">Step 3: Update your Shubox element's HTML</h3>
+
+<p>
+  For Shubox to know that any uploadable element must put ensuing uploads through
+  the image transform queue you have defined above, you must update your
+  element's HTML with a data attribute that says something to the effect of
+  "uploads here must go through <em>image transform X</em>".
+</p>
+
+<p>
+  Here is an example, with HTML and JS, <strong><em>before</em></strong>
+  setting up an image transform:
+</p>
+
+<pre class="html"><code>&lt;div id=&quot;avatar&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  new Shubox(&quot;#avatar&quot;);
+&lt;/script&gt;</code></pre>
+
+<p>
+  And if we've created an image transform called "avatar-transforms", we would
+  enable it with the following:
+</p>
+
+<pre class="html"><code>&lt;div id=&quot;avatar&quot; data-shubox-transform=&quot;avatar-transforms&quot;&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  new Shubox(&quot;#avatar&quot;);
+&lt;/script&gt;</code></pre>
+
+<p>
+  The important part is the data attribute &mdash;
+</p>
+
+<pre class="html"><code>data-shubox-transform="avatar-transforms"</code></pre>
