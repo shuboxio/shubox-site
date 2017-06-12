@@ -171,7 +171,7 @@ order: 1
   a single new image size created, several different image sizes, or more.
 </p>
 
-<h3 class="mt4 mb0">What Image Transforms processes are available?</h3>
+<h3 class="mt4 mb0">Available Image Transforms Processes</h3>
 
 <p>
   Currently:
@@ -192,7 +192,34 @@ order: 1
   </li>
 </ul>
 
-<h2 class="mt4 mb0">How does an image transform queue get set up?</h2>
+<h2 class="mt4 mb0">New Files Resulting From Image Transforms</h2>
+
+<p>
+After images are uploaded to S3 and are put through the assigned image transform process
+queue, the resulting files are uploaded back to S3 alongside the original file in the same, original, directory.
+The resulting files are named with a prefix according to the process applied to them. The prefixes related to the above
+processes are.
+</p>
+
+<ul>
+  <li>
+    <strong><code>ORIGINAL.JPG</code></strong>. The original file, if the
+    auto-orient or EXIF stripping processes are applied, will remain the same
+    but will have either/or process applied.
+  </li>
+  <li>
+    <strong><code>[Provided Imagemagick Geometry]_ORIGINAL.JPG</code></strong>.
+    Where <em>"Provided Imagemagick Geometry"</em> is what was assigned for the
+    value(s) under "Image Sizes".  Eg: <em>100x100!</em> would result in
+    <strong><em>100x100!_ORIGINAL.JPG</em></strong>.
+  </li>
+  <li>
+    <strong><code>frame_ORIGINAL.gif</code></strong>. Animated gifs that have a
+    frame extracted will have a <em>frame_</em> prefix.
+  </li>
+</ul>
+
+<h2 class="mt4 mb0">Setting Up an Image Transform Queue</h2>
 
 <h3 class="mt4 mb0">Step 1: A functional Shubox upload</h3>
 
