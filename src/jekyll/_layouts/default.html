@@ -6,7 +6,7 @@
     <title>Shubox | {{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/css/main.css?{{ "now" | date: "%Y%m%d%H%M" }}">
-    <script src="https://js.shubox.io/v1/{{ site.shuboxScriptId }}_src.js"></script>
+    <script src="https://js.shubox.io/v1/{{ site.shuboxScriptId }}.js"></script>
     <script src="https://use.typekit.net/dji7eur.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -48,10 +48,7 @@
     </main>
     {% include footer.liquid %}
 
-    <script type="text/javascript" src="/js/highlight.pack.js"></script>
-    <script type="text/javascript" src="/js/jquery-3.0.0.min.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/dist.js" async></script>
     <script src="https://embed.small.chat/{{ site.smallChatId }}.js" async></script>
-    <script>hljs.initHighlightingOnLoad()</script>
   </body>
 </html>

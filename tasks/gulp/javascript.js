@@ -6,19 +6,19 @@ const sourcemaps = require('gulp-sourcemaps')
 const babel = require('gulp-babel')
 const path = require('path')
 const changed = require('gulp-changed')
+const concat = require('gulp-concat')
 
-// Concat and minfy JS
+// Concat and minify JS
 gulp.task('js', () => {
   return gulp.src([
     path.join(config.shuboxWeb.scripts.src, '_vendor/highlight.pack.js'),
     path.join(config.shuboxWeb.scripts.src, '_vendor/jquery-3.0.0.min.js'),
     path.join(config.shuboxWeb.scripts.src, 'main.js')
   ])
+    .pipe(concat('dist.js'))
     .pipe(changed(config.shuboxWeb.scripts.dest))
-    .pipe(sourcemaps.init())
     .pipe(babel())
     .pipe(uglify())
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.shuboxWeb.scripts.dest))
     .pipe(browserSync.stream({ match: '**/*.js' }))
 })
