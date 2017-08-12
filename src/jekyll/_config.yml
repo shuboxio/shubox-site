@@ -24,7 +24,7 @@ defaults:
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
 keep_files:
   - ./js/
