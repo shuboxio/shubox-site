@@ -129,7 +129,7 @@ order: 1
   into your project, customize them, or use them to learn the ropes.
 </p>
 
-<h2 class="mt4">Local Development with <em>Development Sandboxes</em></h2>
+<h2 class="mt4" id="local-dev-with-sandboxes">Local Development with <em>Development Sandboxes</em></h2>
 
 <p>
   To make local development as <em>"quick to victory"</em> as possible we've
@@ -179,16 +179,27 @@ order: 1
 
 <ul>
   <li>
-    Resize images using <a href="https://www.imagemagick.org/script/command-line-processing.php#geometry">the geometry conventions with ImageMagick</a>.
+    <strong>Resize images</strong> using <a href="https://www.imagemagick.org/script/command-line-processing.php#geometry">the geometry conventions with ImageMagick</a>. Currently supported geometries:
+
+    <ul>
+      <li><code>300</code> - resize to width.</li>
+      <li><code>x400</code> - resize to height.</li>
+      <li><code>340x400</code> - max width and height.</li>
+      <li><code>340x400^</code> - minimum width and height.</li>
+      <li><code>340x400#</code> - cropped to this size.</li>
+      <li><code>340x400!</code> - explicitly this size.</li>
+      <li><code>340x400&gt;</code> - shrink if larger than size.</li>
+    </ul>
+
   </li>
   <li>
-    Auto-orient rotation in photos (usually) taken with cell phone cameras.
+    <strong>Auto-orient rotation</strong> in photos (usually) taken with cell phone cameras.
   </li>
   <li>
-    Strip EXIF data from uploaded photos.
+    <strong>Strip EXIF data</strong> from uploaded photos.
   </li>
   <li>
-    Extract single frame from the middle of an animated gif.
+    <strong>Extract single frame</strong> from the middle of an animated gif.
   </li>
 </ul>
 
@@ -241,10 +252,11 @@ processes are.
 <h3 class="mt4 mb0">Step 3: Update your Shubox element's HTML</h3>
 
 <p>
-  For Shubox to know that any uploadable element must put ensuing uploads through
-  the image transform queue you have defined above, you must update your
-  element's HTML with a data attribute that says something to the effect of
-  "uploads here must go through <em>image transform X</em>".
+  For Shubox to know that any uploadable element must put <em>each</em>
+  uploaded image through the image transform queue that you have defined above,
+  you must initialize your <code>Shubox</code> JavaScript object with the
+  <code>transformName</code> option being assigned the name of the image
+  transform you have created in the dashboard.
 </p>
 
 <p>
@@ -259,18 +271,12 @@ processes are.
 &lt;/script&gt;</code></pre>
 
 <p>
-  And if we've created an image transform called "avatar-transforms", we would
+  And if we've <a href="https://dashboard.shubox.io/image_transforms/new" target="_blank">created an image transform</a> called "avatar-transforms", we would
   enable it with the following:
 </p>
 
-<pre class="html"><code>&lt;div id=&quot;avatar&quot; data-shubox-transform=&quot;avatar-transforms&quot;&gt;&lt;/div&gt;
+<pre class="html"><code>&lt;div id=&quot;avatar&quot;&gt;&lt;/div&gt;
 
 &lt;script&gt;
-  new Shubox(&quot;#avatar&quot;);
+  new Shubox(&quot;#avatar&quot;, { transformName: &quot;avatar-transforms&quot; });
 &lt;/script&gt;</code></pre>
-
-<p>
-  The important part is the data attribute &mdash;
-</p>
-
-<pre class="html"><code>data-shubox-transform="avatar-transforms"</code></pre>
