@@ -94,19 +94,32 @@ order: 2
   visit the DropzoneJS website</a> and get an idea for what you can do
   by "theming" the resulting UI.
 </p>
-<pre class="javascript"><code> var myTemplate = '&lt;div class=\&quot;dz-preview dz-file-preview\&quot;&gt;' +
-'  &lt;div class=\&quot;dz-details\&quot;&gt;' +
-'    &lt;div class=\&quot;dz-filename\&quot;&gt;&lt;span data-dz-name&gt;&lt;/span&gt;&lt;/div&gt;' +
-'    &lt;div class=\&quot;dz-size\&quot; data-dz-size&gt;&lt;/div&gt;' +
-'    &lt;img data-dz-thumbnail /&gt;' +
-'  &lt;/div&gt;' +
-'  &lt;div class=\&quot;dz-progress\&quot;&gt;&lt;span class=\&quot;dz-upload\&quot; data-dz-uploadprogress&gt;&lt;/span&gt;&lt;/div&gt;' +
-'  &lt;div class=\&quot;dz-success-mark\&quot;&gt;&lt;span&gt;😄&lt;/span&gt;&lt;/div&gt;' +
-'  &lt;div class=\&quot;dz-error-mark\&quot;&gt;&lt;span&gt;😩&lt;/span&gt;&lt;/div&gt;' +
-'  &lt;div class=\&quot;dz-error-message\&quot;&gt;&lt;span data-dz-errormessage&gt;&lt;/span&gt;&lt;/div&gt;' +
-'&lt;/div&gt;'
+<pre class="javascript"><code>var myTemplate = '&lt;div class=\&quot;dz-preview dz-file-preview\&quot;&gt;' +
+  '  &lt;div class=\&quot;dz-details\&quot;&gt;' +
+  '    &lt;div class=\&quot;dz-filename\&quot;&gt;&lt;span data-dz-name&gt;&lt;/span&gt;&lt;/div&gt;' +
+  '    &lt;div class=\&quot;dz-size\&quot; data-dz-size&gt;&lt;/div&gt;' +
+  '    &lt;img data-dz-thumbnail /&gt;' +
+  '  &lt;/div&gt;' +
+  '  &lt;div class=\&quot;dz-progress\&quot;&gt;&lt;span class=\&quot;dz-upload\&quot; data-dz-uploadprogress&gt;&lt;/span&gt;&lt;/div&gt;' +
+  '  &lt;div class=\&quot;dz-success-mark\&quot;&gt;&lt;span&gt;😄&lt;/span&gt;&lt;/div&gt;' +
+  '  &lt;div class=\&quot;dz-error-mark\&quot;&gt;&lt;span&gt;😩&lt;/span&gt;&lt;/div&gt;' +
+  '  &lt;div class=\&quot;dz-error-message\&quot;&gt;&lt;span data-dz-errormessage&gt;&lt;/span&gt;&lt;/div&gt;' +
+  '&lt;/div&gt;'
 
-previewTemplate: myTemplate
+new Shubox('#my-selector', {
+  previewTemplate: myTemplate
+});
+</code></pre>
+
+<h3 class="mt4" id="option-previews-container">previewsContainer</h3>
+<p>
+  Defines <em>where</em> to display the file previews. If <code>null</code> the
+  target Shubox element itself is used. Can be a plain HTMLElement or a CSS
+  selector. A demo that uses this <a href="https://codepen.io/shubox/pen/qRdddM" target="_blank">can be found on CodePen here</a>.
+</p>
+<pre class="javascript"><code>previewsContainer: null // the default
+previewsContainer: '#selector'
+previewsContainer: document.querySelector('#dom-element')
 </code></pre>
 
 <h3 class="mt4" id="option-extra-params">extraParams:</h3>
@@ -127,3 +140,14 @@ previewTemplate: myTemplate
   userID: 123,
   userEmail: 'team@shubox.io'
 }</code></pre>
+
+<h3 class="mt4" id="option-accepted-files">acceptedFiles:</h3>
+<p>
+  If you only want <em>certain</em> file types allowed to be uploaded, you may
+  provide a list of mime types or extensions.  The contents of the option may
+  include a comma separated list of mime types or file extensions.  Eg.:
+  <code></code>
+</p>
+<pre class="javascript"><code>acceptedFiles: "image/*,application/pdf,.psd"</code></pre>
+
+
