@@ -7,6 +7,15 @@ order: 2
 
 <h2>Methods</h2>
 
+<h3 id="option-sending">sending:</h3>
+<p>
+  The <code>sending</code> callback is called just before each file is sent.
+  It receives <code>file</code>[<a href="#type-file">1</a>], <code>xhr</code>,
+  and <code>formData</code> objects. This allows you to modify any or all of
+  these object before they go in flight to your endpoint (to add headers, etc).
+</p>
+<pre><code>sending: function(file, xhr, formData) {}</code></pre>
+
 <h3 id="option-success">success:</h3>
 <p>
   Assign a function to the success key that accepts a
