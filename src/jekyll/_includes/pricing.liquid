@@ -1,25 +1,49 @@
 <div id="pricing" class="pricing-block {% include tachyons-container.liquid %} flex flex-wrap pt5 pt6-ns pb6-m pb5 mw6-m">
+  <div class="w-33-l tc mb5 uptick">
+    <h3 class="f3 b dark-purple mt0 mb3">That's What's Up</h3>
 
-  <div class="w-50-l tc mb5 uploader">
-    <svg><use xlink:href="#plan-upload"></use></svg>
+    <span class="f3 red db mb2">$0/month</span>
+    <span class="silver db mb2">$0/year</span>
 
-    <h3 class="f2 b dark-purple mt0 mb3">The Uploader</h3>
+    <p class="silver lh-copy ph3 mb4">
+      Every month your account will be able to upload, transform, and webhook
+      &mdash; <em>for free</em> &mdash; up to 500 event credits. An upload is single
+      credit, and each transform <em>process</em> (resize, gif extraction, etc)
+      are additional credits.Max allowed file size is 3MB.
+    </p>
+
+    <p>
+      Files are capped to a 3 megabyte file limit.
+    </p>
+
+    <p><a href="https://dashboard.shubox.io/sign_up" class="btn mb3">Sign Up</a></p>
+  </div>
+
+  <div class="w-33-l tc mb5 uptick">
+    <h3 class="f3 b dark-purple mt0 mb3">The Uptick</h3>
+
+    <span class="f3 red db mb2">$29/month</span>
+    <span class="silver">$299/year</span>
+
+    <p class="silver lh-copy ph3 mb4">
+      <em>2,500</em> credits a month. An upload is single
+      credit, and each transform <em>process</em> (resize, gif extraction, etc)
+      is an additional credit. Files are capped to a 20 megabyte file limit.
+    </p>
+  </div>
+
+  <div class="w-33-l tc up-up-away">
+    <h3 class="f3 b dark-purple mt0 mb3">The Up-Up &amp; Away</h3>
 
     <span class="f3 red db mb2">$49/month</span>
     <span class="silver">$499/year</span>
 
-    <p class="silver lh-copy ph3 mb4">Upload files from a web browser directly to your own Amazon S3 bucket, define webhooks for upload events, and use our robust JavaScript library to customize your upload experience. Unlimited domains.</p>
+    <p class="silver lh-copy ph3 mb4">
+      <em>10,000</em> credits a month. An upload is single
+      credit, each transform <em>process</em> (resize, gif extraction, etc)
+      is an additional credit. Files are capped to a 20 megabyte
+      file limit. Future experimental transforms and features will
+      be introduced here <em>first</em>.
+    </p>
   </div>
-
-  <div class="w-50-l tc transformer">
-    <svg><use xlink:href="#plan-transform"></use></svg>
-
-    <h3 class="f2 b dark-purple mt0 mb3">The Transformer</h3>
-
-    <span class="f3 red db mb2">$199/month</span>
-    <span class="silver">$1999/year</span>
-
-    <p class="silver lh-copy ph3 mb4">All features from The Uploader plan, plus you can configure Shubox to resize images, correct orientation, strip EXIF data, extract frames from animated gifs, and get email support.</p>
-  </div>
-
 </div>
