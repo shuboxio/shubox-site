@@ -3,6 +3,7 @@ title: shubox.io
 email: joel@shubox.io
 shuboxScriptId: "03457406"
 smallChatId: "123"
+production: "false"
 baseurl: ""    # the subpath of your site, e.g. /blog
 url: ""        # the base hostname & protocol for your site, e.g. http://example.com
 description: >

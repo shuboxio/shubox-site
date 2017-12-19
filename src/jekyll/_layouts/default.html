@@ -48,6 +48,11 @@
     </main>
     {% include footer.liquid %}
 
+    {% if site.production == "true" %}
+    <script type="text/javascript">
+      if (location.protocol !== "https:") location.protocol = "https:";
+    </script>
+    {% endif %}
     <script type="text/javascript" src="/js/dist.js" async></script>
     <script src="https://embed.small.chat/{{ site.smallChatId }}.js" async></script>
   </body>
