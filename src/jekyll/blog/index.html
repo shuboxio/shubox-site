@@ -5,14 +5,13 @@ title: Blog
 
 {% include page-header.liquid title="Blog" %}
 
-<div class="{% include tachyons-container.liquid %}">
+<div class="{% include tachyons-container.liquid %} blog">
   <div class="flex flex-row flex-wrap nl2 nr2">
 
     {% for post in site.posts %}
       <article class="w-100 w-50-m w-third-l mb4 mb5-l ph2">
         <a href="{{ post.url }}">
-
-            <img class="mb1" src="{{ post.image }}" alt="">
+          <img class="mb1" src="{{ post.image }}" alt="">
           <h1 class="f4 lh-title mb2">{{ post.title }}</h1>
           <p class="silver lh-copy mt0">
             {{ post.summary }}
