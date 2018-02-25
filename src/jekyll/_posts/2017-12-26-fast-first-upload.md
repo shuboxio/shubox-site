@@ -10,7 +10,7 @@ summary: |
 
 _Setting up an S3 bucket before using Shubox - no longer required!_
 
-![](https://shubox-codepen-io.s3.amazonaws.com/s-codepen-io/6ded4978/ghost-presenter-423726.jpg)
+![](https://jekyll-shubox-io.s3.amazonaws.com/localhost-5001/fa7157ee/544_ghost-presenter-423726.jpg.webp)
 <span class="bg-light-gray f7 db pa2 tr nt5 br3 br--bottom">Photo by [Ghost Presenter] on [Unsplash]</span>
 
 [Ghost Presenter]: https://unsplash.com/photos/VSwlS0PpWwc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

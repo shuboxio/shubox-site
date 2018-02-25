@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% if site.production != "true" %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+{% endif %}
+
 <div class="{% include tachyons-container.liquid %} mb6 blog-post">
   <div class="measure-wide">
     <h1 class="f2 f1-ns b dark-purple lh-title">
@@ -18,6 +22,16 @@ layout: default
       nested-headline-line-height
       nested-img
       nested-copy-colors">
+
+      {% if site.production != "true" %}
+      <div id="upload-image" class="ba br2 b--dark-purple dark-purple
+        bg-light-gray pa4 o-50 ho-100 grow">
+        Dragging and dropping some images here will allow me to upload, resize,
+        optimize, and write some code for you.
+      </div>
+      <div id="uploaded-images"></div>
+      {% endif %}
+
       {{ content }}
     </div>
 
@@ -36,3 +50,28 @@ layout: default
 fbq("track", "ViewContent", { page: "Blog post", title: "{{ page.title }}" });
 mixpanel.track("Viewed blog post", { title: "{{ page.title }}"});
 </script>
+
+{% if site.production != "true" %}
+<script>
+new Shubox(
+  "#upload-image", {
+    transformName: "blog-large-image",
+    previewsContainer: false,
+    success: function(file) {
+      originalFilename = file.s3url.split("/").reverse()[0];
+      newFileName = "544_" + originalFilename + ".webp";
+      s3url = file.s3url.replace(originalFilename, newFileName);
+
+      $("#uploaded-images").append(
+        "<div " +
+          "data-clipboard-text=\"![]("+ s3url +")\"" +
+          "class=\"lh-copy code mt2 f7 pa3 bg-light-gray gray br2\">" +
+          "![]("+ s3url +")" +
+        "</div>"
+      )
+      new Clipboard('#uploaded-images > div');
+    }
+  }
+);
+</script>
+{% endif %}

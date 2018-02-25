@@ -64,4 +64,14 @@ window.onload = function () {
   $('.folding-header').on('click', function () {
     $(this).toggleClass('rotate-arrow').next('.folding-links').slideToggle()
   })
+
+  // ============================================================
+  // Fall back to png's & jpg's for browsers without WEBP support
+  // ============================================================
+
+  var WEBPs = document.querySelectorAll(".no-webp img[src$='.webp']")
+
+  for (var i = 0; i < WEBPs.length; i++) {
+    WEBPs[i].src = WEBPs[i].src.replace('.webp', '')
+  }
 }

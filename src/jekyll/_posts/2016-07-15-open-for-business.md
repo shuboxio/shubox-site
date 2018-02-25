@@ -5,7 +5,7 @@ image: "/assets/blog/balloons.svg"
 summary: "Shubox is the easiest, quickest, and most painless way to allow your users to upload images to S3."
 ---
 
-![](http://theartaround.us/system/photos/images/52c9839ecc82497a9600b7f1/original.jpg?1388938142)
+![](https://jekyll-shubox-io.s3.amazonaws.com/localhost-5001/9ba10b0b/544_original.jpg.webp)
 
 Hi 👋, I'm [Joel]. I'm the founder of Shubox. How are you?
 

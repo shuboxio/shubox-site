@@ -7,11 +7,12 @@
 
 /*
 
-    OPACITY
-    Docs: http://tachyons.io/docs/themes/opacity/
+OPACITY
+Docs: http://tachyons.io/docs/themes/opacity/
 
-*/
+ */
 
+.ho-100:hover,
 .o-100 { opacity: 1;    }
 .o-90  { opacity: .9;   }
 .o-80  { opacity: .8;   }
@@ -25,3 +26,4 @@
 .o-05  { opacity: .05;  }
 .o-025 { opacity: .025; }
 .o-0   { opacity: 0; }
+

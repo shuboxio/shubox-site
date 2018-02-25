@@ -9,7 +9,7 @@ Happy holidays! Guess what? I have a gift for you (sort of). More on that
 shortly. Before we get to that, though, let's talk a little bit about needs and
 motivation.
 
-![](https://shubox-codepen-io.s3.amazonaws.com/s-codepen-io/35678616/box-2953722_1280.jpg)
+![](https://jekyll-shubox-io.s3.amazonaws.com/localhost-5001/5ba62331/544_box-2953722_1280.jpg.webp)
 
 It's been several years since I wrote the first line of code for Shubox. From
 that first hacking session until today my goal has always been to make
