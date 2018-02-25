@@ -2,7 +2,23 @@
 
 Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
 
-*/
+ */
+
+.blog-post .highlighter-rouge:hover {
+  width: 150%;
+}
+
+p .highlighter-rouge {
+  font-size: .9rem;
+  background-color: $light-gray;
+  padding: 1px 5px;
+  text-shadow: 1px 1px 0px white;
+  border-radius: 2px;
+
+  &:hover {
+    color: $near-black;
+  }
+}
 
 .hljs {
   @extend .pa4;
