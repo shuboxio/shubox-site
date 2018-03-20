@@ -10,11 +10,11 @@ $monospace: "Anonymous Pro", monospace;
 
 /*
 
-  STYLES
+STYLES
 
-  Add custom styles here.
+Add custom styles here.
 
-*/
+ */
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -80,6 +80,11 @@ pre {
   width: 65px;
   height: 40px;
   margin-top: 4px;
+}
+
+.twitter--small {
+  width: 25px;
+  height: 25px;
 }
 
 // Pricing Block
