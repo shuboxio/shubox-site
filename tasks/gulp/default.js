@@ -11,3 +11,5 @@ gulp.task('watch', () => {
 })
 
 gulp.task('default', ['browserSync', 'watch'])
+
+gulp.task('build', ['images', 'svg', 'js', 'sass', 'jekyll-build'])
