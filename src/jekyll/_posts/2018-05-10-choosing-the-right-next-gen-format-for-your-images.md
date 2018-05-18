@@ -16,7 +16,7 @@ For the past few years, the easiest and most straightforward way to choose your 
 
 There are a bunch of other image formats, such as BMPs, EXIFs, and TIFFs, but those have largely fallen out of favor even though they still technically work.
 
-With this advice, you can't go wrong. But the web is still evolving and there are new file formats to consider when putting your images on the web.
+For years this advice would serve you well. But the web is still evolving and there are new file formats to consider when putting your images on the web.
 
 ## The advanced way to choose image types
 
