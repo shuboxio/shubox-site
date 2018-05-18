@@ -36,7 +36,7 @@ Even if you aren't in the film or healthcare industry, you can take advantage of
 
 The main benefits of JPEG XR over the standard format are for enhanced support for HDR imagery. While the original format uses 3 color channels in a bit-depth of 8, JPEG XR supports multiple color formats like monochrome and CMYK and supports bit-depths of 16 or greater. It was also designed from the ground up to support better compression techniques. In other words, it is like JPEG on steroids.
 
-While this is the more practical, versatile file format in comparison to JPEG 2000, it suffers from the same adoption blunders by being available on only a limited set of browsers. As of this writing, JPEG XR is only [supported on IE](https://caniuse.com/#feat=jpegxr), so it will only benefit your customers on Windows machines running some form of IE.
+While this is a more practical and versatile file format compared to JPEG 2000, it suffers from the same adoption blunders by being available on only a limited set of browsers. As of this writing, JPEG XR is only [supported on IE](https://caniuse.com/#feat=jpegxr), so it will only benefit your customers on Windows machines running some form of IE.
 
 Combined, these two formats will cover all of your photography needs across the majority of devices. But what about PNGs? And what about open source browsers like Firefox and Chrome?
 
