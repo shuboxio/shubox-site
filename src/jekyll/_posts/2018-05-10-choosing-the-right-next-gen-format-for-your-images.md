@@ -5,7 +5,7 @@ image: "/assets/blog/doc-markdown.svg"
 summary: "There are a lot more options for images these days than just JPGs and PNGs."
 ---
 
-The web is getting bigger and slower. One of the easiest ways to improve the big part is to [compress your images](https://userinterfacing.com/the-fastest-way-to-increase-your-sites-performance-now/) (or you can do it [automatically](https://shubox.io/docs/#setup-image-transforms) with Shubox). A better way would be to choose the right image type in the first place.
+The web is getting bigger and slower. One of the easiest ways to improve the big part is to [compress your images](https://userinterfacing.com/the-fastest-way-to-increase-your-sites-performance-now/) (or you can do it [automatically](https://shubox.io/docs/#setup-image-transforms) with Shubox). An alternate question you could ask yourself is whether your image formats are the right type of images in the first place.
 
 ## The basic way to choose image types
 
