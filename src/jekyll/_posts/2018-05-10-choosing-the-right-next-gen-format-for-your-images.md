@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Choosing the Right Next-Gen Format for Your Images"
-image: "/assets/blog/doc-markdown.svg"
+image: "/assets/blog/picture-x2.svg"
 summary: "There are a lot more options for images these days than just JPGs and PNGs."
 ---
 
@@ -58,9 +58,9 @@ If you overlay all of the browser support links, you'll notice that Firefox is t
 
 While the next generation image formats above are not supported by all browser vendors there are some tactics you can employ to get these images to your users in the best format possible.
 
-* **Utilize responsive images.** Libraries like [Modernizr](https://modernizr.com/) and [Picturefill](https://scottjehl.github.io/picturefill/) can detect what is supported by the browser at runtime, and 
-polyfill responsive image support. 
-* **Use `srcset` to select each file type.** [`Srcset`](https://www.w3.org/TR/html-srcset/) is an image property that lets you toggle between images based on various criteria, such as high-resolution displays which are typically only seen on newer laptops and mobile phones. 
+* **Utilize responsive images.** Libraries like [Modernizr](https://modernizr.com/) and [Picturefill](https://scottjehl.github.io/picturefill/) can detect what is supported by the browser at runtime, and
+polyfill responsive image support.
+* **Use `srcset` to select each file type.** [`Srcset`](https://www.w3.org/TR/html-srcset/) is an image property that lets you toggle between images based on various criteria, such as high-resolution displays which are typically only seen on newer laptops and mobile phones.
 * **Use external services to convert your images for you.** Shubox will automatically create WebP images for you, while [Onthe.io](https://i.onthe.io/jxr) and [MyGeoData](https://mygeodata.cloud/converter/jpeg-to-jpeg2000) will convert JPGs into JPEG XRs and JPEG 2000s, respectively.
 
 At first blush it might seem like a lot but consider an incremental support approach. With all of these image formats to choose from, you can experience the web of tomorrow, today!
