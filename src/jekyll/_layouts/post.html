@@ -8,6 +8,12 @@ layout: default
       {{ page.title }}
     </h1>
 
+    {% if page.guest_bio %}
+      <div id="guest-post" class="w-100 mt4 mb4 pa3 lh-copy bg-light-gray gray">
+        {{ page.guest_bio | markdownify | remove: '<p>' | remove: '</p>' }}
+      </div>
+    {% endif %}
+
     <div class="nested-copy-line-height
       nested-headline-line-height
       nested-img
