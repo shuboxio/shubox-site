@@ -28,7 +28,7 @@ Recently there has been a rise in next-generation image formats to make the web 
 
 This is useful for applications like film and medical imaging because a great deal of data needs to be associated with the image. For example, film stills need to store information about high dynamic range and different color spaces. Medical imaging requires absolute precision in image clarity in spite of the large volume of data. With JPEG 2000, you can encode these files completely losslessly, with good-enough compression performance to make transfer acceptable.
 
-Even if you aren't in the film or healthcare industry, you can take advantage of these new compression techniques in your current JPGs by switching to JPEG 2000. There is one caveat: if you are writing for the web, JPEG 2000 is only [supported on Safari](https://caniuse.com/#feat=jpeg2000), so it will only benefit your customers on Macs, iPhones, and iPads. As long as you use the other two formats that follow, you should definitely consider JPEG 2000 in your arsenal of image formats.
+Even if you aren't in the film or healthcare industry, you can take advantage of these new compression techniques in your current JPGs by switching to JPEG 2000. Excluding these specific applications, as a general alternative to JPGs, JPEG 2000 is still superior because it can be compressed down even further than a standard JPEG with less loss in visual quality. With a smaller file size and better visual quality, JPEG 2000 is a total win over the standard JPG format. There is one caveat: if you are writing for the web, JPEG 2000 is only [supported on Safari](https://caniuse.com/#feat=jpeg2000), so it will only benefit your customers on Macs, iPhones, and iPads. As long as you use the other two formats that follow, you should definitely consider JPEG 2000 in your arsenal of image formats.
 
 ### JPEG XR
 
@@ -54,4 +54,13 @@ Again, the thing to remember with next-gen photographs is a triple threat approa
 
 If you overlay all of the browser support links, you'll notice that Firefox is the only browser to not support any of these formats. Mozilla has tried to implement not [once](https://bugzilla.mozilla.org/show_bug.cgi?id=1294490), not [twice](https://bugzilla.mozilla.org/show_bug.cgi?id=600919), but [thrice](https://bugzilla.mozilla.org/show_bug.cgi?id=856375)! Technically, they claim it is being worked on and has been assigned and updated within the last 2 weeks of this writing, but I'm not holding out any hope in the near future. In the meantime, keep the original image you used to create the previous three formats, and use that as the fallback for any browsers or devices that aren't supported.
 
-With all of these image formats to choose from, you can experience the web of tomorrow, today!
+## How to combine everything to get a total solution
+
+While the next generation image formats above are not supported by all browser vendors there are some tactics you can employ to get these images to your users in the best format possible.
+
+* **Utilize responsive images.** Libraries like [Modernizr](https://modernizr.com/) and [Picturefill](https://scottjehl.github.io/picturefill/) can detect what is supported by the browser at runtime, and 
+polyfill responsive image support. 
+* **Use `srcset` to select each file type.** [`Srcset`](https://www.w3.org/TR/html-srcset/) is an image property that lets you toggle between images based on various criteria, such as high-resolution displays which are typically only seen on newer laptops and mobile phones. 
+* **Use external services to convert your images for you.** Shubox will automatically create WebP images for you, while [Onthe.io](https://i.onthe.io/jxr) and [MyGeoData](https://mygeodata.cloud/converter/jpeg-to-jpeg2000) will convert JPGs into JPEG XRs and JPEG 2000s, respectively.
+
+At first blush it might seem like a lot but consider an incremental support approach. With all of these image formats to choose from, you can experience the web of tomorrow, today!
