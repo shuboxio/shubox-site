@@ -33,6 +33,8 @@ This is useful for applications like film and medical imaging because a great de
 
 Even if you aren't in the film or healthcare industry, you can take advantage of these new compression techniques in your current JPGs by switching to JPEG 2000. Excluding these specific applications, as a general alternative to JPGs, JPEG 2000 is still superior because it can be compressed down even further than a standard JPEG with less loss in visual quality. With a smaller file size and better visual quality, JPEG 2000 is a total win over the standard JPG format. There is one caveat: if you are writing for the web, JPEG 2000 is only [supported on Safari](https://caniuse.com/#feat=jpeg2000), so it will only benefit your customers on Macs, iPhones, and iPads. As long as you use the other two formats that follow, you should definitely consider JPEG 2000 in your arsenal of image formats.
 
+**NOTE:** As of May 21 JPEG 2000 is a supported format by Shubox. You can now convert JPGs and PNGs to JPEG 2000!
+
 ### JPEG XR
 
 [JPEG XR](https://jpeg.org/jpegxr/index.html) is yet another next-gen JPEG format and a close cousin of JPEG 2000. JPEG XRs application is less intense than JPEG 2000 and was designed in many ways to be the successor of the standard JPEG format.
