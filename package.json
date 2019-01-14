@@ -1,8 +1,8 @@
 {
   "devDependencies": {
     "babel-preset-es2015": "^6.18.0",
-    "browser-sync": "^2.18.2",
-    "chalk": "^1.1.3",
+    "browser-sync": "^2.26.3",
+    "chalk": "^2.4.2",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -23,11 +23,11 @@
     "gulp-task-listing": "^1.0.1",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.8",
-    "netlify-cli": "^1.2.2",
-    "require-dir": "^0.3.1"
+    "netlify-cli": "^2.6.1",
+    "require-dir": "^1.2.0"
   },
   "dependencies": {
-    "gulp-strip-css-comments": "^1.2.0",
-    "node-sass": "^4.7.2"
+    "gulp-strip-css-comments": "^2.0.0",
+    "node-sass": "^4.11.0"
   }
 }
