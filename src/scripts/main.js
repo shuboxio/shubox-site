@@ -54,6 +54,17 @@ window.onload = function () {
     }
   }
 
+  function pricingAnchor () {
+    if(window.location.pathname == "/") {
+      var el = document.querySelector(".main-nav a[href='/pricing']")
+      el.addEventListener("click", function(e){
+        e.preventDefault()
+        window.location.href = "#plans-pricing"
+      })
+    }
+  }
+
+  pricingAnchor()
   initalizeStickyNav()
   hljs.initHighlighting()
 
