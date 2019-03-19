@@ -5,6 +5,26 @@ image: "/assets/blog/balloons.svg"
 summary: "Months later - a new and improved JS library is ready for the world."
 ---
 
+<div id="upload">
+  Click or drag and drop to upload your image
+</div>
+<script src="/js/shubox.umd.js"></script>
+<script>
+new Shubox("#upload", {
+  key: "03457406",
+  maxFiles: 1,
+  transformName: 'blog-large-image',
+  previewsContainer: false,
+  transformCallbacks: {
+    "544": function(shuboxFile) {
+      var upload = document.getElementById("upload");
+      upload.innerHTML = '![]('+ shuboxFile.transforms["544"].s3url +')';
+    }
+  }
+})
+</script>
+
+
 The Shubox mission from the beginning was simple - make it easier to get any
 old arbitrary file from your computer or mobile phone to the biggest cloud
 storage player in the world, Amazon S3, without having to hook up all this
