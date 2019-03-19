@@ -53,6 +53,8 @@ title: Documentation
   </div>
 </div>
 
+{% if site.production == "true" %}
 <script>
   mixpanel.track("Viewed docs");
 </script>
+{% endif %}

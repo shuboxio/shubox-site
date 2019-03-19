@@ -14,6 +14,12 @@ layout: default
       </div>
     {% endif %}
 
+    {% if site.production != "true" %}
+    <div id="upload" class="lh-copy">
+      Click or drag and drop to upload your image
+    </div>
+    {% endif %}
+
     <div class="nested-copy-line-height
       nested-headline-line-height
       nested-img
@@ -32,6 +38,8 @@ layout: default
   </div>
 </div>
 
+{% if site.production == "true" %}
 <script>
 mixpanel.track("Viewed blog post", { title: "{{ page.title }}"});
 </script>
+{% endif %}

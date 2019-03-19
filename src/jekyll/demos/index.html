@@ -173,6 +173,8 @@ title: Demos
 
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
+{% if site.production == "true" %}
 <script>
 mixpanel.track("Viewed demos");
 </script>
+{% endif %}

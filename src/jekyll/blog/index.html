@@ -23,6 +23,8 @@ title: Blog
   </div>
 </div>
 
+{% if site.production == "true" %}
 <script>
 mixpanel.track("Viewed blog index");
 </script>
+{% endif %}
