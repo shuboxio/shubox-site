@@ -82,16 +82,17 @@ will benefit not only Shubox but _YOU_, the every day developer.
 [this blog]: https://github.com/shuboxio/site
 
 Suffice it to say, it's been a journey getting this new library whipped into
-shape to the point where things felt good getting out there. [All] [of] [the]
-[demos] at Codepen have been updated to use the new library -- some with the
-new features I outline above -- so we invite you to kick the tires over there.
+shape to the point where things felt good getting out there.
+[All](https://codepen.io/shubox/pen/dNPyQV)
+[of](https://codepen.io/shubox/pen/bgNVGL)
+[the](https://codepen.io/shubox/pen/qRdddM)
+[demos](https://codepen.io/shubox/pen/bgNKmR)
+at Codepen have been updated to use the new library -- some with the
+new features I outline above -- so we invite you to [kick the tires over there].
 Or check out the code [at GitHub] and to let us know what you think at our
 [twitter account], or email us directly at <a href="mailto:team@shubox.io">team@shubox.io</a>.
 We're all ears!
 
-[All]: https://codepen.io/shubox/pen/dNPyQV
-[of]: https://codepen.io/shubox/pen/bgNVGL
-[the]: https://codepen.io/shubox/pen/qRdddM
-[demos]: https://codepen.io/shubox/pen/bgNKmR
-[twitter account]: https://twitter.com/shuboxio
+[kick the tires over there]: https://codepen.io/shubox
 [at GitHub]: https://github.com/shuboxio/shubox.js
+[twitter account]: https://twitter.com/shuboxio
