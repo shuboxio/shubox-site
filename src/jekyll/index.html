@@ -80,6 +80,8 @@ title: Upload images to Amazon S3
 
 {% include sign-up.liquid %}
 
+{% if site.production == "true" %}
 <script>
   mixpanel.track("Viewed home page");
 </script>
+{% endif %}

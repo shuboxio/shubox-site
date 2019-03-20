@@ -1,6 +1,27 @@
 /* global $, hljs */
 
 window.onload = function () {
+
+  // ============================================================
+  // Upload Shubox dropzone'age
+  // =================================================
+  new Shubox("#upload", {
+    key: "03457406",
+    maxFiles: 1,
+    transformName: 'blog-large-image',
+    previewsContainer: false,
+    success: function (shuboxFile) {
+      var upload = document.getElementById("upload");
+      upload.innerHTML = '![]('+ shuboxFile.s3url +')';
+    },
+    transformCallbacks: {
+      "544": function(shuboxFile) {
+        var upload = document.getElementById("upload");
+        upload.innerHTML = '![]('+ shuboxFile.transforms["544"].s3url +')';
+      }
+    }
+  })
+
   // ============================================================
   // Debounce
   // ============================================================

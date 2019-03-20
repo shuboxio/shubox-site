@@ -5,25 +5,13 @@ image: "/assets/blog/balloons.svg"
 summary: "Months later - a new and improved JS library is ready for the world."
 ---
 
-<div id="upload">
-  Click or drag and drop to upload your image
-</div>
-<script src="/js/shubox.umd.js"></script>
-<script>
-new Shubox("#upload", {
-  key: "03457406",
-  maxFiles: 1,
-  transformName: 'blog-large-image',
-  previewsContainer: false,
-  transformCallbacks: {
-    "544": function(shuboxFile) {
-      var upload = document.getElementById("upload");
-      upload.innerHTML = '![]('+ shuboxFile.transforms["544"].s3url +')';
-    }
-  }
-})
-</script>
+![](https://s3.amazonaws.com/jekyll-shubox-io/localhost-5001/64ebeac6/544_andre-hunter-62014-unsplash.jpg)
+<span class="bg-light-gray f7 db pa2 tr nt5 br3 br--bottom">
+Photo by [Andre Hunter] on [Unsplash]
+</span>
 
+[Andre Hunter]: https://unsplash.com/@dre0316
+[Unsplash]: https://unsplash.com
 
 The Shubox mission from the beginning was simple - make it easier to get any
 old arbitrary file from your computer or mobile phone to the biggest cloud
@@ -38,14 +26,15 @@ tools in order to make things flexible, while fitting the experience in
 your mind's eye.
 
 Until now(ish) we had the foundation to do this, and it was fine. We had a
-javascript file generated spefically for each of our users' domains. There
+javascript file generated specifically for each of our users' domains. There
 were a few custom bits and bobs injected into the JS that made things work.
 Over time we noticed this wasn't entirely scalable, and not entirely
 conducive to having a fun development experience on our part.
 
 I won't belabor any further with the "why's" and "how's" things needed to
-change but instead let's talk about the great new things that come with the
-_new_ library.
+change because of course there are plenty. Instead let's talk about the great
+things that come with the _new_ library as a way to illustrate how this shift
+will benefit not only Shubox but _YOU_, the every day developer.
 
 1. **It is written in [TypeScript]!** It can't be understated how the marriage
    of a strong type system and superset of JavaScript have provided such a
@@ -59,9 +48,8 @@ _new_ library.
    your project/domain (per the note above) - just include it in your HTML and
    you're off to the races. The downside to this is that approach is analogous
    to purchasing a horse and buggy in the age of cars. Single page
-   applications, react, vue, angular, and the 10 new frameworks that came out
-   today don't work that way.  So, it was beyond the time to get with the
-   program.
+   applications, react, vue, angular, et al, don't work that way.  So, it was
+   beyond the time to get with the program.
 3. **There are _many_ new features.** Let's talk about some of the new ones:
 
    * Transform completion callback. When your processed images are created, or

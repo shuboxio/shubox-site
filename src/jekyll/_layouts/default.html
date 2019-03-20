@@ -36,7 +36,9 @@
     <meta property="og:description" content="Upload images from your web app directly to Amazon S3. Simple. Fast. Customizable." />
     <meta property="og:image" content="https://shubox.io/assets/Shubox-Facebook.png" />
 
+    {% if site.production == "true" %}
     {% include analytics.liquid %}
+    {% endif %}
   </head>
   <body>
 
@@ -51,8 +53,8 @@
     <script type="text/javascript">
       if (location.protocol !== "https:") location.protocol = "https:";
     </script>
+    <script src="https://embed.small.chat/{{ site.smallChatId }}.js" async></script>
     {% endif %}
     <script type="text/javascript" src="/js/dist.js" async></script>
-    <script src="https://embed.small.chat/{{ site.smallChatId }}.js" async></script>
   </body>
 </html>
