@@ -81,6 +81,12 @@ will benefit not only Shubox but _YOU_, the every day developer.
 [everything on GitHub]: https://github.com/shuboxio/shubox.js
 [this blog]: https://github.com/shuboxio/site
 
+The JavaScript that's been carrying the work-load up until now will continue to
+live on for several more months until the new library makes its way to a 1.0
+version. Needless to say, it will be a little while. We will not be pulling
+those files off our CDN and will continue to support them. That being said -
+we would still encourage you to try out the new version!
+
 Suffice it to say, it's been a journey getting this new library whipped into
 shape to the point where things felt good getting out there.
 [All](https://codepen.io/shubox/pen/dNPyQV)
