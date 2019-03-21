@@ -5,7 +5,7 @@ image: "/assets/blog/balloons.svg"
 summary: "Months later - a new and improved JS library is ready for the world."
 ---
 
-![](https://s3.amazonaws.com/jekyll-shubox-io/localhost-5001/64ebeac6/544_andre-hunter-62014-unsplash.jpg)
+![YAAAAAAAY!](https://s3.amazonaws.com/jekyll-shubox-io/localhost-5001/64ebeac6/544_andre-hunter-62014-unsplash.jpg)
 <span class="bg-light-gray f7 db pa2 tr nt5 br3 br--bottom">
 Photo by [Andre Hunter] on [Unsplash]
 </span>
@@ -67,7 +67,7 @@ will benefit not only Shubox but _YOU_, the every day developer.
      GitHub].
 
 4. **It is _open source_!** That's right. The Shubox TS code is all available
-   and open at [our GitHub repo]. As is this blog, [mind you]. Let us know over
+   and open at [our GitHub repo]. As is [this blog], mind you. Let us know over
    there if [there are any issues, comments, feature requests].
 5. There is more documentation -- a LOT more documentation. With the guts of
    [everything on GitHub] the barrier to
