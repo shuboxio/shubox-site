@@ -2,7 +2,6 @@ const config = require('../../config')
 const gulp = require('gulp')
 const path = require('path')
 const del = require('del')
-const gulpSequence = require('gulp-sequence')
 
 gulp.task('watch', () => {
   gulp.watch(path.join(config.shuboxWeb.images.src, '**'), ['images'])
@@ -12,7 +11,7 @@ gulp.task('watch', () => {
   gulp.watch(path.join(config.shuboxWeb.jekyll.tmp, '**'), ['jekyll-sync'])
 })
 
-gulp.task('default', ['browserSync', 'watch'])
+gulp.task('default', gulp.series(['browserSync', 'watch']))
 
 gulp.task('clean', function () {
   return del(['public/*'])
@@ -20,7 +19,7 @@ gulp.task('clean', function () {
 
 gulp.task(
   'build',
-  gulpSequence(
+  gulp.series([
     'clean',
     'images',
     'svg',
@@ -28,5 +27,5 @@ gulp.task(
     'sass',
     'jekyll-build',
     'jekyll-sync',
-  ),
+  ]),
 )

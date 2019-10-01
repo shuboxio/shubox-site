@@ -23,7 +23,11 @@ gulp.task('sass', () => {
     .on('error', function(err) {
       return notify().write(err);
     })
-    .pipe(postcss([autoprefixer({browsers: ['last 2 versions']})]))
+    .pipe(postcss([
+      autoprefixer({
+        overrideBrowserslist: ["last 2 versions"]
+      })
+    ]))
     .pipe(sourcemaps.write('.'))
     .pipe(stripCssComments({preserve: false}))
     .pipe(gulp.dest(config.shuboxWeb.styles.dest))
