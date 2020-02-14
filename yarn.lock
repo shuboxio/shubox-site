@@ -9892,9 +9892,9 @@ yargs@~3.10.0:
     window-size "0.1.0"
 
 yarn@^1.15.0:
-  version "1.19.0"
-  resolved "https://ezcater.jfrog.io/ezcater/api/npm/npm/yarn/-/yarn-1.19.0.tgz#e4fb83762849a9545f95eb077fd0905f7ddae2f0"
-  integrity sha1-5PuDdihJqVRflesHf9CQX33a4vA=
+  version "1.22.0"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.0.tgz#acf82906e36bcccd1ccab1cfb73b87509667c881"
+  integrity sha512-KMHP/Jq53jZKTY9iTUt3dIVl/be6UPs2INo96+BnZHLKxYNTfwMmlgHTaMWyGZoO74RI4AIFvnWhYrXq2USJkg==
 
 yauzl@^2.4.2:
   version "2.10.0"
