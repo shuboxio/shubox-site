@@ -15,9 +15,9 @@ window.onload = function () {
       upload.innerHTML = '![]('+ shuboxFile.s3url +')';
     },
     transformCallbacks: {
-      "544": function(shuboxFile) {
+      "544.webp": function(shuboxFile) {
         var upload = document.getElementById("upload");
-        upload.innerHTML = '![]('+ shuboxFile.transforms["544"].s3url +')';
+        upload.innerHTML = '![]('+ shuboxFile.transforms["544.webp"].s3url +')';
       }
     }
   })
