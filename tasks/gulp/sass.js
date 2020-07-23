@@ -8,6 +8,8 @@ var postcss = require('gulp-postcss');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var stripCssComments = require('gulp-strip-css-comments');
+var purgecss = require('gulp-purgecss');
+
 
 gulp.task('sass', () => {
   return gulp
@@ -28,6 +30,7 @@ gulp.task('sass', () => {
         overrideBrowserslist: ["last 2 versions"]
       })
     ]))
+    .pipe(purgecss({ content: ['src/jekyll/**/*.{html,liquid}'] }))
     .pipe(sourcemaps.write('.'))
     .pipe(stripCssComments({preserve: false}))
     .pipe(gulp.dest(config.shuboxWeb.styles.dest))
