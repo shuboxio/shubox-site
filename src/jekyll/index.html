@@ -85,3 +85,12 @@ title: Upload images to Amazon S3
   mixpanel.track("Viewed home page");
 </script>
 {% endif %}
+
+<script>
+document
+  .querySelector(".main-nav a[href='/pricing']")
+  .addEventListener("click", function(e){
+    e.preventDefault()
+    window.location.href = "#plans-pricing"
+  })
+</script>

@@ -5,11 +5,12 @@ title: Demos
 
 {% include page-header.liquid title="Demos" %}
 
+<div class="threshold"></div>
 <div class="{% include tachyons-container.liquid %}">
   <div class="flex-l flex-row">
 
     <div class="subnav w5 mr4 mb5 flex-none">
-      <nav id="sticky" class="is-active">
+      <nav>
         <ul class="list pl0 ma0 bt bw1 b--light-gray pt4">
           <li class="mb3"><a href="#demo-easy-avatar">Upload an avatar</a></li>
           <li class="mb3"><a href="#demo-fancy-avatar">Another avatar upload approach</a></li>
@@ -237,3 +238,5 @@ title: Demos
 mixpanel.track("Viewed demos");
 </script>
 {% endif %}
+<script type="text/javascript" src="/js/stickynav.js" async defer></script>
+</script>

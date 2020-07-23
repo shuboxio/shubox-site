@@ -41,7 +41,6 @@
     {% endif %}
   </head>
   <body>
-
     {% include svg.html %}
     {% include header.liquid %}
     <main>
@@ -53,8 +52,11 @@
     <script type="text/javascript">
       if (location.protocol !== "https:") location.protocol = "https:";
     </script>
-    <script src="https://embed.small.chat/{{ site.smallChatId }}.js" async></script>
+    <script src="https://embed.small.chat/{{ site.smallChatId }}.js" async defer></script>
+    {% else %}
+    <script type="text/javascript" src="/js/dev.js" async defer></script>
     {% endif %}
-    <script type="text/javascript" src="/js/dist.js" async></script>
+
+    <script type="text/javascript" src="/js/index.js" async defer></script>
   </body>
 </html>

@@ -9,17 +9,62 @@ const changed = require('gulp-changed')
 const concat = require('gulp-concat')
 
 // Concat and minify JS
-gulp.task('js', () => {
+gulp.task('sitejs', () => {
   return gulp.src([
-    path.join(config.shuboxWeb.scripts.src, '_vendor/highlight.pack.js'),
-    path.join(config.shuboxWeb.scripts.src, '_vendor/jquery-3.0.0.min.js'),
-    path.join(config.shuboxWeb.scripts.src, '_vendor/shubox.umd.js'),
-    path.join(config.shuboxWeb.scripts.src, 'main.js')
+    path.join(config.shuboxWeb.scripts.src, 'index.js')
   ])
-    .pipe(concat('dist.js'))
+    .pipe(concat('index.js'))
     .pipe(changed(config.shuboxWeb.scripts.dest))
     .pipe(babel())
     .pipe(uglify())
     .pipe(gulp.dest(config.shuboxWeb.scripts.dest))
     .pipe(browserSync.stream({ match: '**/*.js' }))
 })
+
+gulp.task('devjs', () => {
+  return gulp.src([
+    path.join(config.shuboxWeb.scripts.src, '_vendor/shubox.umd.js'),
+    path.join(config.shuboxWeb.scripts.src, 'dev.js')
+  ])
+    .pipe(concat('dev.js'))
+    .pipe(changed(config.shuboxWeb.scripts.dest))
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(gulp.dest(config.shuboxWeb.scripts.dest))
+    .pipe(browserSync.stream({ match: '**/*.js' }))
+})
+
+gulp.task('highlightjs', () => {
+  return gulp.src([
+    path.join(config.shuboxWeb.scripts.src, '_vendor/highlight.pack.js'),
+    path.join(config.shuboxWeb.scripts.src, 'highlight.js')
+  ])
+    .pipe(concat('highlight.js'))
+    .pipe(changed(config.shuboxWeb.scripts.dest))
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(gulp.dest(config.shuboxWeb.scripts.dest))
+    .pipe(browserSync.stream({ match: '**/*.js' }))
+})
+
+gulp.task('stickyjs', () => {
+  return gulp.src([
+    path.join(config.shuboxWeb.scripts.src, 'stickynav.js')
+  ])
+    .pipe(concat('stickynav.js'))
+    .pipe(changed(config.shuboxWeb.scripts.dest))
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(gulp.dest(config.shuboxWeb.scripts.dest))
+    .pipe(browserSync.stream({ match: '**/*.js' }))
+})
+
+gulp.task(
+  'js',
+  gulp.series([
+    'sitejs',
+    'devjs',
+    'highlightjs',
+    'stickyjs'
+  ])
+)

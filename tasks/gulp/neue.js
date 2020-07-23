@@ -42,7 +42,7 @@ function makeJsFile (key) {
 
 function appendToMainJs (key) {
   return fs.appendFile(
-    path.join(config.src, 'js', 'main.js'),
+    path.join(config.src, 'js', 'index.js'),
     `\nrequire('_${key}/${argv[key]}.js')`,
     function (err) {
       if (err) console.log(err)
