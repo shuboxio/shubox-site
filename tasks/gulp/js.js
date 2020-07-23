@@ -11,6 +11,7 @@ const concat = require('gulp-concat')
 // Concat and minify JS
 gulp.task('sitejs', () => {
   return gulp.src([
+    path.join(config.shuboxWeb.scripts.src, '_vendor/lazysizes.min.js'),
     path.join(config.shuboxWeb.scripts.src, 'index.js')
   ])
     .pipe(concat('index.js'))
