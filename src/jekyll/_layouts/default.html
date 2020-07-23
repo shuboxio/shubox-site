@@ -40,7 +40,7 @@
     {% include analytics.liquid %}
     {% endif %}
   </head>
-  <body>
+  <body data-small-chat-id="{{ site.smallChatId }}">
     {% include svg.html %}
     {% include header.liquid %}
     <main>
@@ -52,7 +52,6 @@
     <script type="text/javascript">
       if (location.protocol !== "https:") location.protocol = "https:";
     </script>
-    <script src="https://embed.small.chat/{{ site.smallChatId }}.js" async defer></script>
     {% else %}
     <script type="text/javascript" src="/js/dev.js" async defer></script>
     {% endif %}
