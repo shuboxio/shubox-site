@@ -23,9 +23,10 @@ window.addEventListener('scroll', function(e) {
 
   var script = document.createElement("script")
   script.src = "https://embed.small.chat/"+ smallChatId +".js"
-  script.async = true
-  script.defer = true
   document.body.appendChild(script);
+
+  // force smallchat to load
+  setTimeout(function(){ dispatchEvent(new Event('load')) }, 500)
 
   scrolled = true;
 });
