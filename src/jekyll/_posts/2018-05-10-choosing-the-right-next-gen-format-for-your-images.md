@@ -5,7 +5,7 @@ image: "/assets/blog/picture-x2.svg"
 summary: "There are a lot more options for images these days than just JPGs and PNGs."
 guest_bio: |
   This is a guest post by Adam Conrad. Adam is a Boston-based designer,
-  developer, UX consultant at [Anon Consulting](http://anonconsulting.com/)
+  developer, UX consultant at [Anon Consulting](https://anonconsulting.com/)
 ---
 
 The web is getting bigger and slower. One of the easiest ways to improve the big part is to [compress your images](https://userinterfacing.com/the-fastest-way-to-increase-your-sites-performance-now/) (or you can do it [automatically](https://shubox.io/docs/#setup-image-transforms) with Shubox). An alternate question you could ask yourself is whether your image formats are the right type of images in the first place.

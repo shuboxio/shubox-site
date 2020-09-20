@@ -33,5 +33,5 @@ client's app accept image uploads? Are uploads taking too long? Are uploads
 taking up too much of our server resources? Am I too often fiddling with
 code around all of my file uploads?" If so, I really think Shubox can help you! Go ahead, [give it a shot]!
 
-[Joel]: http://joeloliveira.com
+[Joel]: https://joeloliveira.com
 [give it a shot]: https://shubox.io/sign_up

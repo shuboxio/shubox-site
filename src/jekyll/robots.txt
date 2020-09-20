@@ -3,3 +3,4 @@ Sitemap: https://shubox.io/sitemap.xml
 User-agent: *
 
 Disallow: /sign_up/
+Disallow: /passwords/new
