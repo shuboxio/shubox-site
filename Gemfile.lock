@@ -73,7 +73,7 @@ DEPENDENCIES
   jekyll-sitemap
 
 RUBY VERSION
-   ruby 3.0.1p64
+   ruby 2.6.6p146
 
 BUNDLED WITH
    2.2.16
