@@ -13,7 +13,6 @@ description: >
 # Analytics settings
 fb_pixel: "1490231254348649"
 ga: "UA-80905075-3"
-mixpanel: "01357d729eae31357daebaf72ebb3cd6"
 
 # Site-wide defaults
 defaults:

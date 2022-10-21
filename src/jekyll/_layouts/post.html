@@ -38,9 +38,4 @@ layout: default
   </div>
 </div>
 
-{% if site.production == "true" %}
-<script>
-mixpanel.track("Viewed blog post", { title: "{{ page.title }}"});
-</script>
-{% endif %}
 <script type="text/javascript" src="/js/highlight.js" async defer></script>
