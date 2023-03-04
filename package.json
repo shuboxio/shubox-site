@@ -24,7 +24,7 @@
     "gulp-svgstore": "^6.1.0",
     "gulp-task-listing": "^1.0.1",
     "gulp-uglify": "^2.0.0",
-    "minimist": "^0.2.1",
+    "minimist": "^0.2.4",
     "netlify-cli": "^2.15.0"
   }
 }
