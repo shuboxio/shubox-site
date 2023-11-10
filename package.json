@@ -26,5 +26,6 @@
     "gulp-uglify": "^2.0.0",
     "minimist": "^0.2.4",
     "netlify-cli": "^2.15.0"
-  }
+  },
+  "dependencies": {}
 }
