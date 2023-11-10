@@ -1,14 +1,14 @@
 ---
-title: Getting Started
+title: Get Started With Your Own Bucket
 order: 1
 ---
 
 <h1 class="mt0">{{ page.title }}</h1>
 
 <p>
-  Getting up and running with Shubox was designed to be quick and easy so you can get up back to working on your project. There are two parts to setting up
-  Shubox — connecting your Amazon S3 account to Shubox, then integrating Shubox
-  into your website. Let’s go!
+  For those bringing their own AWS accounts and buckets, there are two parts to
+  setting up Shubox — connecting your Amazon S3 account to Shubox, then
+  integrating Shubox into your website. Let’s go!
 </p>
 
 <h2 class="mt4 mb0" id="setup-amazon">Amazon S3 Setup</h2>
@@ -53,19 +53,30 @@ order: 1
 <p>
   Not comfortable with granting Shubox full permissions? That’s okay, we only
   need following permissions to do our work:
-  <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGET.html">
-    <code>s3:ListBucket</code>
-  </a>
-  <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUT.html">
-    <code>s3:CreateBucket</code>
-  </a>
-  <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTcors.html">
-    <code>s3:PutBucketCORS</code>
-  </a>
-  <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTcors.html">
-    <code>s3:PutObject</code>
-  </a>
 </p>
+
+<ul>
+  <li>
+    <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGET.html">
+      <code>s3:ListBucket</code>
+    </a>
+  </li>
+  <li>
+    <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUT.html">
+      <code>s3:CreateBucket</code>
+    </a>
+  </li>
+  <li>
+    <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTcors.html">
+      <code>s3:PutBucketCORS</code>
+    </a>
+  </li>
+  <li>
+    <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTcors.html">
+      <code>s3:PutObject</code>
+    </a>
+  </li>
+</ul>
 
 <h4 class="mt4">Review and create the user:</h4>
 

@@ -1,4 +1,4 @@
-<div class="global-header pv4{% if page.url == '/' %} bg-near-white{% endif %}">
+<div class="global-header bg-near-white pv4 fixed w-100 {% if page.url == '/' %}bg-near-white{% endif %}">
   <div class="{% include tachyons-container.liquid %}">
     <nav class="flex flex-column flex-row-ns items-center items-baseline-ns justify-between-ns">
 
@@ -22,8 +22,8 @@
           Demos
         </a>
         <a href="/blog" class="mid-gray mr3{% if page.url contains '/blog/' %} dark-purple{% endif %}">Blog</a>
-        <a class="red" href="https://dashboard.shubox.io/sign_in">
-          Sign In
+        <a class="red" href="https://dashboard.shubox.io/sign_up">
+          Sign Up
         </a>
       </div>
 
