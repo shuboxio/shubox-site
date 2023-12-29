@@ -30,7 +30,7 @@ gulp.task('sass', () => {
         overrideBrowserslist: ["last 2 versions"]
       })
     ]))
-    .pipe(purgecss({ content: ['src/jekyll/**/*.{html,liquid}'] }))
+    .pipe(purgecss({ content: ['src/jekyll/**/*.{html,liquid,md}'] }))
     .pipe(sourcemaps.write('.'))
     .pipe(stripCssComments({preserve: false}))
     .pipe(gulp.dest(config.shuboxWeb.styles.dest))

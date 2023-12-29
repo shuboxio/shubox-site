@@ -2,4 +2,22 @@
   background-color: $light-purple;
   color: $dark-purple;
   padding: 15px;
+  margin-bottom: 2rem;
 }
+
+/* purgecss start ignore */
+.photo-with-caption {
+  margin: 0px;
+}
+
+.photo-with-caption picture,
+.photo-with-caption img {
+  margin: 0px;
+}
+
+.photo-with-caption figcaption {
+  background: $light-gray;
+  padding: 1rem 2rem;
+  color: $gray;
+}
+/* purgecss end ignore */
