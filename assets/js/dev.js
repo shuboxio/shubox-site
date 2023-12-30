@@ -19,4 +19,3 @@ window.onload = function () {
     }
   })
 }
-

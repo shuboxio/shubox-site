@@ -6,9 +6,7 @@ smallChatId: "123"
 production: "false"
 baseurl: ""
 url: "https://shubox.io"
-description: >
-  The easiest and fastest way for your web-app to
-  upload images directly to Amazon S3
+description: The easiest and fastest way for your web-app to upload images directly to Amazon S3
 
 # Analytics settings
 fb_pixel: "1490231254348649"
@@ -26,8 +24,17 @@ defaults:
 markdown: kramdown
 
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
+  - jekyll-dotenv
+
+tailwindcss:
+  - input: assets/css/shubox.css
+    config: tailwind.config.js
+    minified: true
+
+esbuild:
+  - input: assets/js/shubox.js
+    outdir: assets/js/dist
+    extra_options: --format=esm --splitting
 
 exclude:
   - bin

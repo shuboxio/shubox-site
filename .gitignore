@@ -5,3 +5,4 @@
 /tmp
 _site/**/*
 bin/deploy
+node_modules
