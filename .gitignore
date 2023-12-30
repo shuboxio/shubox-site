@@ -2,7 +2,7 @@
 /tmp
 bin/deploy
 node_modules
-public/*
-src/jekyll/.jekyll-cache
-src/jekyll/.jekyll-metadata
-src/jekyll/.sass-cache
+_site/**/*
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
