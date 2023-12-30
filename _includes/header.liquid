@@ -1,0 +1,32 @@
+<div class="global-header bg-near-white pv4 fixed w-100 {% if page.url == '/' %}bg-near-white{% endif %}">
+  <div class="">
+    <nav class="flex flex-column flex-row-ns items-center items-baseline-ns justify-between-ns">
+
+      <h1 class="logo mt0 mb3 mb0-ns">
+        <a href="/">
+          <svg>
+            <title>Shubox Home</title>
+            <use xlink:href="#logo"/>
+          </svg>
+        </a>
+      </h1>
+
+      <div class="main-nav">
+        <a href="/pricing" class="mid-gray mr3{% if page.url contains '/pricing/' %} dark-purple{% endif %}">
+          Plans &amp; Pricing
+        </a>
+        <a href="/docs" class="mid-gray mr3{% if page.url contains '/docs/' %} dark-purple{% endif %}">
+          Docs
+        </a>
+        <a href="/demos" class="mid-gray mr3{% if page.url contains '/demos/' %} dark-purple{% endif %}">
+          Demos
+        </a>
+        <a href="/blog" class="mid-gray mr3{% if page.url contains '/blog/' %} dark-purple{% endif %}">Blog</a>
+        <a class="red" href="https://dashboard.shubox.io/sign_up">
+          Sign Up
+        </a>
+      </div>
+
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Shubox | {{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/main.css?{{ "now" | date: "%Y%m%d%H%M" }}">
+    <script src="https://use.typekit.net/dji7eur.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- Connect to external dependencies ASAP -->
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preconnect" href="https://p.typekit.net">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://use.typekit.net">
+    <link rel="dns-prefetch" href="https://p.typekit.net">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+    <!-- SEO -->
+    <meta name="referrer" content="always" />
+    <meta name="robots" content="all" />
+    <meta name="keywords" content="image upload, amazon s3, s3, service" />
+    <meta name="description" content="Upload, transform, and optimize images and files from your web app directly to Amazon S3. Simple. Fast. Customizable. (@shuboxio)" />
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/favicon.png" />
+    <link rel='mask-icon' href='/favicon.svg' color='#7c60ce'>
+
+    <!-- Twitter Summary Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@shuboxio" />
+    <meta name="twitter:title" content="Shubox" />
+    <meta name="twitter:description" content="Upload, transform, and optimize images and files from your web app directly to Amazon S3. Simple. Fast. Customizable." />
+    <meta name="twitter:image" content="https://shubox.io/assets/home-hero.svg" />
+
+    {% if site.production == "true" %}
+    {% include analytics.liquid %}
+    {% endif %}
+  </head>
+  <body data-small-chat-id="{{ site.smallChatId }}">
+    {% include svg.liquid %}
+    {% include header.liquid %}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.liquid %}
+
+    {% if site.production == "true" %}
+    <script type="text/javascript">
+      if (location.protocol !== "https:") location.protocol = "https:";
+    </script>
+    {% else %}
+    <script type="text/javascript" src="/js/dev.js" async defer></script>
+    {% endif %}
+
+    <script type="text/javascript" src="/js/index.js" async defer></script>
+  </body>
+</html>

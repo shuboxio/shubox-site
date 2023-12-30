@@ -1,0 +1,79 @@
+---
+layout: default
+title: Documentation
+---
+
+{% include page-header.liquid title='Documentation' %}
+
+<div class="threshold"></div>
+<div class="">
+  <div class="flex-l flex-row">
+
+    <div class="subnav w5-l mr5-l flex-none">
+      <nav id="sticky">
+
+        <div class="bt bw1 b--light-gray">
+          <div class="flex items-center justify-between">
+            <h2 class="f4 b purple">Set Up Your Own Bucket</h2>
+          </div>
+          <div class="dn db-l">
+            <ul class="list pl0 ma0">
+              <li class="mb3"><a href="#setup-amazon">Create Your AWS IAM User</a></li>
+              <li class="mb3"><a href="#setup-shubox">Connect IAM User to Shubox</a></li>
+              <li class="mb4"><a href="#plan-limits">BYO Plan Limits and Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bt bw1 b--light-gray">
+          <div class="flex items-center justify-between">
+            <h2 class="f4 b purple">Set Up A Shubox Bucket</h2>
+          </div>
+          <div class="dn db-l">
+            <ul class="list pl0 ma0">
+              <li class="mb3"><a href="#shu-setup-bucket">Create Your Bucket</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bt bw1 b--light-gray">
+          <div class="flex items-center justify-between">
+            <h2 class="f4 b purple">Getting Started</h2>
+          </div>
+          <div class="dn db-l">
+            <ul class="list pl0 ma0">
+              <li class="mb3"><a href="#setup-website">Website Integration</a></li>
+              <li class="mb3"><a href="#setup-image-transforms">Image Transforms</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bt bw1 b--light-gray mb4 mb5-ns">
+          <div class="flex items-center justify-between">
+            <h2 class="f4 b purple">JavaScript API</h2>
+          </div>
+          <div class="dn db-l">
+            <ul class="list pl0 mt0 mb4">
+              <li class="mb3"><a href="https://github.com/shuboxio/shubox.js/blob/master/README.md#library-documentation" target="_blank">Shubox Library @ GitHub</a></li>
+              <li class="mb3"><a href="https://github.com/shuboxio/shubox.js/blob/master/LEGACY-JS.md#legacy-shubox-javascript-api" target="_blank">Shubox <em>Legacy</em> Library</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+
+    <div class="mb6 flex-auto">
+      <div class="nested-copy-line-height nested-headline-line-height nested-img nested-copy-colors">
+        {% assign docs = site.docs | sort: "order" %}
+        {% for doc in docs %}
+          {{ doc.content }}
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/highlight.js" async defer></script>
+<script type="text/javascript" src="/js/stickynav.js" async defer></script>
