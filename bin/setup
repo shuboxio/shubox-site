@@ -1,4 +1,6 @@
 #!/bin/bash
 
-bundle
-yarn
+bundle install
+npm install
+bundle exec jekyll clean
+bundle exec jekyll build
