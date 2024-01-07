@@ -1,5 +1,5 @@
-<div class="p-4 fixed top-0 left-0 right-0 bg-shubox-near-white">
-  <nav class="flex">
+<div class="p-4 md:py-6 fixed top-0 left-0 right-0 bg-shubox-near-white">
+  <nav class="flex max-w-5xl mx-auto px-4 md:px-8">
     <h1 id="logo" class="grow inline-block">
       <a href="/">
         <svg class="w-24 h-8 block">
@@ -9,7 +9,7 @@
       </a>
     </h1>
 
-    <label for="toggle-menu" class="cursor-pointer inline-block">
+    <label for="toggle-menu" class="cursor-pointer inline-block md:hidden">
       <svg class="" fill="none" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
         <g stroke="#7c5cd1" stroke-linecap="round" stroke-width="2">
           <path d="m4 18h16"/>
@@ -20,12 +20,37 @@
     </label>
 
     <input name="toggle-menu" id="toggle-menu" type="checkbox" class="peer/menu hidden">
-    <div id="nav-menu" class="transition-opacity duration-700 top-full opacity-0 peer-checked/menu:top-12 peer-checked/menu:opacity-100 fixed left-0 right-0 bottom-0 h-full bg-white flex flex-col p-24">
-      <a href="https://dashboard.shubox.io/sign_up" class="py-3 text-2xl hover:underline text-shubox-purple text-center">Sign Up</a>
-      <a href="/pricing" class="py-3 text-2xl hover:underline text-shubox-purple text-center">Plans &amp; Pricing</a>
-      <a href="/blog"    class="py-3 text-2xl hover:underline text-shubox-purple text-center">Blog</a>
-      <a href="/demos"   class="py-3 text-2xl hover:underline text-shubox-purple text-center">Demos</a>
-      <a href="/docs"    class="py-3 text-2xl hover:underline text-shubox-purple text-center">Docs</a>
+    <div id="nav-menu" class="
+             transition-opacity
+             duration-700
+             top-full
+             opacity-0
+             peer-checked/menu:top-12
+             peer-checked/menu:opacity-100
+             fixed
+             left-0
+             right-0
+             bottom-0
+             h-full
+             bg-shubox-near-white
+             flex
+             flex-col
+             p-24
+
+             md:opacity-100
+             md:h-auto
+             md:static
+             md:flex-row
+             md:flex-row-reverse
+             md:p-0
+             md:bg-transparent
+             ">
+      <a href="https://dashboard.shubox.io/sign_up"
+                         class="py-3 md:text-base text-2xl hover:underline hover:text-shubox-red text-shubox-purple md:mx-2 md:text-shubox-red text-center">Sign Up</a>
+      <a href="/pricing" class="py-3 md:text-base text-2xl hover:underline hover:text-shubox-red text-shubox-purple md:mx-2 md:text-shubox-charcoal text-center">Plans &amp; Pricing</a>
+      <a href="/blog"    class="py-3 md:text-base text-2xl hover:underline hover:text-shubox-red text-shubox-purple md:mx-2 md:text-shubox-charcoal text-center">Blog</a>
+      <a href="/demos"   class="py-3 md:text-base text-2xl hover:underline hover:text-shubox-red text-shubox-purple md:mx-2 md:text-shubox-charcoal text-center">Demos</a>
+      <a href="/docs"    class="py-3 md:text-base text-2xl hover:underline hover:text-shubox-red text-shubox-purple md:mx-2 md:text-shubox-charcoal text-center">Docs</a>
     </div>
   </nav>
 </div>
