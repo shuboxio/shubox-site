@@ -12,12 +12,12 @@ var chatLoader = function() {
 }
 
 var scrollHandler = function(e) {
-  var nav = document.querySelector('.global-header');
+  var nav = document.getElementById('nav-container');
 
   if (window.scrollY > 200) {
-    nav.attributes.class.value = nav.attributes.class.value.replace('pv4', 'pv3');
+    nav.attributes.class.value = nav.attributes.class.value.replace('md:py-6', 'md:py-4');
   } else {
-    nav.attributes.class.value = nav.attributes.class.value.replace('pv3', 'pv4');
+    nav.attributes.class.value = nav.attributes.class.value.replace('md:py-4', 'md:py-6');
   }
 
   var smallChatId = document.body.dataset.smallChatId;

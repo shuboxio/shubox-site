@@ -53,9 +53,10 @@
       if (location.protocol !== "https:") location.protocol = "https:";
     </script>
     {% else %}
-    <script type="text/javascript" src="/js/dev.js" async defer></script>
+    <script type="text/javascript" src="https://unpkg.com/shubox@0.4.4/dist/shubox.umd.js"></script>
+    <script type="text/javascript" src="/assets/js/dev.js" async defer></script>
     {% endif %}
 
-    <script type="text/javascript" src="/js/index.js" async defer></script>
+    <script type="text/javascript" src="/assets/js/shubox.js" async defer></script>
   </body>
 </html>

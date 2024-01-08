@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
-  content: ["./_site/**/*.{html,js}"],
+  content: [
+    "./_site/**/*.{html,js}",
+    "./assets/js/shubox.js",
+  ],
   theme: {
     extend: {
       boxShadow: {
@@ -18,6 +21,10 @@ module.exports = {
         'shubox-light-gray': '#edeae6',
         'shubox-dark-gray': '#3f3f40',
         'shubox-charcoal': '#3f3f40',
+      },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
       },
     },
   },
