@@ -40,10 +40,10 @@
     {% include analytics.liquid %}
     {% endif %}
   </head>
-  <body data-small-chat-id="{{ site.smallChatId }}">
+  <body data-small-chat-id="{{ site.smallChatId }}" class="overflow-auto scroll-smooth">
     {% include svg.liquid %}
     {% include header.liquid %}
-    <main>
+    <main class="scroll-mt-0">
       {{ content }}
     </main>
     {% include footer.liquid %}
