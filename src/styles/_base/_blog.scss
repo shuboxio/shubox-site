@@ -20,4 +20,16 @@
   padding: 1rem 2rem;
   color: $gray;
 }
+
+/* for mobile screens */
+.blog-container {
+  padding-top: 11rem;
+}
+
+/* for everything bigger than mobile */
+@media #{$breakpoint-not-small} {
+  .blog-container {
+    padding-top: 8rem;
+  }
+}
 /* purgecss end ignore */
